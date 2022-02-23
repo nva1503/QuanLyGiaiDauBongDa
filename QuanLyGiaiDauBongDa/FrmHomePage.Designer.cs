@@ -29,10 +29,9 @@ namespace QuanLyGiaiDauBongDa
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHomePage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -42,29 +41,17 @@ namespace QuanLyGiaiDauBongDa
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 158);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(78, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -81,12 +68,26 @@ namespace QuanLyGiaiDauBongDa
             this.panel2.Size = new System.Drawing.Size(877, 412);
             this.panel2.TabIndex = 1;
             // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.Control;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button8.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.button8.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.setting_tool;
+            this.button8.Location = new System.Drawing.Point(388, 179);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(171, 161);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "Cài Đặt Thông Tin";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.SystemColors.Control;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.graph__1_;
             this.button6.Location = new System.Drawing.Point(196, 179);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(171, 161);
@@ -100,7 +101,7 @@ namespace QuanLyGiaiDauBongDa
             this.button5.BackColor = System.Drawing.SystemColors.Control;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.podium__1_;
             this.button5.Location = new System.Drawing.Point(16, 179);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(174, 161);
@@ -115,7 +116,7 @@ namespace QuanLyGiaiDauBongDa
             this.button4.BackColor = System.Drawing.SystemColors.Control;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.calendar;
             this.button4.Location = new System.Drawing.Point(575, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(171, 160);
@@ -129,7 +130,7 @@ namespace QuanLyGiaiDauBongDa
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.amonestation;
             this.button3.Location = new System.Drawing.Point(388, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(171, 160);
@@ -145,7 +146,7 @@ namespace QuanLyGiaiDauBongDa
             this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.football_player;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.Location = new System.Drawing.Point(196, 5);
             this.button2.Name = "button2";
@@ -161,7 +162,7 @@ namespace QuanLyGiaiDauBongDa
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.football_club__1_;
             this.button1.Location = new System.Drawing.Point(16, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 160);
@@ -183,6 +184,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(282, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(656, 158);
@@ -190,7 +192,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             // button7
             // 
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.exit;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button7.Location = new System.Drawing.Point(832, 640);
             this.button7.Name = "button7";
@@ -200,19 +202,16 @@ namespace QuanLyGiaiDauBongDa
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // label1
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.Control;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(388, 179);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(171, 161);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Cài Đặt Thông Tin";
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button8.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(35, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Thông tin cá nhân";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmHomePage
             // 
@@ -227,9 +226,9 @@ namespace QuanLyGiaiDauBongDa
             this.Name = "FrmHomePage";
             this.Text = "Phần Mềm Quản Lý Giải Premier League";
             this.Load += new System.EventHandler(this.FrmHomePage_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +237,6 @@ namespace QuanLyGiaiDauBongDa
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Button button2;
@@ -250,5 +248,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label1;
     }
 }
