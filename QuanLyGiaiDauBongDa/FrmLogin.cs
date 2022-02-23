@@ -36,7 +36,7 @@ namespace QuanLyGiaiDauBongDa
         {
             FrmHomePage h = new FrmHomePage();
             this.Hide();//ẩn form login
-            h.ShowDialog();  
+            h.ShowDialog();
             this.Show();
         }
 

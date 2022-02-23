@@ -34,7 +34,7 @@ namespace QuanLyGiaiDauBongDa
 
         private void FrmHomePage_Load(object sender, EventArgs e)
         {
-
+            statusStrip1.Text = "Welcome, Admin! Have a nice Day";
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -48,6 +48,16 @@ namespace QuanLyGiaiDauBongDa
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
