@@ -37,7 +37,7 @@ namespace QuanLyGiaiDauBongDa
             FrmHomePage h = new FrmHomePage();
             this.Hide();//ẩn form login
             h.ShowDialog();
-            this.Show();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,6 +51,14 @@ namespace QuanLyGiaiDauBongDa
             {
                 e.Cancel = true;//cancel event e
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmRegister frmRegister = new FrmRegister();
+            this.Hide();
+            frmRegister.ShowDialog();
+           
         }
     }
 }
