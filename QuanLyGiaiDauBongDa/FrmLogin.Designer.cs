@@ -66,7 +66,7 @@ namespace QuanLyGiaiDauBongDa
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label2
             // 
@@ -108,7 +108,7 @@ namespace QuanLyGiaiDauBongDa
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.button2_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // pictureBox1
             // 

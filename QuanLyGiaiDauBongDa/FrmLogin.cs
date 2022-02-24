@@ -32,7 +32,7 @@ namespace QuanLyGiaiDauBongDa
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             FrmHomePage h = new FrmHomePage();
             this.Hide();//ẩn form login
@@ -40,7 +40,7 @@ namespace QuanLyGiaiDauBongDa
            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
