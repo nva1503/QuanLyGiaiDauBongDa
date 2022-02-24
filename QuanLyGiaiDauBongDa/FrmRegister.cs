@@ -19,10 +19,18 @@ namespace QuanLyGiaiDauBongDa
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+
             FrmLogin frmLogin = new FrmLogin();
             this.Hide();
             frmLogin.ShowDialog();
-            this.Show();
+            
+        }
+
+        private void linkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmLogin frmLogin = new FrmLogin();
+            this.Hide();
+            frmLogin.ShowDialog();
         }
     }
 }
