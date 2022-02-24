@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaiDauBongDa.DBContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace QuanLyGiaiDauBongDa
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,9 +35,35 @@ namespace QuanLyGiaiDauBongDa
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            FrmHomePage h = new FrmHomePage();
-            this.Hide();//ẩn form login
-            h.ShowDialog();
+            
+            try
+            {
+                List<Account> accounts = new AccountDAO().GetAccounts();
+                bool isLogin = false;
+                foreach (var a in accounts)
+                {
+                    if (txtUsername.Text == a.userName && txtPassword.Text == a.passWord)
+                    {
+                        isLogin = true;
+                    }
+                   
+                }
+                if (isLogin == true) {
+                    MessageBox.Show("Bạn đã đăng nhập thành công !", "Thông Báo", MessageBoxButtons.OK);
+                    FrmHomePage h = new FrmHomePage();
+                    this.Hide();//ẩn form login
+                    h.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+          
            
         }
 

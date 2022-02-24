@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
+
 namespace QuanLyGiaiDauBongDa.DBContext
 {
     internal class Account
@@ -22,7 +24,7 @@ namespace QuanLyGiaiDauBongDa.DBContext
         {
             List<Account> accounts= new  List<Account>();
             connection = new SqlConnection(GetConnectionString());
-            command = new SqlCommand("Select * from Account", connection);
+            command = new SqlCommand("select * from Account", connection);
             try
             {
                 connection.Open();
@@ -45,8 +47,9 @@ namespace QuanLyGiaiDauBongDa.DBContext
             }
             catch (Exception ex)
             {
-
+                
                 throw new Exception(ex.Message);
+
             }
             finally
             {

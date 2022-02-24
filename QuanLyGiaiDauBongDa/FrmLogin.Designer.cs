@@ -33,8 +33,8 @@ namespace QuanLyGiaiDauBongDa
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkForgotPassword = new System.Windows.Forms.LinkLabel();
@@ -80,24 +80,24 @@ namespace QuanLyGiaiDauBongDa
             this.label2.Text = "Mật Khẩu:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.AccessibleName = "txtUsername";
-            this.textBox1.Location = new System.Drawing.Point(273, 159);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtUsername.AccessibleName = "txtUsername";
+            this.txtUsername.Location = new System.Drawing.Point(273, 159);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(241, 23);
+            this.txtUsername.TabIndex = 1;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.AccessibleName = "txtPassword";
-            this.textBox2.Location = new System.Drawing.Point(273, 199);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(241, 23);
-            this.textBox2.TabIndex = 2;
+            this.txtPassword.AccessibleName = "txtPassword";
+            this.txtPassword.Location = new System.Drawing.Point(273, 199);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(241, 23);
+            this.txtPassword.TabIndex = 2;
             // 
             // btnExit
             // 
@@ -158,8 +158,8 @@ namespace QuanLyGiaiDauBongDa
             this.Controls.Add(this.linkForgotPassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
@@ -180,8 +180,8 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkForgotPassword;

@@ -21,7 +21,7 @@ namespace QuanLyGiaiDauBongDa.DBContext
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", true, true)
                 .Build();
-            return config["ConnectionStrings:QuanLiGiaiDauBongDa"];
+            return config["ConnectionStrings:QuanLyGiaiDauBongDa"];
         }
     }
 }
