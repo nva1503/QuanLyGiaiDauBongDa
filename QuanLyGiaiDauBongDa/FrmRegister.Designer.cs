@@ -41,6 +41,10 @@ namespace QuanLyGiaiDauBongDa
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.linkLogin = new System.Windows.Forms.LinkLabel();
+            this.txtDOB = new System.Windows.Forms.TextBox();
+            this.txtFname = new System.Windows.Forms.TextBox();
+            this.labelDOB = new System.Windows.Forms.Label();
+            this.labelFname = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,7 +142,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(523, 321);
+            this.btnRegister.Location = new System.Drawing.Point(523, 358);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 16;
@@ -149,13 +153,53 @@ namespace QuanLyGiaiDauBongDa
             // linkLogin
             // 
             this.linkLogin.AutoSize = true;
-            this.linkLogin.Location = new System.Drawing.Point(385, 359);
+            this.linkLogin.Location = new System.Drawing.Point(385, 384);
             this.linkLogin.Name = "linkLogin";
             this.linkLogin.Size = new System.Drawing.Size(214, 15);
             this.linkLogin.TabIndex = 17;
             this.linkLogin.TabStop = true;
             this.linkLogin.Text = "Already have an account? Back to login";
             this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
+            // 
+            // txtDOB
+            // 
+            this.txtDOB.Location = new System.Drawing.Point(377, 316);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.Size = new System.Drawing.Size(221, 23);
+            this.txtDOB.TabIndex = 18;
+            // 
+            // txtFname
+            // 
+            this.txtFname.Location = new System.Drawing.Point(377, 284);
+            this.txtFname.Name = "txtFname";
+            this.txtFname.Size = new System.Drawing.Size(221, 23);
+            this.txtFname.TabIndex = 19;
+            // 
+            // labelDOB
+            // 
+            this.labelDOB.AccessibleName = "label1";
+            this.labelDOB.AutoSize = true;
+            this.labelDOB.BackColor = System.Drawing.SystemColors.Control;
+            this.labelDOB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelDOB.Location = new System.Drawing.Point(217, 316);
+            this.labelDOB.Name = "labelDOB";
+            this.labelDOB.Padding = new System.Windows.Forms.Padding(4);
+            this.labelDOB.Size = new System.Drawing.Size(71, 23);
+            this.labelDOB.TabIndex = 21;
+            this.labelDOB.Text = "Ngày sinh:";
+            // 
+            // labelFname
+            // 
+            this.labelFname.AccessibleName = "label1";
+            this.labelFname.AutoSize = true;
+            this.labelFname.BackColor = System.Drawing.SystemColors.Control;
+            this.labelFname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelFname.Location = new System.Drawing.Point(217, 287);
+            this.labelFname.Name = "labelFname";
+            this.labelFname.Padding = new System.Windows.Forms.Padding(4);
+            this.labelFname.Size = new System.Drawing.Size(79, 23);
+            this.labelFname.TabIndex = 22;
+            this.labelFname.Text = "Tên đầy đủ:";
             // 
             // FrmRegister
             // 
@@ -164,6 +208,10 @@ namespace QuanLyGiaiDauBongDa
             this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.LoginBackground1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelFname);
+            this.Controls.Add(this.labelDOB);
+            this.Controls.Add(this.txtFname);
+            this.Controls.Add(this.txtDOB);
             this.Controls.Add(this.linkLogin);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtConfirmPassword);
@@ -196,5 +244,10 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.LinkLabel linkLogin;
+        private System.Windows.Forms.TextBox txtDOB;
+        private System.Windows.Forms.TextBox txtFname;
+       
+        private System.Windows.Forms.Label labelDOB;
+        private System.Windows.Forms.Label labelFname;
     }
 }
