@@ -57,5 +57,46 @@ namespace QuanLyGiaiDauBongDa.DBContext
             }
             return accounts;
         }
+        public int CreateAccount(Account account)
+        {
+            int numRow = 0;
+            connection = new SqlConnection(GetConnectionString());
+            string sql = "Insert into Account values(@account_id,@full_name,@username,@password,@email,@dob)";
+            command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@account_id", account.accountID);
+            command.Parameters.AddWithValue("@full_name", account.fullName);
+            command.Parameters.AddWithValue("@username", account.userName);
+            command.Parameters.AddWithValue("@password", account.passWord);
+            command.Parameters.AddWithValue("@email", account.email);
+            command.Parameters.AddWithValue("@dob", account.dob);
+            try
+            {
+                connection.Open();
+                numRow = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return numRow;
+        }
+        internal bool CheckExistAccount(string userName)
+        {
+            bool isExist = true;
+            List<Account> accounts = new AccountDAO().GetAccounts();
+            foreach (var a in accounts)
+            {
+                if (a.userName.Trim().Equals(userName))
+                {
+                    isExist = false;
+                }
+            }
+            return isExist;
+        }
     }
 }
