@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaiDauBongDa.DBContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,11 +21,30 @@ namespace QuanLyGiaiDauBongDa
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
+            if (ValidateInfomation())
+            {
+                if(new AccountDAO().CheckExistAccount(txtUsername.Text.Trim())==false)
+                {
+                    Account account = new Account()
+                    {
+                        userName = txtUsername.Text.Trim(),
+                        fullName = txtFname.Text.Trim(),
+                        email = txtEmail.Text.Trim(),
+                        passWord = txtPassword.Text,
+                        dob = DateTime.Parse(txtDOB.Text)
+                    };
+                    if(new AccountDAO().CreateAccount(account) > 0)
+                    {
+                        MessageBox.Show("Tạo tài khoản thành công");
+                        FrmLogin frmLogin = new FrmLogin();
+                        this.Hide();
+                        frmLogin.ShowDialog();
+                    }
 
-            FrmLogin frmLogin = new FrmLogin();
-            this.Hide();
-            frmLogin.ShowDialog();
+                }
+            }
+
+            
             
         }
 
