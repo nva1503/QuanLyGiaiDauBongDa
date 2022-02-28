@@ -11,7 +11,7 @@ namespace QuanLyGiaiDauBongDa.DBContext
 {
     internal class Account
     {
-        public int accountID { get; set; }
+       
         public string fullName { get; set; }
         public string userName { get; set; }
         public string passWord { get; set; }
@@ -35,9 +35,8 @@ namespace QuanLyGiaiDauBongDa.DBContext
                     {
                         accounts.Add(new Account
                         {
-                            accountID = reader.GetInt32("account_id"),
-                            fullName=reader.GetString("full_name"),
-                            userName=reader.GetString("username"),
+                            userName = reader.GetString("username"),
+                            fullName =reader.GetString("full_name"),                         
                             passWord=reader.GetString("password"),
                             email=reader.GetString("email"),
                             dob=reader.GetDateTime("dob")
@@ -61,11 +60,10 @@ namespace QuanLyGiaiDauBongDa.DBContext
         {
             int numRow = 0;
             connection = new SqlConnection(GetConnectionString());
-            string sql = "Insert into Account values(@account_id,@full_name,@username,@password,@email,@dob)";
+            string sql = "Insert into Account values(@username,@full_name,@password,@email,@dob)";
             command = new SqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@account_id", account.accountID);
-            command.Parameters.AddWithValue("@full_name", account.fullName);
             command.Parameters.AddWithValue("@username", account.userName);
+            command.Parameters.AddWithValue("@full_name", account.fullName);       
             command.Parameters.AddWithValue("@password", account.passWord);
             command.Parameters.AddWithValue("@email", account.email);
             command.Parameters.AddWithValue("@dob", account.dob);
