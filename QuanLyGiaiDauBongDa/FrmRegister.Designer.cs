@@ -184,9 +184,9 @@ namespace QuanLyGiaiDauBongDa
             this.labelDOB.Location = new System.Drawing.Point(217, 316);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Padding = new System.Windows.Forms.Padding(4);
-            this.labelDOB.Size = new System.Drawing.Size(71, 23);
+            this.labelDOB.Size = new System.Drawing.Size(149, 23);
             this.labelDOB.TabIndex = 21;
-            this.labelDOB.Text = "Ngày sinh:";
+            this.labelDOB.Text = "Ngày sinh(yyyy/MM/dd):";
             // 
             // labelFname
             // 

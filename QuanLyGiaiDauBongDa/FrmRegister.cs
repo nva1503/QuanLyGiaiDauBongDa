@@ -23,7 +23,12 @@ namespace QuanLyGiaiDauBongDa
         {
             if (ValidateInfomation())
             {
-                if(new AccountDAO().CheckExistAccount(txtUsername.Text.Trim())==false)
+                bool isExist = new AccountDAO().CheckExistAccount(txtUsername.Text.Trim());
+                if (isExist)
+                {
+                    MessageBox.Show("Tên đăng nhập đã tồn tại !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
                 {
                     Account account = new Account()
                     {
@@ -69,6 +74,10 @@ namespace QuanLyGiaiDauBongDa
             }
            else if (!txtPassword.Text.Equals(txtConfirmPassword.Text)){            
                 mess += "Xác nhận mật khẩu không trùng với mật khẩu";
+            }
+            else if(!Regex.IsMatch(txtEmail.Text.Trim(), @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +@"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" + @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+            {
+                mess += "Email không hợp lệ ";
             }
             if (mess.Equals(""))
                 return true;

@@ -85,13 +85,13 @@ namespace QuanLyGiaiDauBongDa.DBContext
         }
         internal bool CheckExistAccount(string userName)
         {
-            bool isExist = true;
+            bool isExist = false;
             List<Account> accounts = new AccountDAO().GetAccounts();
             foreach (var a in accounts)
             {
                 if (a.userName.Trim().Equals(userName))
                 {
-                    isExist = false;
+                    isExist = true;
                 }
             }
             return isExist;
