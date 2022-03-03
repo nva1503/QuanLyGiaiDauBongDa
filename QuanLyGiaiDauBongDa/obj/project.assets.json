@@ -2579,19 +2579,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\Git\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
+      "projectUniqueName": "E:\\Kỳ 5\\PRN211 Programming with Dotnet\\Project\\Code trên Git\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
       "projectName": "QuanLyGiaiDauBongDa",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\Git\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\Git\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\obj\\",
+      "projectPath": "E:\\Kỳ 5\\PRN211 Programming with Dotnet\\Project\\Code trên Git\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "E:\\Kỳ 5\\PRN211 Programming with Dotnet\\Project\\Code trên Git\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2644,7 +2644,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
