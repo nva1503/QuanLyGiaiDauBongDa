@@ -194,7 +194,6 @@ E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBon
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.csproj.AssemblyReference.cache
-E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmDanhSachDoiBong.resources
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmHomePage.resources
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmLogin.resources
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmRegister.resources
@@ -209,3 +208,4 @@ E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBon
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\ref\QuanLyGiaiDauBongDa.dll
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.pdb
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.genruntimeconfig.cache
+E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmDanhSachClub.resources

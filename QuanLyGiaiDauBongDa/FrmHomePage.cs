@@ -71,5 +71,14 @@ namespace QuanLyGiaiDauBongDa
         {
              
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FrmDanhSachClub frmDanhSachDoiBong = new FrmDanhSachClub();
+            this.Hide();
+            frmDanhSachDoiBong.Show();
+            this.Show();
+
+        }
     }
 }
