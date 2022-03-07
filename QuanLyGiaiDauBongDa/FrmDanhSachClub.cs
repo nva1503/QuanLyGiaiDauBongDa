@@ -22,18 +22,24 @@ namespace QuanLyGiaiDauBongDa
         public void LoadList()
         {
             var clubs = context.Clubs.Include(c => c.Country).Include(x => x.Stadium).ToList();
-            txtYear.DataBindings.Clear();
-            txtAddress.DataBindings.Clear();
-            txtCity.DataBindings.Clear();
-            txtCountry.DataBindings.Clear();
-            txtStadium.DataBindings.Clear();
-            txtYear.DataBindings.Add("Text", clubs, "YearCreated");
-            txtAddress.DataBindings.Add("Text", clubs, "Address");
-            txtCity.DataBindings.Add("Text", clubs, "City");
-            txtCountry.DataBindings.Add("Text", clubs, "CountryId");
-            txtStadium.DataBindings.Add("Text", clubs, "StadiumId");
+            label7.DataBindings.Clear();
+            label8.DataBindings.Clear();
+            label9.DataBindings.Clear();
+            label10.DataBindings.Clear();
+            label11.DataBindings.Clear();
+            label7.DataBindings.Add("Text", clubs, "YearCreated");
+            label8.DataBindings.Add("Text", clubs, "Address");
+            label9.DataBindings.Add("Text", clubs, "City");
+            label10.DataBindings.Add("Text", clubs, "CountryId");
+            label11.DataBindings.Add("Text", clubs, "StadiumId");
             labelNameClub.DataBindings.Add("Text", clubs, "Name");
-            picLogo.ImageLocation = "./logo.png"; 
+            picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\mu.png");
+            //var binding = new Binding("Text", clubs, "LogoUrl");
+            //binding.Format += delegate (object sentFrom, ConvertEventArgs convertEventArgs)
+            //{
+            //    convertEventArgs.Value = @"..\..\..\Resources\" + convertEventArgs.Value;
+            //};
+            //picLogo.BackgroundImage = Image.FromFile(binding.DataSource.ToString());
             dgvClub.DataSource = clubs;
         }
 
@@ -47,6 +53,11 @@ namespace QuanLyGiaiDauBongDa
             {
                 MessageBox.Show(ex.Message, "Thông Báo");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
