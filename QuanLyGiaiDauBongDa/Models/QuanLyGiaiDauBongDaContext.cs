@@ -37,7 +37,7 @@ namespace QuanLyGiaiDauBongDa.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("server=DESKTOP-06THPCQ\\SQLEXPRESS;database=QuanLyGiaiDauBongDa;uid=sa;pwd=sa;TrustServerCertificate=True");
             }
         }
@@ -100,6 +100,9 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasConstraintName("FK_Card_Player");
             });
 
+            //modelBuilder.Entity<Club>().HasKey(cd => new { cd.ClubId, cd.CountryId });
+
+
             modelBuilder.Entity<Club>(entity =>
             {
                 entity.ToTable("Club");
@@ -140,6 +143,8 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasForeignKey(d => d.StadiumId)
                     .HasConstraintName("FK_Club_Stadiun");
             });
+
+
 
             modelBuilder.Entity<Country>(entity =>
             {
