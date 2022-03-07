@@ -60,6 +60,7 @@ namespace QuanLyGiaiDauBongDa
             this.dgvClub.RowTemplate.Height = 29;
             this.dgvClub.Size = new System.Drawing.Size(960, 419);
             this.dgvClub.TabIndex = 0;
+            this.dgvClub.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClub_CellClick);
             // 
             // button1
             // 

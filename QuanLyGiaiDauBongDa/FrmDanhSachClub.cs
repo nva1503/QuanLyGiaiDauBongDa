@@ -21,7 +21,9 @@ namespace QuanLyGiaiDauBongDa
         QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
         public void LoadList()
         {
-            var clubs = context.Clubs.Include(c => c.Country).Include(x => x.Stadium).ToList();
+            //Select data clubs include country,  tables
+            var clubs = context.Clubs.Include(x => x.Stadium).Include(y => y.Country).ToList();
+                        
             label7.DataBindings.Clear();
             label8.DataBindings.Clear();
             label9.DataBindings.Clear();
@@ -34,12 +36,7 @@ namespace QuanLyGiaiDauBongDa
             label11.DataBindings.Add("Text", clubs, "StadiumId");
             labelNameClub.DataBindings.Add("Text", clubs, "Name");
             picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\mu.png");
-            //var binding = new Binding("Text", clubs, "LogoUrl");
-            //binding.Format += delegate (object sentFrom, ConvertEventArgs convertEventArgs)
-            //{
-            //    convertEventArgs.Value = @"..\..\..\Resources\" + convertEventArgs.Value;
-            //};
-            //picLogo.BackgroundImage = Image.FromFile(binding.DataSource.ToString());
+
             dgvClub.DataSource = clubs;
         }
 
@@ -57,6 +54,12 @@ namespace QuanLyGiaiDauBongDa
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvClub_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + dgvClub.CurrentRow.Cells["LogoUrl"].Value.ToString());
 
         }
     }
