@@ -42,11 +42,11 @@ namespace QuanLyGiaiDauBongDa
             this.txtNameClub = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.cbCountry = new System.Windows.Forms.ComboBox();
             this.cbStadium = new System.Windows.Forms.ComboBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -161,6 +161,15 @@ namespace QuanLyGiaiDauBongDa
             this.panel1.Size = new System.Drawing.Size(223, 209);
             this.panel1.TabIndex = 37;
             // 
+            // picLogo
+            // 
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picLogo.Location = new System.Drawing.Point(3, 3);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(215, 201);
+            this.picLogo.TabIndex = 43;
+            this.picLogo.TabStop = false;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(555, 354);
@@ -197,17 +206,9 @@ namespace QuanLyGiaiDauBongDa
             this.cbStadium.Size = new System.Drawing.Size(262, 28);
             this.cbStadium.TabIndex = 42;
             // 
-            // picLogo
-            // 
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picLogo.Location = new System.Drawing.Point(3, 3);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(215, 201);
-            this.picLogo.TabIndex = 43;
-            this.picLogo.TabStop = false;
-            // 
             // FrmEditClub
             // 
+            this.AcceptButton = this.button2;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 433);

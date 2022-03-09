@@ -46,6 +46,7 @@ namespace QuanLyGiaiDauBongDa
             label9.DataBindings.Clear();
             label10.DataBindings.Clear();
             label11.DataBindings.Clear();
+            labelNameClub.DataBindings.Clear();
             label7.DataBindings.Add("Text", clubs, "YearCreated");
             label8.DataBindings.Add("Text", clubs, "Address");
             label9.DataBindings.Add("Text", clubs, "City");
@@ -56,6 +57,9 @@ namespace QuanLyGiaiDauBongDa
             label8.AutoSize = true;
             label11.AutoSize = true;
             dgvClub.DataSource = clubs;
+
+            dgvClub.Update();
+            dgvClub.Refresh();
 
             txtTotalNumber.Text = clubs.Count.ToString();
         }
@@ -77,7 +81,11 @@ namespace QuanLyGiaiDauBongDa
             var cub_id = (int)dgvClub.CurrentRow.Cells["ClubId"].Value;
             FrmEditClub frmEditClub = new FrmEditClub(cub_id);
             this.Hide();
-            frmEditClub.ShowDialog();
+            if (frmEditClub.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                dgvClub.Refresh();
+                this.LoadList();
+            }
             this.Show();
         }
 
@@ -99,7 +107,7 @@ namespace QuanLyGiaiDauBongDa
             try
             {
                 var club = context.Clubs.SingleOrDefault(s => s.ClubId == (int)dgvClub.CurrentRow.Cells["ClubId"].Value);
-                if(MessageBox.Show("Are you want to delete?","Thông báo?",MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Are you want to delete?", "Thông báo?", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     context.Clubs.Remove(club);
                     int count = context.SaveChanges();
@@ -115,6 +123,18 @@ namespace QuanLyGiaiDauBongDa
                 MessageBox.Show(ex.Message);
                 throw;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmAddClub frmAddClub = new FrmAddClub();
+            this.Hide();
+            if (frmAddClub.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                dgvClub.Refresh();
+                this.LoadList();
+            }
+            this.Show();
         }
     }
 }

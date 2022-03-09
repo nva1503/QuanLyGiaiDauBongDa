@@ -69,7 +69,10 @@ namespace QuanLyGiaiDauBongDa
                     club.StadiumId = (int)cbStadium.SelectedValue;
                     club.CountryId = (int)cbCountry.SelectedValue;
                     club.LogoUrl = System.IO.Path.GetFileName(picLogo.ImageLocation);
+                    FrmDanhSachClub frmDanhSachClub = (FrmDanhSachClub)Application.OpenForms["FrmDanhSachClub"];
+                    frmDanhSachClub.LoadList();
                     context.SaveChanges();
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 }
                 this.Hide();
             }
