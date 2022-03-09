@@ -44,6 +44,7 @@ namespace QuanLyGiaiDauBongDa
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
+            this.txtTime = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -244,11 +245,22 @@ namespace QuanLyGiaiDauBongDa
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // txtTime
+            // 
+            this.txtTime.AccessibleDescription = "";
+            this.txtTime.AutoSize = true;
+            this.txtTime.Location = new System.Drawing.Point(28, 666);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(50, 20);
+            this.txtTime.TabIndex = 7;
+            this.txtTime.Text = "label3";
+            // 
             // FrmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 720);
+            this.Controls.Add(this.txtTime);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.statusStrip1);
@@ -282,5 +294,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label txtTime;
     }
 }

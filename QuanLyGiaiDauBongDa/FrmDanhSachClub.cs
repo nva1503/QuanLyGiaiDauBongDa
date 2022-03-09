@@ -40,7 +40,6 @@ namespace QuanLyGiaiDauBongDa
                              s.LogoUrl
 
                          }).ToList();
-            
 
             label7.DataBindings.Clear();
             label8.DataBindings.Clear();
@@ -57,6 +56,8 @@ namespace QuanLyGiaiDauBongDa
             label8.AutoSize = true;
             label11.AutoSize = true;
             dgvClub.DataSource = clubs;
+
+            txtTotalNumber.Text = clubs.Count.ToString();
         }
 
         private void FrmDanhSachDoiBong_Load(object sender, EventArgs e)
@@ -75,7 +76,9 @@ namespace QuanLyGiaiDauBongDa
         {
             var cub_id = (int)dgvClub.CurrentRow.Cells["ClubId"].Value;
             FrmEditClub frmEditClub = new FrmEditClub(cub_id);
-            frmEditClub.Show();
+            this.Hide();
+            frmEditClub.ShowDialog();
+            this.Show();
         }
 
         private void dgvClub_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -83,6 +86,34 @@ namespace QuanLyGiaiDauBongDa
             if (dgvClub.CurrentRow.Cells["LogoUrl"].Value != null)
             {
                 picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + dgvClub.CurrentRow.Cells["LogoUrl"].Value.ToString());
+            }
+        }
+
+        private void txtTotalNumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var club = context.Clubs.SingleOrDefault(s => s.ClubId == (int)dgvClub.CurrentRow.Cells["ClubId"].Value);
+                if(MessageBox.Show("Are you want to delete?","Thông báo?",MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    context.Clubs.Remove(club);
+                    int count = context.SaveChanges();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Delete success");
+                    }
+                }
+                LoadList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
             }
         }
     }

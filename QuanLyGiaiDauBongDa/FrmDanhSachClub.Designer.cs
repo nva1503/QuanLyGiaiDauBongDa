@@ -47,6 +47,8 @@ namespace QuanLyGiaiDauBongDa
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtTotalNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -205,6 +207,7 @@ namespace QuanLyGiaiDauBongDa
             this.button2.TabIndex = 23;
             this.button2.Text = " Xóa Club";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -216,11 +219,32 @@ namespace QuanLyGiaiDauBongDa
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(560, 69);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 20);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Tổng số đội bóng:";
+            // 
+            // txtTotalNumber
+            // 
+            this.txtTotalNumber.AutoSize = true;
+            this.txtTotalNumber.Location = new System.Drawing.Point(696, 69);
+            this.txtTotalNumber.Name = "txtTotalNumber";
+            this.txtTotalNumber.Size = new System.Drawing.Size(23, 20);
+            this.txtTotalNumber.TabIndex = 26;
+            this.txtTotalNumber.Text = "xx";
+            this.txtTotalNumber.Click += new System.EventHandler(this.txtTotalNumber_Click);
+            // 
             // FrmDanhSachClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 673);
+            this.Controls.Add(this.txtTotalNumber);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
@@ -269,5 +293,7 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label txtTotalNumber;
     }
 }

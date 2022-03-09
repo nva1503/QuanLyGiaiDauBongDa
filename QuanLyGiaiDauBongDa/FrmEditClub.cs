@@ -56,20 +56,22 @@ namespace QuanLyGiaiDauBongDa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var club = new Club();
-            club.Name = txtNameClub.Text.ToUpper().Trim();
-            club.YearCreated = txtYear.Text.Trim();
-            club.Address = txtAddress.Text.Trim();
-            club.City = txtCity.Text.Trim();
-            club.StadiumId = (int)cbStadium.SelectedValue;
-            club.CountryId = (int)cbCountry.SelectedValue;
-            club.LogoUrl = System.IO.Path.GetFileName(picLogo.ImageLocation);
-            DialogResult result = MessageBox.Show("Are you want to update data?", "Thông Báo", MessageBoxButtons.OKCancel);
-
+            var club = context.Clubs.SingleOrDefault(s => s.ClubId == club_id);
             try
             {
-                context.Clubs.Update(club);
-                context.SaveChanges();
+                var result = MessageBox.Show("Are you want to update data?", "Thông Báo", MessageBoxButtons.OKCancel);
+                if (club != null && result == DialogResult.OK)
+                {
+                    club.Name = txtNameClub.Text.ToUpper().Trim();
+                    club.YearCreated = txtYear.Text.Trim();
+                    club.Address = txtAddress.Text.Trim();
+                    club.City = txtCity.Text.Trim();
+                    club.StadiumId = (int)cbStadium.SelectedValue;
+                    club.CountryId = (int)cbCountry.SelectedValue;
+                    club.LogoUrl = System.IO.Path.GetFileName(picLogo.ImageLocation);
+                    context.SaveChanges();
+                }
+                this.Hide();
             }
             catch (Exception ex)
             {

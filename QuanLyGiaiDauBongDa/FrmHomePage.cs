@@ -35,6 +35,7 @@ namespace QuanLyGiaiDauBongDa
         private void FrmHomePage_Load(object sender, EventArgs e)
         {
             statusStrip1.Text = "Welcome, Admin! Have a nice Day";
+            txtTime.Text = DateTime.Now.ToString();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
