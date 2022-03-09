@@ -45,6 +45,8 @@ namespace QuanLyGiaiDauBongDa
             this.txtFname = new System.Windows.Forms.TextBox();
             this.labelDOB = new System.Windows.Forms.Label();
             this.labelFname = new System.Windows.Forms.Label();
+            this.verifyEmail = new System.Windows.Forms.LinkLabel();
+            this.txtCaptcha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,7 +94,7 @@ namespace QuanLyGiaiDauBongDa
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(217, 218);
+            this.label3.Location = new System.Drawing.Point(217, 258);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(4);
             this.label3.Size = new System.Drawing.Size(70, 23);
@@ -105,7 +107,7 @@ namespace QuanLyGiaiDauBongDa
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(217, 255);
+            this.label4.Location = new System.Drawing.Point(217, 287);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(4);
             this.label4.Size = new System.Drawing.Size(123, 23);
@@ -128,21 +130,21 @@ namespace QuanLyGiaiDauBongDa
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(378, 217);
+            this.txtPassword.Location = new System.Drawing.Point(377, 258);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(221, 23);
             this.txtPassword.TabIndex = 14;
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(378, 255);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(377, 287);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(221, 23);
             this.txtConfirmPassword.TabIndex = 15;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(523, 358);
+            this.btnRegister.Location = new System.Drawing.Point(524, 377);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 16;
@@ -153,7 +155,7 @@ namespace QuanLyGiaiDauBongDa
             // linkLogin
             // 
             this.linkLogin.AutoSize = true;
-            this.linkLogin.Location = new System.Drawing.Point(385, 384);
+            this.linkLogin.Location = new System.Drawing.Point(385, 403);
             this.linkLogin.Name = "linkLogin";
             this.linkLogin.Size = new System.Drawing.Size(214, 15);
             this.linkLogin.TabIndex = 17;
@@ -163,14 +165,14 @@ namespace QuanLyGiaiDauBongDa
             // 
             // txtDOB
             // 
-            this.txtDOB.Location = new System.Drawing.Point(377, 316);
+            this.txtDOB.Location = new System.Drawing.Point(377, 348);
             this.txtDOB.Name = "txtDOB";
             this.txtDOB.Size = new System.Drawing.Size(221, 23);
             this.txtDOB.TabIndex = 18;
             // 
             // txtFname
             // 
-            this.txtFname.Location = new System.Drawing.Point(377, 284);
+            this.txtFname.Location = new System.Drawing.Point(377, 319);
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(221, 23);
             this.txtFname.TabIndex = 19;
@@ -181,7 +183,7 @@ namespace QuanLyGiaiDauBongDa
             this.labelDOB.AutoSize = true;
             this.labelDOB.BackColor = System.Drawing.SystemColors.Control;
             this.labelDOB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelDOB.Location = new System.Drawing.Point(217, 316);
+            this.labelDOB.Location = new System.Drawing.Point(217, 348);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Padding = new System.Windows.Forms.Padding(4);
             this.labelDOB.Size = new System.Drawing.Size(149, 23);
@@ -194,12 +196,31 @@ namespace QuanLyGiaiDauBongDa
             this.labelFname.AutoSize = true;
             this.labelFname.BackColor = System.Drawing.SystemColors.Control;
             this.labelFname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelFname.Location = new System.Drawing.Point(217, 287);
+            this.labelFname.Location = new System.Drawing.Point(217, 319);
             this.labelFname.Name = "labelFname";
             this.labelFname.Padding = new System.Windows.Forms.Padding(4);
             this.labelFname.Size = new System.Drawing.Size(79, 23);
             this.labelFname.TabIndex = 22;
             this.labelFname.Text = "Tên đầy đủ:";
+            // 
+            // verifyEmail
+            // 
+            this.verifyEmail.AutoSize = true;
+            this.verifyEmail.Location = new System.Drawing.Point(605, 193);
+            this.verifyEmail.Name = "verifyEmail";
+            this.verifyEmail.Size = new System.Drawing.Size(45, 15);
+            this.verifyEmail.TabIndex = 23;
+            this.verifyEmail.TabStop = true;
+            this.verifyEmail.Text = "Gửi mã";
+            this.verifyEmail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.verifyEmail_LinkClicked);
+            // 
+            // txtCaptcha
+            // 
+            this.txtCaptcha.Location = new System.Drawing.Point(378, 214);
+            this.txtCaptcha.Name = "txtCaptcha";
+            this.txtCaptcha.Size = new System.Drawing.Size(85, 23);
+            this.txtCaptcha.TabIndex = 24;
+            this.txtCaptcha.Text = " Nhập Captcha ";
             // 
             // FrmRegister
             // 
@@ -208,6 +229,8 @@ namespace QuanLyGiaiDauBongDa
             this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.LoginBackground1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCaptcha);
+            this.Controls.Add(this.verifyEmail);
             this.Controls.Add(this.labelFname);
             this.Controls.Add(this.labelDOB);
             this.Controls.Add(this.txtFname);
@@ -249,5 +272,7 @@ namespace QuanLyGiaiDauBongDa
        
         private System.Windows.Forms.Label labelDOB;
         private System.Windows.Forms.Label labelFname;
+        private System.Windows.Forms.LinkLabel verifyEmail;
+        private System.Windows.Forms.TextBox txtCaptcha;
     }
 }
