@@ -1,0 +1,87 @@
+﻿using QuanLyGiaiDauBongDa.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QuanLyGiaiDauBongDa
+{
+    public partial class FrmEditClub : Form
+    {
+        public int club_id;
+        public FrmEditClub(int id)
+        {
+            club_id = id;
+            InitializeComponent();
+        }
+        QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
+
+        private void labelNameClub_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void FrmEditClub_Load(object sender, EventArgs e)
+        {
+            var club = context.Clubs.Where(s => s.ClubId == club_id).FirstOrDefault();
+            txtNameClub.Text = club.Name;
+            txtYear.Text = club.YearCreated;
+            txtAddress.Text = club.Address;
+            txtCity.Text = club.City;
+            cbStadium.DataSource = context.Stadiuns.ToList();
+            cbStadium.DisplayMember = "Name";
+            cbStadium.ValueMember = "StadiumId";
+            cbStadium.SelectedValue = club.StadiumId;
+
+            cbCountry.DataSource = context.Countries.ToList();
+            cbCountry.DisplayMember = "Name";
+            cbCountry.ValueMember = "CountryId";
+            cbCountry.SelectedValue = club.CountryId;
+            if (club.LogoUrl != null)
+            {
+                picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + club.LogoUrl);
+            }
+            else
+            {
+                picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\logo.png");
+            }
+            txtYear.Text = club.YearCreated;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var club = new Club();
+            club.Name = txtNameClub.Text.ToUpper().Trim();
+            club.YearCreated = txtYear.Text.Trim();
+            club.Address = txtAddress.Text.Trim();
+            club.City = txtCity.Text.Trim();
+            club.StadiumId = (int)cbStadium.SelectedValue;
+            club.CountryId = (int)cbCountry.SelectedValue;
+            club.LogoUrl = System.IO.Path.GetFileName(picLogo.ImageLocation);
+            DialogResult result = MessageBox.Show("Are you want to update data?", "Thông Báo", MessageBoxButtons.OKCancel);
+
+            try
+            {
+                context.Clubs.Update(club);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông Báo");
+                throw;
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

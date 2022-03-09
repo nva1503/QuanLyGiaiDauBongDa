@@ -48,10 +48,10 @@ namespace QuanLyGiaiDauBongDa
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(152, 159);
+            this.label1.Location = new System.Drawing.Point(174, 212);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(4);
-            this.label1.Size = new System.Drawing.Size(102, 23);
+            this.label1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label1.Size = new System.Drawing.Size(131, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Đăng Nhập:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -59,10 +59,9 @@ namespace QuanLyGiaiDauBongDa
             // btnLogin
             // 
             this.btnLogin.AccessibleName = "btnLogin";
-            this.btnLogin.Location = new System.Drawing.Point(312, 275);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(357, 367);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(82, 22);
+            this.btnLogin.Size = new System.Drawing.Size(94, 29);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -72,10 +71,10 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(183, 199);
+            this.label2.Location = new System.Drawing.Point(209, 265);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(4);
-            this.label2.Size = new System.Drawing.Size(71, 23);
+            this.label2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label2.Size = new System.Drawing.Size(91, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật Khẩu:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -83,28 +82,25 @@ namespace QuanLyGiaiDauBongDa
             // txtUsername
             // 
             this.txtUsername.AccessibleName = "txtUsername";
-            this.txtUsername.Location = new System.Drawing.Point(273, 159);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Location = new System.Drawing.Point(312, 212);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(241, 23);
+            this.txtUsername.Size = new System.Drawing.Size(275, 27);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
             // 
             this.txtPassword.AccessibleName = "txtPassword";
-            this.txtPassword.Location = new System.Drawing.Point(273, 199);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(312, 265);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(241, 23);
+            this.txtPassword.Size = new System.Drawing.Size(275, 27);
             this.txtPassword.TabIndex = 2;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(432, 275);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(494, 367);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(82, 22);
+            this.btnExit.Size = new System.Drawing.Size(94, 29);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -114,10 +110,9 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(152, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(174, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(382, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(437, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -127,9 +122,9 @@ namespace QuanLyGiaiDauBongDa
             this.linkForgotPassword.AutoSize = true;
             this.linkForgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.linkForgotPassword.LinkColor = System.Drawing.Color.Red;
-            this.linkForgotPassword.Location = new System.Drawing.Point(417, 224);
+            this.linkForgotPassword.Location = new System.Drawing.Point(477, 299);
             this.linkForgotPassword.Name = "linkForgotPassword";
-            this.linkForgotPassword.Size = new System.Drawing.Size(97, 15);
+            this.linkForgotPassword.Size = new System.Drawing.Size(120, 20);
             this.linkForgotPassword.TabIndex = 6;
             this.linkForgotPassword.TabStop = true;
             this.linkForgotPassword.Text = "Quên mật khẩu ?";
@@ -139,9 +134,9 @@ namespace QuanLyGiaiDauBongDa
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel1.Location = new System.Drawing.Point(464, 248);
+            this.linkLabel1.Location = new System.Drawing.Point(530, 331);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(50, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(63, 20);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Đăng ký";
@@ -149,11 +144,11 @@ namespace QuanLyGiaiDauBongDa
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.LoginBackground1;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(760, 411);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(869, 501);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkForgotPassword);
             this.Controls.Add(this.pictureBox1);
@@ -163,7 +158,6 @@ namespace QuanLyGiaiDauBongDa
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";

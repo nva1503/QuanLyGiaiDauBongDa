@@ -73,13 +73,17 @@ namespace QuanLyGiaiDauBongDa
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            var cub_id = (int)dgvClub.CurrentRow.Cells["ClubId"].Value;
+            FrmEditClub frmEditClub = new FrmEditClub(cub_id);
+            frmEditClub.Show();
         }
 
         private void dgvClub_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + dgvClub.CurrentRow.Cells["LogoUrl"].Value.ToString());
-
+            if (dgvClub.CurrentRow.Cells["LogoUrl"].Value != null)
+            {
+                picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + dgvClub.CurrentRow.Cells["LogoUrl"].Value.ToString());
+            }
         }
     }
 }
