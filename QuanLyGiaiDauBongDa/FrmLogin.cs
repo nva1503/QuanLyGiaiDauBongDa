@@ -1,4 +1,5 @@
-﻿using QuanLyGiaiDauBongDa.DBContext;
+﻿
+using QuanLyGiaiDauBongDa.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace QuanLyGiaiDauBongDa
 {
     public partial class FrmLogin : Form
     {
+        QuanLyGiaiDauBongDaContext _db = new QuanLyGiaiDauBongDaContext();
         public FrmLogin()
         {
             InitializeComponent();
@@ -23,26 +25,19 @@ namespace QuanLyGiaiDauBongDa
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             
+
             try
             {
-                List<Account> accounts = new AccountDAO().GetAccounts();
+                var accounts = (from a in _db.Accounts select new { a.Username,a.Password }).ToList();
                 bool isLogin = false;
                 foreach (var a in accounts)
                 {
-                    if (txtUsername.Text == a.userName && txtPassword.Text == a.passWord)
+                    if (txtUsername.Text.Trim().Equals(a.Username) && txtPassword.Text.Trim().Equals(a.Password))
                     {
                         isLogin = true;
                     }
