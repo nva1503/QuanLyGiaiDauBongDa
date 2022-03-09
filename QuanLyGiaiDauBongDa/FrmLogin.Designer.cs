@@ -54,7 +54,7 @@ namespace QuanLyGiaiDauBongDa
             this.label1.Size = new System.Drawing.Size(131, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Đăng Nhập:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+           
             // 
             // btnLogin
             // 
@@ -77,7 +77,7 @@ namespace QuanLyGiaiDauBongDa
             this.label2.Size = new System.Drawing.Size(91, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật Khẩu:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            
             // 
             // txtUsername
             // 
