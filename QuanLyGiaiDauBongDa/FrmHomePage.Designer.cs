@@ -45,6 +45,7 @@ namespace QuanLyGiaiDauBongDa
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.txtTime = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -185,6 +186,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -244,6 +246,7 @@ namespace QuanLyGiaiDauBongDa
             this.button7.Text = "Log Out";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // txtTime
             // 
@@ -254,6 +257,16 @@ namespace QuanLyGiaiDauBongDa
             this.txtTime.Size = new System.Drawing.Size(50, 20);
             this.txtTime.TabIndex = 7;
             this.txtTime.Text = "label3";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(858, 39);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(94, 29);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "About us";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // FrmHomePage
             // 
@@ -295,5 +308,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label txtTime;
+        private System.Windows.Forms.Button button9;
     }
 }

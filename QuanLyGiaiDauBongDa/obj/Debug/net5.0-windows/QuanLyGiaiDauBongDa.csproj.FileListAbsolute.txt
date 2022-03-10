@@ -211,3 +211,4 @@ E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBon
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.csproj.AssemblyReference.cache
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmEditClub.resources
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmAddClub.resources
+E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmAboutUs.resources

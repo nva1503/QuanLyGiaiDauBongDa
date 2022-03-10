@@ -49,6 +49,8 @@ namespace QuanLyGiaiDauBongDa
             this.button3 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTotalNumber = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -239,11 +241,30 @@ namespace QuanLyGiaiDauBongDa
             this.txtTotalNumber.Text = "xx";
             this.txtTotalNumber.Click += new System.EventHandler(this.txtTotalNumber_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(724, 30);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(254, 27);
+            this.txtSearch.TabIndex = 27;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(984, 29);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Tìm Kiếm";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // FrmDanhSachClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 673);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtTotalNumber);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button3);
@@ -296,5 +317,7 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label txtTotalNumber;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -19,6 +19,7 @@ namespace QuanLyGiaiDauBongDa
             InitializeComponent();
         }
         QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
+        public string search;
         public void LoadList()
         {
             //Select data clubs include country,  tables
@@ -38,8 +39,12 @@ namespace QuanLyGiaiDauBongDa
                              CountryName = m.Name,
                              StadiumName = h.Name,
                              s.LogoUrl
-
                          }).ToList();
+
+            if(search != "" && search != null)
+            {
+                clubs = clubs.FindAll(s => s.Name.ToLower().Contains(search.ToLower())).ToList();
+            }
 
             label7.DataBindings.Clear();
             label8.DataBindings.Clear();
@@ -135,6 +140,12 @@ namespace QuanLyGiaiDauBongDa
                 this.LoadList();
             }
             this.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            search = txtSearch.Text.Trim();
+            LoadList();
         }
     }
 }

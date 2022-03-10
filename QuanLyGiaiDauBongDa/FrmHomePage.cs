@@ -35,7 +35,7 @@ namespace QuanLyGiaiDauBongDa
         private void FrmHomePage_Load(object sender, EventArgs e)
         {
             statusStrip1.Text = "Welcome, Admin! Have a nice Day";
-            txtTime.Text = DateTime.Now.ToString();
+            txtTime.Text = "Time: "+ DateTime.Now.DayOfWeek.ToString();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -79,6 +79,18 @@ namespace QuanLyGiaiDauBongDa
             this.Hide();
             frmDanhSachDoiBong.Show();
             this.Show();
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
 
         }
     }
