@@ -19,13 +19,14 @@ namespace QuanLyGiaiDauBongDa
             InitializeComponent();
         }
         QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
+
         public string search;
         public void LoadList()
         {
             //Select data clubs include country,  tables
             //var clubs = (context.Clubs
             //    .Include(x => x.Stadium).Include(y => y.Country)).ToList();
-
+            context = new QuanLyGiaiDauBongDaContext();
             var clubs = (from s in context.Clubs.ToList()
                          join m in context.Countries on s.CountryId equals m.CountryId
                          join h in context.Stadiuns on s.StadiumId equals h.StadiumId
