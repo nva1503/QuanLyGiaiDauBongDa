@@ -63,26 +63,31 @@ namespace QuanLyGiaiDauBongDa
                 TextBox textBox = new TextBox();
                 textBox.Text = item.PlayDate.ToShortDateString();
                 textBox.Size = new Size(180, 20);
-                Button labelHost = new Button();
-                labelHost.AutoSize = true;
-                labelHost.Image = Image.FromFile(@"..\..\..\Resources\"+ item.Host.LogoUrl);
-                labelHost.ImageAlign = ContentAlignment.MiddleCenter;
-                labelHost.Text = item.Host.Name.ToString();
+                Button btnHost = new Button();
+                btnHost.AutoSize = true;
+                btnHost.Image = Image.FromFile(@"..\..\..\Resources\"+ item.Host.LogoUrl);
+                btnHost.ImageAlign = ContentAlignment.MiddleCenter;
+                btnHost.Text = item.Host.Name.ToString();
+                btnHost.TextAlign = ContentAlignment.BottomCenter;
 
-                Button labelGuest = new Button();
-                labelGuest.AutoSize = true;
-                labelGuest.Image = Image.FromFile(@"..\..\..\Resources\" + item.Guest.LogoUrl);
-                labelGuest.ImageAlign = ContentAlignment.TopCenter;
-                labelGuest.Text = item.Guest.Name.ToString();
 
-                panel.FlowDirection = FlowDirection.TopDown;
+                Button btnGuest = new Button();
+                btnGuest.AutoSize = true;
+                btnGuest.Image = Image.FromFile(@"..\..\..\Resources\" + item.Guest.LogoUrl);
+                btnGuest.ImageAlign = ContentAlignment.MiddleCenter;
+                btnGuest.Text = item.Guest.Name.ToString();
+                btnGuest.TextAlign = ContentAlignment.BottomCenter;
+                
+
+                panel.FlowDirection = FlowDirection.LeftToRight;
 
                 panel.Controls.Add(textBox);
-                panel.Controls.Add(labelHost);
-                panel.Controls.Add(labelGuest);
+                panel.Controls.Add(btnHost);
+                panel.Controls.Add(btnGuest);
 
 
                 flowLayoutPanel1.Controls.Add(panel);
+                flowLayoutPanel1.AutoScroll = true;
             }
         }
     }
