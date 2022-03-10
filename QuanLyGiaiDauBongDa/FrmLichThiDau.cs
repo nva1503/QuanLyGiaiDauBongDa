@@ -81,10 +81,12 @@ namespace QuanLyGiaiDauBongDa
 
                 panel.FlowDirection = FlowDirection.LeftToRight;
 
+                panel.Controls.Add(new Label() { Text = "Ngày Thi Đấu: ", AutoSize = true }); 
                 panel.Controls.Add(textBox);
                 panel.Controls.Add(btnHost);
+                panel.Controls.Add(new Label() { Text = "VS" });
                 panel.Controls.Add(btnGuest);
-
+                
 
                 flowLayoutPanel1.Controls.Add(panel);
                 flowLayoutPanel1.AutoScroll = true;
