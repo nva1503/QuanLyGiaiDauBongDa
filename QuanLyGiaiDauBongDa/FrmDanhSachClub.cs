@@ -148,5 +148,10 @@ namespace QuanLyGiaiDauBongDa
             search = txtSearch.Text.Trim();
             LoadList();
         }
+
+        private void dgvClub_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

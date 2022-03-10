@@ -65,6 +65,7 @@ namespace QuanLyGiaiDauBongDa
             this.dgvClub.Size = new System.Drawing.Size(960, 419);
             this.dgvClub.TabIndex = 0;
             this.dgvClub.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClub_CellClick);
+            this.dgvClub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClub_CellContentClick);
             // 
             // button1
             // 

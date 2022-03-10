@@ -39,13 +39,14 @@ namespace QuanLyGiaiDauBongDa
             this.button1 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.txtTime = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -123,6 +124,7 @@ namespace QuanLyGiaiDauBongDa
             this.button4.Text = "Lịch Thi Đấu";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -197,6 +199,16 @@ namespace QuanLyGiaiDauBongDa
             this.panel3.TabIndex = 5;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(858, 39);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(94, 29);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "About us";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -258,21 +270,23 @@ namespace QuanLyGiaiDauBongDa
             this.txtTime.TabIndex = 7;
             this.txtTime.Text = "label3";
             // 
-            // button9
+            // linkLabel1
             // 
-            this.button9.Location = new System.Drawing.Point(858, 39);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(94, 29);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "About us";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(704, 653);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(80, 20);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Trang Web";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FrmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 720);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel3);
@@ -309,5 +323,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label txtTime;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -51,6 +51,8 @@ namespace QuanLyGiaiDauBongDa
             {
                 picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\logo.png");
             }
+
+            txtLogo2.Text = club.LogoUrl;
             txtYear.Text = club.YearCreated;
         }
 
@@ -68,7 +70,8 @@ namespace QuanLyGiaiDauBongDa
                     club.City = txtCity.Text.Trim();
                     club.StadiumId = (int)cbStadium.SelectedValue;
                     club.CountryId = (int)cbCountry.SelectedValue;
-                    club.LogoUrl = System.IO.Path.GetFileName(picLogo.ImageLocation);
+                    //club.LogoUrl = System.IO.Path.GetFileName(picLogo.ImageLocation);
+                    club.LogoUrl = txtLogo2.Text.Trim();
                     FrmDanhSachClub frmDanhSachClub = (FrmDanhSachClub)Application.OpenForms["FrmDanhSachClub"];
                     frmDanhSachClub.LoadList();
                     context.SaveChanges();

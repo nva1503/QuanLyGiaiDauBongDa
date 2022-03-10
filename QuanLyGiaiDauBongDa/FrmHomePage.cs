@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace QuanLyGiaiDauBongDa
         private void FrmHomePage_Load(object sender, EventArgs e)
         {
             statusStrip1.Text = "Welcome, Admin! Have a nice Day";
-            txtTime.Text = "Time: "+ DateTime.Now.DayOfWeek.ToString();
+            txtTime.Text = "Hôm nay là: "+ DateTime.Now.DayOfWeek.ToString();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -92,6 +93,18 @@ namespace QuanLyGiaiDauBongDa
         private void button9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmLichThiDau FrmLichThiDau = new FrmLichThiDau();
+            this.Hide();
+            FrmLichThiDau.Show();
+            this.Show();
         }
     }
 }
