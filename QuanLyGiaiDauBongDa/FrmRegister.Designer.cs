@@ -66,39 +66,36 @@ namespace QuanLyGiaiDauBongDa
             // label1
             // 
             this.label1.AccessibleName = "label1";
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(217, 149);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(4);
-            this.label1.Size = new System.Drawing.Size(102, 23);
+            this.label1.Size = new System.Drawing.Size(123, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tên Đăng Nhập:";
             // 
             // label2
             // 
             this.label2.AccessibleName = "label1";
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(217, 185);
+            this.label2.Location = new System.Drawing.Point(217, 311);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(4);
-            this.label2.Size = new System.Drawing.Size(47, 23);
+            this.label2.Size = new System.Drawing.Size(123, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = "Email:";
             // 
             // label3
             // 
             this.label3.AccessibleName = "label1";
-            this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(217, 258);
+            this.label3.Location = new System.Drawing.Point(217, 181);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(4);
-            this.label3.Size = new System.Drawing.Size(70, 23);
+            this.label3.Size = new System.Drawing.Size(123, 23);
             this.label3.TabIndex = 9;
             this.label3.Text = "Mật khẩu:";
             // 
@@ -108,7 +105,7 @@ namespace QuanLyGiaiDauBongDa
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(217, 287);
+            this.label4.Location = new System.Drawing.Point(217, 214);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(4);
             this.label4.Size = new System.Drawing.Size(123, 23);
@@ -117,21 +114,21 @@ namespace QuanLyGiaiDauBongDa
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(378, 149);
+            this.txtUsername.Location = new System.Drawing.Point(356, 149);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(221, 23);
             this.txtUsername.TabIndex = 12;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(378, 185);
+            this.txtEmail.Location = new System.Drawing.Point(354, 311);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(221, 23);
             this.txtEmail.TabIndex = 13;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(377, 258);
+            this.txtPassword.Location = new System.Drawing.Point(355, 181);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(221, 23);
             this.txtPassword.TabIndex = 14;
@@ -139,7 +136,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(377, 287);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(356, 214);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(221, 23);
             this.txtConfirmPassword.TabIndex = 15;
@@ -147,7 +144,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(524, 377);
+            this.btnRegister.Location = new System.Drawing.Point(502, 377);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 16;
@@ -158,7 +155,7 @@ namespace QuanLyGiaiDauBongDa
             // linkLogin
             // 
             this.linkLogin.AutoSize = true;
-            this.linkLogin.Location = new System.Drawing.Point(385, 403);
+            this.linkLogin.Location = new System.Drawing.Point(363, 403);
             this.linkLogin.Name = "linkLogin";
             this.linkLogin.Size = new System.Drawing.Size(214, 15);
             this.linkLogin.TabIndex = 17;
@@ -168,7 +165,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             // txtFname
             // 
-            this.txtFname.Location = new System.Drawing.Point(377, 319);
+            this.txtFname.Location = new System.Drawing.Point(355, 246);
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(221, 23);
             this.txtFname.TabIndex = 19;
@@ -176,33 +173,31 @@ namespace QuanLyGiaiDauBongDa
             // labelDOB
             // 
             this.labelDOB.AccessibleName = "label1";
-            this.labelDOB.AutoSize = true;
             this.labelDOB.BackColor = System.Drawing.SystemColors.Control;
             this.labelDOB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelDOB.Location = new System.Drawing.Point(217, 348);
+            this.labelDOB.Location = new System.Drawing.Point(216, 279);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Padding = new System.Windows.Forms.Padding(4);
-            this.labelDOB.Size = new System.Drawing.Size(71, 23);
+            this.labelDOB.Size = new System.Drawing.Size(124, 23);
             this.labelDOB.TabIndex = 21;
             this.labelDOB.Text = "Ngày sinh:";
             // 
             // labelFname
             // 
             this.labelFname.AccessibleName = "label1";
-            this.labelFname.AutoSize = true;
             this.labelFname.BackColor = System.Drawing.SystemColors.Control;
             this.labelFname.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelFname.Location = new System.Drawing.Point(217, 319);
+            this.labelFname.Location = new System.Drawing.Point(217, 246);
             this.labelFname.Name = "labelFname";
             this.labelFname.Padding = new System.Windows.Forms.Padding(4);
-            this.labelFname.Size = new System.Drawing.Size(79, 23);
+            this.labelFname.Size = new System.Drawing.Size(123, 23);
             this.labelFname.TabIndex = 22;
             this.labelFname.Text = "Tên đầy đủ:";
             // 
             // verifyEmail
             // 
             this.verifyEmail.AutoSize = true;
-            this.verifyEmail.Location = new System.Drawing.Point(605, 193);
+            this.verifyEmail.Location = new System.Drawing.Point(581, 319);
             this.verifyEmail.Name = "verifyEmail";
             this.verifyEmail.Size = new System.Drawing.Size(45, 15);
             this.verifyEmail.TabIndex = 23;
@@ -212,14 +207,14 @@ namespace QuanLyGiaiDauBongDa
             // 
             // txtCaptcha
             // 
-            this.txtCaptcha.Location = new System.Drawing.Point(443, 220);
+            this.txtCaptcha.Location = new System.Drawing.Point(422, 340);
             this.txtCaptcha.Name = "txtCaptcha";
             this.txtCaptcha.Size = new System.Drawing.Size(85, 23);
             this.txtCaptcha.TabIndex = 24;
             // 
             // dateTimePickerDOB
             // 
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(378, 348);
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(355, 279);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(220, 23);
             this.dateTimePickerDOB.TabIndex = 25;
@@ -230,7 +225,7 @@ namespace QuanLyGiaiDauBongDa
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(378, 220);
+            this.label5.Location = new System.Drawing.Point(354, 340);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(4);
             this.label5.Size = new System.Drawing.Size(62, 23);
