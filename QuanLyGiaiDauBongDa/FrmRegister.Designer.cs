@@ -135,6 +135,7 @@ namespace QuanLyGiaiDauBongDa
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(221, 23);
             this.txtPassword.TabIndex = 14;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtConfirmPassword
             // 
@@ -142,6 +143,7 @@ namespace QuanLyGiaiDauBongDa
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(221, 23);
             this.txtConfirmPassword.TabIndex = 15;
+            this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // btnRegister
             // 
@@ -231,9 +233,9 @@ namespace QuanLyGiaiDauBongDa
             this.label5.Location = new System.Drawing.Point(378, 220);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(4);
-            this.label5.Size = new System.Drawing.Size(59, 23);
+            this.label5.Size = new System.Drawing.Size(62, 23);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Captcha";
+            this.label5.Text = "Captcha:";
             // 
             // FrmRegister
             // 
