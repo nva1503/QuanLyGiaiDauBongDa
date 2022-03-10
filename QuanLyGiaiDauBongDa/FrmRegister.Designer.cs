@@ -41,12 +41,13 @@ namespace QuanLyGiaiDauBongDa
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.linkLogin = new System.Windows.Forms.LinkLabel();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.txtFname = new System.Windows.Forms.TextBox();
             this.labelDOB = new System.Windows.Forms.Label();
             this.labelFname = new System.Windows.Forms.Label();
             this.verifyEmail = new System.Windows.Forms.LinkLabel();
             this.txtCaptcha = new System.Windows.Forms.TextBox();
+            this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,13 +164,6 @@ namespace QuanLyGiaiDauBongDa
             this.linkLogin.Text = "Already have an account? Back to login";
             this.linkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLogin_LinkClicked);
             // 
-            // txtDOB
-            // 
-            this.txtDOB.Location = new System.Drawing.Point(377, 348);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(221, 23);
-            this.txtDOB.TabIndex = 18;
-            // 
             // txtFname
             // 
             this.txtFname.Location = new System.Drawing.Point(377, 319);
@@ -186,9 +180,9 @@ namespace QuanLyGiaiDauBongDa
             this.labelDOB.Location = new System.Drawing.Point(217, 348);
             this.labelDOB.Name = "labelDOB";
             this.labelDOB.Padding = new System.Windows.Forms.Padding(4);
-            this.labelDOB.Size = new System.Drawing.Size(149, 23);
+            this.labelDOB.Size = new System.Drawing.Size(71, 23);
             this.labelDOB.TabIndex = 21;
-            this.labelDOB.Text = "Ngày sinh(yyyy/MM/dd):";
+            this.labelDOB.Text = "Ngày sinh:";
             // 
             // labelFname
             // 
@@ -216,11 +210,30 @@ namespace QuanLyGiaiDauBongDa
             // 
             // txtCaptcha
             // 
-            this.txtCaptcha.Location = new System.Drawing.Point(378, 214);
+            this.txtCaptcha.Location = new System.Drawing.Point(443, 220);
             this.txtCaptcha.Name = "txtCaptcha";
             this.txtCaptcha.Size = new System.Drawing.Size(85, 23);
             this.txtCaptcha.TabIndex = 24;
-            this.txtCaptcha.Text = " Nhập Captcha ";
+            // 
+            // dateTimePickerDOB
+            // 
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(378, 348);
+            this.dateTimePickerDOB.Name = "dateTimePickerDOB";
+            this.dateTimePickerDOB.Size = new System.Drawing.Size(220, 23);
+            this.dateTimePickerDOB.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AccessibleName = "label1";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(378, 220);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(4);
+            this.label5.Size = new System.Drawing.Size(59, 23);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Captcha";
             // 
             // FrmRegister
             // 
@@ -229,12 +242,13 @@ namespace QuanLyGiaiDauBongDa
             this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.LoginBackground1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePickerDOB);
             this.Controls.Add(this.txtCaptcha);
             this.Controls.Add(this.verifyEmail);
             this.Controls.Add(this.labelFname);
             this.Controls.Add(this.labelDOB);
             this.Controls.Add(this.txtFname);
-            this.Controls.Add(this.txtDOB);
             this.Controls.Add(this.linkLogin);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtConfirmPassword);
@@ -267,12 +281,13 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.LinkLabel linkLogin;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.TextBox txtFname;
        
         private System.Windows.Forms.Label labelDOB;
         private System.Windows.Forms.Label labelFname;
         private System.Windows.Forms.LinkLabel verifyEmail;
         private System.Windows.Forms.TextBox txtCaptcha;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
+        private System.Windows.Forms.Label label5;
     }
 }

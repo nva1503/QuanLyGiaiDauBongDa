@@ -42,7 +42,7 @@ namespace QuanLyGiaiDauBongDa
                             FullName = txtFname.Text.Trim(),
                             Email = txtEmail.Text.Trim(),
                             Password = txtPassword.Text,
-                            Dob = DateTime.Parse(txtDOB.Text)
+                            Dob = dateTimePickerDOB.Value
                         };
                         RoleAccount roll_acc = new RoleAccount()
                         {
@@ -56,8 +56,9 @@ namespace QuanLyGiaiDauBongDa
                         if (count > 0)
                         {
                             MessageBox.Show("Tạo tài khoản thành công");
-                            FrmLogin frmLogin = new FrmLogin();
                             this.Hide();
+                            FrmLogin frmLogin = new FrmLogin();
+
                             frmLogin.ShowDialog();
                         }
                     }
@@ -97,7 +98,7 @@ namespace QuanLyGiaiDauBongDa
         private bool ValidateInfomation()
         {
             string mess = "";
-            if (txtUsername.Text.Trim().Equals("") || txtPassword.Text.Trim().Equals("") || txtEmail.Text.Trim().Equals("") || txtConfirmPassword.Text.Trim().Equals("") || txtFname.Text.Trim().Equals("") || txtDOB.Text.Trim().Equals(""))
+            if (txtUsername.Text.Trim().Equals("") || txtPassword.Text.Trim().Equals("") || txtEmail.Text.Trim().Equals("") || txtConfirmPassword.Text.Trim().Equals("") || txtFname.Text.Trim().Equals(""))
             {
                 mess += "Bạn phải nhập đầy đủ thông tin";
             }
@@ -116,7 +117,8 @@ namespace QuanLyGiaiDauBongDa
             else if (!Regex.IsMatch(txtEmail.Text.Trim(), @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" + @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" + @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
             {
                 mess += "Email không hợp lệ ";
-            } else if (isMatchCaptcha==false)
+            }
+            else if (CheckCaptcha(txtCaptcha.Text.Trim(), Captcha.Trim()) == false)
             {
                 mess += "Captcha không đúng";
             }
@@ -128,20 +130,31 @@ namespace QuanLyGiaiDauBongDa
                 return false;
             }
         }
-        bool isMatchCaptcha=false;
-        public void verifyEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {          
-            
-            string captcha = CreateCaptcha();
-            Send(txtEmail.Text.Trim(),"Lấy mã captcha để verify tài khoản của bạn",captcha);
-            MessageBox.Show("Một email chứa captcha đã gửi vào tài khoản của bạn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            if (txtCaptcha.Text.Trim().Equals(captcha)){
+
+        public string Captcha;
+        public bool CheckCaptcha(string txt, string captcha)
+        {
+            bool isMatchCaptcha;
+
+            if (txt.Trim().Equals(captcha.Trim()))
+            {
                 isMatchCaptcha = true;
             }
-            
+            else { isMatchCaptcha = false; }
+            return isMatchCaptcha;
         }
-      
-           public string CreateCaptcha()
+        public void verifyEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            string captcha = CreateCaptcha();
+            Captcha = captcha;
+            Send(txtEmail.Text.Trim(), "Lấy mã captcha để verify tài khoản của bạn", "Mã captcha của bạn là: " + captcha);
+            MessageBox.Show("Một email chứa captcha đã gửi vào tài khoản của bạn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+
+        public string CreateCaptcha()
         {
             const string characterArray = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
             StringBuilder strCaptcha = new StringBuilder();
@@ -155,40 +168,40 @@ namespace QuanLyGiaiDauBongDa
             return strCaptcha.ToString();
         }
 
-            public void Send(string sendto, string subject, string content)
+        public void Send(string sendto, string subject, string content)
+        {
+            string _from = "slenderman9196@gmail.com";
+            string _pass = "Yeuthuy111";
+            //sendto: Email receiver (người nhận)
+            //subject: Tiêu đề email
+            //content: Nội dung của email
+            //Nếu gửi email thành công, sẽ trả về kết quả: OK, không thành công sẽ trả về thông tin l�-i
+            try
             {
-            string _from = "slenderman9196@gmail.com"; 
-            string _pass = "Yeuthuy111"; 
-                //sendto: Email receiver (người nhận)
-                //subject: Tiêu đề email
-                //content: Nội dung của email
-                //Nếu gửi email thành công, sẽ trả về kết quả: OK, không thành công sẽ trả về thông tin l�-i
-                try
-                {
-                    MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                    mail.From = new MailAddress(_from);
-                    mail.To.Add(sendto);
-                    mail.Subject = subject;
-                    mail.IsBodyHtml = true;
-                    mail.Body = content;
+                mail.From = new MailAddress(_from);
+                mail.To.Add(sendto);
+                mail.Subject = subject;
+                mail.IsBodyHtml = true;
+                mail.Body = content;
 
-                    mail.Priority = MailPriority.High;
+                mail.Priority = MailPriority.High;
 
-                    SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential(_from, _pass);
-                    SmtpServer.EnableSsl = true;
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(_from, _pass);
+                SmtpServer.EnableSsl = true;
 
-                    SmtpServer.Send(mail);
-                
+                SmtpServer.Send(mail);
+
             }
-                catch (Exception ex)
-                {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            }
         }
     }
+}
 
