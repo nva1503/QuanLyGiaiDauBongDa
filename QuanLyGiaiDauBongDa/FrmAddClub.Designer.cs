@@ -66,6 +66,7 @@ namespace QuanLyGiaiDauBongDa
             this.cbCountry.Name = "cbCountry";
             this.cbCountry.Size = new System.Drawing.Size(262, 28);
             this.cbCountry.TabIndex = 58;
+            this.cbCountry.Text = " ";
             // 
             // button3
             // 

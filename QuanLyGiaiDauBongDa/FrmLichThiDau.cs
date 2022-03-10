@@ -92,5 +92,13 @@ namespace QuanLyGiaiDauBongDa
                 flowLayoutPanel1.AutoScroll = true;
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FrmAddMatch frmAddMatch = new FrmAddMatch();
+            this.Hide();
+            frmAddMatch.ShowDialog();
+            this.Show();
+        }
     }
 }

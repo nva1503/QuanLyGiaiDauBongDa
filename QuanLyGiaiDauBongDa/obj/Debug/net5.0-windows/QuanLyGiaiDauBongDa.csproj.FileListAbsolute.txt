@@ -213,3 +213,4 @@ E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBon
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmAddClub.resources
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmAboutUs.resources
 E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmLichThiDau.resources
+E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmAddMatch.resources
