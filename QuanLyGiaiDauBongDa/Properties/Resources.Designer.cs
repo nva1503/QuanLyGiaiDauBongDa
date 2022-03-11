@@ -163,6 +163,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap animated_click_here_sign_and_button_image_0040 {
+            get {
+                object obj = ResourceManager.GetObject("animated-click-here-sign-and-button-image-0040", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap appinfo {
             get {
                 object obj = ResourceManager.GetObject("appinfo", resourceCulture);
@@ -186,6 +196,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         internal static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clcikhereicon {
+            get {
+                object obj = ResourceManager.GetObject("clcikhereicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
