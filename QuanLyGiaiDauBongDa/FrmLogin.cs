@@ -45,7 +45,7 @@ namespace QuanLyGiaiDauBongDa
                 }
                 if (isLogin == true) {
                     MessageBox.Show("Bạn đã đăng nhập thành công !", "Thông Báo", MessageBoxButtons.OK);
-                    FrmHomePage h = new FrmHomePage();
+                    FrmHomePage h = new FrmHomePage(txtUsername.Text.Trim());
                     this.Hide();//ẩn form login
                     h.ShowDialog();
                 }

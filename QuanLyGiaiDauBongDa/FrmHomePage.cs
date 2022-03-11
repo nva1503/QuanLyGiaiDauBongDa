@@ -17,7 +17,12 @@ namespace QuanLyGiaiDauBongDa
         {
             InitializeComponent();
         }
-
+        string userName;
+        public FrmHomePage(string username): this()
+        {
+            userName = username;
+            
+        }
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -90,10 +95,7 @@ namespace QuanLyGiaiDauBongDa
             frmLogin.Show();
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -105,6 +107,14 @@ namespace QuanLyGiaiDauBongDa
             this.Hide();
             FrmLichThiDau.Show();
             this.Show();
+        }
+
+        private void btnAboutUs_Click(object sender, EventArgs e)
+        {
+            FrmAboutUs frmAboutUs = new FrmAboutUs(userName);
+            frmAboutUs.ShowDialog();
+
+
         }
     }
 }

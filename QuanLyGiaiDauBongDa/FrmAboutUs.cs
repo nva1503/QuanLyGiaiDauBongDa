@@ -16,10 +16,16 @@ namespace QuanLyGiaiDauBongDa
         {
             InitializeComponent();
         }
+        string userName;
+        public FrmAboutUs(string username) : this()
+        {
+            userName = username;
 
+        }
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-
+            FrmSendFeedback frmSendFeedback = new FrmSendFeedback(userName);
+            frmSendFeedback.ShowDialog();
         }
     }
 }
