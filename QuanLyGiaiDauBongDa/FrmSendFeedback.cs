@@ -32,6 +32,11 @@ namespace QuanLyGiaiDauBongDa
             labelUsername.Text = userName;
         }
 
-       
+        private void btnAboutUs_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLogin frmLogin = new FrmLogin();
+            frmLogin.Show();
+        }
     }
 }

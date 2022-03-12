@@ -126,6 +126,7 @@ namespace QuanLyGiaiDauBongDa
             this.btnAboutUs.TabIndex = 8;
             this.btnAboutUs.Text = "Log out";
             this.btnAboutUs.UseVisualStyleBackColor = false;
+            this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             // 
             // labelUsername
             // 
