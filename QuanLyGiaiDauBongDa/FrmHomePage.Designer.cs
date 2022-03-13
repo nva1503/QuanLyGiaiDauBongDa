@@ -63,10 +63,9 @@ namespace QuanLyGiaiDauBongDa
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(79, 153);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(90, 204);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(687, 274);
+            this.panel2.Size = new System.Drawing.Size(785, 364);
             this.panel2.TabIndex = 1;
             // 
             // button8
@@ -75,10 +74,9 @@ namespace QuanLyGiaiDauBongDa
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button8.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.setting_tool;
-            this.button8.Location = new System.Drawing.Point(503, 128);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Location = new System.Drawing.Point(575, 171);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 121);
+            this.button8.Size = new System.Drawing.Size(171, 161);
             this.button8.TabIndex = 11;
             this.button8.Text = "Cài Đặt Thông Tin";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -90,10 +88,9 @@ namespace QuanLyGiaiDauBongDa
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button6.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.graph__1_;
-            this.button6.Location = new System.Drawing.Point(340, 128);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Location = new System.Drawing.Point(389, 171);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 121);
+            this.button6.Size = new System.Drawing.Size(171, 161);
             this.button6.TabIndex = 10;
             this.button6.Text = "Thông Số";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -105,15 +102,15 @@ namespace QuanLyGiaiDauBongDa
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button5.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.podium__1_;
-            this.button5.Location = new System.Drawing.Point(172, 128);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(197, 171);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(152, 121);
+            this.button5.Size = new System.Drawing.Size(174, 161);
             this.button5.TabIndex = 9;
             this.button5.Text = "Bảng Xếp Hạng";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -121,10 +118,9 @@ namespace QuanLyGiaiDauBongDa
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button4.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.calendar;
-            this.button4.Location = new System.Drawing.Point(17, 129);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Location = new System.Drawing.Point(19, 172);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 120);
+            this.button4.Size = new System.Drawing.Size(171, 160);
             this.button4.TabIndex = 8;
             this.button4.Text = "Lịch Thi Đấu";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -137,10 +133,9 @@ namespace QuanLyGiaiDauBongDa
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button3.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.amonestation;
-            this.button3.Location = new System.Drawing.Point(503, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(575, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 120);
+            this.button3.Size = new System.Drawing.Size(171, 160);
             this.button3.TabIndex = 7;
             this.button3.Text = "Danh Sách Trọng Tài";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -155,10 +150,9 @@ namespace QuanLyGiaiDauBongDa
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button2.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.football_player;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.Location = new System.Drawing.Point(340, 4);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(389, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 120);
+            this.button2.Size = new System.Drawing.Size(171, 160);
             this.button2.TabIndex = 6;
             this.button2.Text = "Danh Sách Cầu Thủ";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -171,10 +165,9 @@ namespace QuanLyGiaiDauBongDa
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button1.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.football_club__1_;
-            this.button1.Location = new System.Drawing.Point(14, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(16, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(310, 120);
+            this.button1.Size = new System.Drawing.Size(354, 160);
             this.button1.TabIndex = 5;
             this.button1.Text = "Danh Sách Đội Bóng";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -185,10 +178,9 @@ namespace QuanLyGiaiDauBongDa
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 518);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 698);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(859, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(982, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
@@ -203,18 +195,16 @@ namespace QuanLyGiaiDauBongDa
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(860, 105);
+            this.panel3.Size = new System.Drawing.Size(982, 139);
             this.panel3.TabIndex = 5;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnAboutUs
             // 
-            this.btnAboutUs.Location = new System.Drawing.Point(751, 29);
-            this.btnAboutUs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAboutUs.Location = new System.Drawing.Point(858, 39);
             this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(82, 22);
+            this.btnAboutUs.Size = new System.Drawing.Size(94, 29);
             this.btnAboutUs.TabIndex = 8;
             this.btnAboutUs.Text = "About us";
             this.btnAboutUs.UseVisualStyleBackColor = true;
@@ -223,18 +213,18 @@ namespace QuanLyGiaiDauBongDa
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(585, 54);
+            this.label2.Location = new System.Drawing.Point(669, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 15);
+            this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Online";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(524, 29);
+            this.label1.Location = new System.Drawing.Point(599, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 15);
+            this.label1.Size = new System.Drawing.Size(122, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Welcome, Admin";
             // 
@@ -242,10 +232,9 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.pictureBox2.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.employee__1_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(648, 22);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(741, 29);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 47);
+            this.pictureBox2.Size = new System.Drawing.Size(70, 63);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -253,10 +242,9 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.pictureBox1.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.premierLogo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(288, 107);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -264,10 +252,9 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.button7.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.exit;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(728, 480);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Location = new System.Drawing.Point(832, 640);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(107, 34);
+            this.button7.Size = new System.Drawing.Size(122, 45);
             this.button7.TabIndex = 6;
             this.button7.Text = "Log Out";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,18 +265,18 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.txtTime.AccessibleDescription = "";
             this.txtTime.AutoSize = true;
-            this.txtTime.Location = new System.Drawing.Point(24, 500);
+            this.txtTime.Location = new System.Drawing.Point(27, 667);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(38, 15);
+            this.txtTime.Size = new System.Drawing.Size(50, 20);
             this.txtTime.TabIndex = 7;
             this.txtTime.Text = "label3";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(616, 490);
+            this.linkLabel1.Location = new System.Drawing.Point(704, 653);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(63, 15);
+            this.linkLabel1.Size = new System.Drawing.Size(80, 20);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Trang Web";
@@ -297,16 +284,15 @@ namespace QuanLyGiaiDauBongDa
             // 
             // FrmHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 540);
+            this.ClientSize = new System.Drawing.Size(982, 720);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmHomePage";
             this.Text = "Phần Mềm Quản Lý Giải Premier League";
             this.Load += new System.EventHandler(this.FrmHomePage_Load);

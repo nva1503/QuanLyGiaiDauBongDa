@@ -235,3 +235,7 @@ C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBon
 C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\System.Diagnostics.DiagnosticSource.dll
+E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmSendFeedback.resources
+E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmViewAndEditInformation.resources
+E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+E:\Kỳ 5\PRN211 Programming with Dotnet\Project\Code trên Git\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmBangXepHang.resources
