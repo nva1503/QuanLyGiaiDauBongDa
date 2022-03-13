@@ -116,5 +116,11 @@ namespace QuanLyGiaiDauBongDa
 
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmBangXepHang frmBangXepHang = new FrmBangXepHang();
+            frmBangXepHang.Show();
+        }
     }
 }
