@@ -3146,11 +3146,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
       "projectName": "QuanLyGiaiDauBongDa",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\QuanLyGiaiDauBongDa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3220,7 +3220,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

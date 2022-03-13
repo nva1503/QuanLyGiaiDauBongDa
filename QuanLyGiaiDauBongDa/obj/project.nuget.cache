@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eFX2fVojIsAQF2zLGRRWFl+Prh5Ib0W8WNDuBaufmsNibwlbkq1GhRnrTokoxuEqlyEdQjCmgNDCcTKDX02UUw==",
+  "dgSpecHash": "wNTOL/KbsXt3AoXu/zANhHpQGjEDnwZrkuyRGldiTrXqbAKHIIpVspnluiw0RYNrZNIvNkhmBpE0LCTvMCmAyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
