@@ -61,7 +61,7 @@ namespace QuanLyGiaiDauBongDa
 
                 //CONTENT OF PANEL
                 TextBox textBox = new TextBox();
-                textBox.Text = item.PlayDate.ToShortDateString();
+                textBox.Text = item.PlayDate.ToString();
                 textBox.Size = new Size(180, 20);
                 Button btnHost = new Button();
                 btnHost.AutoSize = true;

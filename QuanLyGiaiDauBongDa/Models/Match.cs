@@ -13,13 +13,11 @@ namespace QuanLyGiaiDauBongDa.Models
         }
 
         public int MatchId { get; set; }
-        public DateTime PlayDate { get; set; }
+        public DateTime? PlayDate { get; set; }
         public int HostId { get; set; }
         public int GuestId { get; set; }
-        public int RefereeId { get; set; }
-        public int TourseasonId { get; set; }
-        public string PlayStage { get; set; }
-        public int VenueId { get; set; }
+        public int? RefereeId { get; set; }
+        public int? VenueId { get; set; }
 
         public virtual Club Guest { get; set; }
         public virtual Club Host { get; set; }

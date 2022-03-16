@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
@@ -10,8 +9,10 @@ namespace QuanLyGiaiDauBongDa.Models
     {
         public Club()
         {
+            Accounts = new HashSet<Account>();
             MatchGuests = new HashSet<Match>();
             MatchHosts = new HashSet<Match>();
+            Players = new HashSet<Player>();
         }
 
         public int ClubId { get; set; }
@@ -22,11 +23,12 @@ namespace QuanLyGiaiDauBongDa.Models
         public string Address { get; set; }
         public int? StadiumId { get; set; }
         public string LogoUrl { get; set; }
-        [ForeignKey("CountryId")]
+
         public virtual Country Country { get; set; }
-        [ForeignKey("StadiumId")]
         public virtual Stadiun Stadium { get; set; }
+        public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<Match> MatchGuests { get; set; }
         public virtual ICollection<Match> MatchHosts { get; set; }
+        public virtual ICollection<Player> Players { get; set; }
     }
 }

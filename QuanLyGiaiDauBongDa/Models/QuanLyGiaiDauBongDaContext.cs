@@ -1,8 +1,6 @@
 ﻿using System;
-using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -37,12 +35,11 @@ namespace QuanLyGiaiDauBongDa.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //Chỉnh file appsettings để hỗ trợ đổi server khi thi
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory()) 
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-            IConfigurationRoot config = builder.Build();
-            optionsBuilder.UseSqlServer(config.GetConnectionString("QuanLyGiaiDauBongDa"));
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("server=(local); database=QuanLyGiaiDauBongDa; uid=nva1503; pwd=1503;TrustServerCertificate=True");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -59,6 +56,8 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasMaxLength(50)
                     .HasColumnName("username");
 
+                entity.Property(e => e.ClubId).HasColumnName("club_id");
+
                 entity.Property(e => e.Dob)
                     .HasColumnType("date")
                     .HasColumnName("dob");
@@ -74,6 +73,11 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.Property(e => e.Password)
                     .HasMaxLength(100)
                     .HasColumnName("password");
+
+                entity.HasOne(d => d.Club)
+                    .WithMany(p => p.Accounts)
+                    .HasForeignKey(d => d.ClubId)
+                    .HasConstraintName("FK_Account_Club");
             });
 
             modelBuilder.Entity<Card>(entity =>
@@ -102,9 +106,6 @@ namespace QuanLyGiaiDauBongDa.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Card_Player");
             });
-
-            //modelBuilder.Entity<Club>().HasKey(cd => new { cd.ClubId, cd.CountryId });
-
 
             modelBuilder.Entity<Club>(entity =>
             {
@@ -146,8 +147,6 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasForeignKey(d => d.StadiumId)
                     .HasConstraintName("FK_Club_Stadiun");
             });
-
-
 
             modelBuilder.Entity<Country>(entity =>
             {
@@ -203,14 +202,7 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnType("date")
                     .HasColumnName("play_date");
 
-                entity.Property(e => e.PlayStage)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .HasColumnName("play_stage");
-
                 entity.Property(e => e.RefereeId).HasColumnName("referee_id");
-
-                entity.Property(e => e.TourseasonId).HasColumnName("tourseason_id");
 
                 entity.Property(e => e.VenueId).HasColumnName("venue_id");
 
@@ -229,13 +221,11 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.HasOne(d => d.Referee)
                     .WithMany(p => p.Matches)
                     .HasForeignKey(d => d.RefereeId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Referee");
 
                 entity.HasOne(d => d.Venue)
                     .WithMany(p => p.Matches)
                     .HasForeignKey(d => d.VenueId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Venue");
             });
 
@@ -279,6 +269,8 @@ namespace QuanLyGiaiDauBongDa.Models
                     .ValueGeneratedNever()
                     .HasColumnName("player_id");
 
+                entity.Property(e => e.ClubId).HasColumnName("club_id");
+
                 entity.Property(e => e.CountryId).HasColumnName("country_id");
 
                 entity.Property(e => e.Dob)
@@ -310,6 +302,11 @@ namespace QuanLyGiaiDauBongDa.Models
                     .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("weight");
+
+                entity.HasOne(d => d.Club)
+                    .WithMany(p => p.Players)
+                    .HasForeignKey(d => d.ClubId)
+                    .HasConstraintName("FK_Player_Club");
 
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Players)
@@ -416,16 +413,9 @@ namespace QuanLyGiaiDauBongDa.Models
 
                 entity.ToTable("Team");
 
-                entity.Property(e => e.ClubId).HasColumnName("club_id");
-
                 entity.Property(e => e.MatchId).HasColumnName("match_id");
 
                 entity.Property(e => e.PlayerId).HasColumnName("player_id");
-
-                entity.HasOne(d => d.Club)
-                    .WithMany()
-                    .HasForeignKey(d => d.ClubId)
-                    .HasConstraintName("FK_Team_Club");
 
                 entity.HasOne(d => d.Match)
                     .WithMany()
