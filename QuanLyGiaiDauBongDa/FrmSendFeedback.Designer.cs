@@ -31,7 +31,7 @@ namespace QuanLyGiaiDauBongDa
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textSubject = new System.Windows.Forms.TextBox();
+            this.txtSubject = new System.Windows.Forms.TextBox();
             this.txtContent = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -77,12 +77,12 @@ namespace QuanLyGiaiDauBongDa
             this.label3.TabIndex = 3;
             this.label3.Text = "Nội dung";
             // 
-            // textSubject
+            // txtSubject
             // 
-            this.textSubject.Location = new System.Drawing.Point(296, 170);
-            this.textSubject.Name = "textSubject";
-            this.textSubject.Size = new System.Drawing.Size(258, 23);
-            this.textSubject.TabIndex = 14;
+            this.txtSubject.Location = new System.Drawing.Point(296, 170);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(258, 23);
+            this.txtSubject.TabIndex = 14;
             // 
             // txtContent
             // 
@@ -272,7 +272,7 @@ namespace QuanLyGiaiDauBongDa
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtContent);
-            this.Controls.Add(this.textSubject);
+            this.Controls.Add(this.txtSubject);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "FrmSendFeedback";
@@ -290,7 +290,7 @@ namespace QuanLyGiaiDauBongDa
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textSubject;
+        private System.Windows.Forms.TextBox txtSubject;
         private System.Windows.Forms.TextBox txtContent;
         private System.Windows.Forms.Label btnSend;
         private System.Windows.Forms.Panel panel3;

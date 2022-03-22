@@ -22,6 +22,26 @@ namespace QuanLyGiaiDauBongDa
             userName = username;
             
         }
+        private bool ValidateInfomation()
+        {
+            string mess = "";
+            if (txtContent.Text.Trim().Equals("") || txtSubject.Text.Trim().Equals(""))
+            {
+                mess += "Bạn phải nhập đầy đủ thông tin";
+            }
+            else if (!radioButton1.Checked || !radioButton2.Checked || !radioButton3.Checked || !radioButton4.Checked || !radioButton5.Checked)
+            {
+                mess += "Hãy đánh giá app !";
+            }
+           
+            if (mess.Equals(""))
+                return true;
+            else
+            {
+                MessageBox.Show(mess, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
         private void btnSend_Click(object sender, EventArgs e)
         {
 
