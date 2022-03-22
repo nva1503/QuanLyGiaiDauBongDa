@@ -35,12 +35,18 @@ namespace QuanLyGiaiDauBongDa
             this.txtContent = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnAboutUs = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.labelUsername = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,15 +73,15 @@ namespace QuanLyGiaiDauBongDa
             this.label3.Location = new System.Drawing.Point(234, 209);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(4);
-            this.label3.Size = new System.Drawing.Size(71, 23);
+            this.label3.Size = new System.Drawing.Size(65, 23);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Nội dung: ";
+            this.label3.Text = "Nội dung";
             // 
             // textSubject
             // 
             this.textSubject.Location = new System.Drawing.Point(296, 170);
             this.textSubject.Name = "textSubject";
-            this.textSubject.Size = new System.Drawing.Size(221, 23);
+            this.textSubject.Size = new System.Drawing.Size(258, 23);
             this.textSubject.TabIndex = 14;
             // 
             // txtContent
@@ -83,21 +89,21 @@ namespace QuanLyGiaiDauBongDa
             this.txtContent.Location = new System.Drawing.Point(296, 209);
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(221, 89);
+            this.txtContent.Size = new System.Drawing.Size(258, 89);
             this.txtContent.TabIndex = 15;
             // 
             // btnSend
             // 
             this.btnSend.AccessibleName = "label1";
-            this.btnSend.AutoSize = true;
             this.btnSend.BackColor = System.Drawing.SystemColors.Control;
             this.btnSend.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSend.Location = new System.Drawing.Point(482, 315);
+            this.btnSend.Location = new System.Drawing.Point(496, 389);
             this.btnSend.Name = "btnSend";
             this.btnSend.Padding = new System.Windows.Forms.Padding(4);
-            this.btnSend.Size = new System.Drawing.Size(35, 23);
+            this.btnSend.Size = new System.Drawing.Size(58, 23);
             this.btnSend.TabIndex = 16;
             this.btnSend.Text = "Gửi";
+            this.btnSend.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // panel3
@@ -105,7 +111,7 @@ namespace QuanLyGiaiDauBongDa
             this.panel3.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.sendmail;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.btnAboutUs);
+            this.panel3.Controls.Add(this.btnLogOut);
             this.panel3.Controls.Add(this.labelUsername);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -116,17 +122,17 @@ namespace QuanLyGiaiDauBongDa
             this.panel3.Size = new System.Drawing.Size(859, 118);
             this.panel3.TabIndex = 17;
             // 
-            // btnAboutUs
+            // btnLogOut
             // 
-            this.btnAboutUs.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnAboutUs.Location = new System.Drawing.Point(751, 29);
-            this.btnAboutUs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(82, 29);
-            this.btnAboutUs.TabIndex = 8;
-            this.btnAboutUs.Text = "Log out";
-            this.btnAboutUs.UseVisualStyleBackColor = false;
-            this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
+            this.btnLogOut.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnLogOut.Location = new System.Drawing.Point(751, 29);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(82, 29);
+            this.btnLogOut.TabIndex = 8;
+            this.btnLogOut.Text = "Log out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // labelUsername
             // 
@@ -182,12 +188,86 @@ namespace QuanLyGiaiDauBongDa
             this.label1.TabIndex = 18;
             this.label1.Text = "Gửi cho chúng tôi ý kiến phản hồi của bạn";
             // 
+            // label4
+            // 
+            this.label4.AccessibleName = "label1";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(218, 321);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(4);
+            this.label4.Size = new System.Drawing.Size(72, 23);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Rate App :";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(296, 324);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(88, 19);
+            this.radioButton1.TabIndex = 20;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Rất hài lòng";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(390, 324);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(70, 19);
+            this.radioButton2.TabIndex = 21;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Hài lòng";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(463, 325);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(91, 19);
+            this.radioButton3.TabIndex = 22;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Bình thường";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(296, 350);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(106, 19);
+            this.radioButton4.TabIndex = 23;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Không hài lòng";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(429, 350);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(125, 19);
+            this.radioButton5.TabIndex = 24;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Rất không hài lòng";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
             // FrmSendFeedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.sendmail;
             this.ClientSize = new System.Drawing.Size(827, 450);
+            this.Controls.Add(this.radioButton5);
+            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSend);
@@ -214,11 +294,17 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.TextBox txtContent;
         private System.Windows.Forms.Label btnSend;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnAboutUs;
+        private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton5;
     }
 }
