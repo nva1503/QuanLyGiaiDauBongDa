@@ -68,7 +68,7 @@ namespace QuanLyGiaiDauBongDa
             // pictureBox4
             // 
             this.pictureBox4.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.info;
-            this.pictureBox4.Location = new System.Drawing.Point(84, 188);
+            this.pictureBox4.Location = new System.Drawing.Point(70, 194);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(109, 99);
             this.pictureBox4.TabIndex = 3;
@@ -113,10 +113,10 @@ namespace QuanLyGiaiDauBongDa
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::QuanLyGiaiDauBongDa.Properties.Resources._21;
-            this.pictureBox2.Location = new System.Drawing.Point(46, 290);
+            this.pictureBox2.Image = global::QuanLyGiaiDauBongDa.Properties.Resources._2;
+            this.pictureBox2.Location = new System.Drawing.Point(23, 260);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(169, 143);
+            this.pictureBox2.Size = new System.Drawing.Size(192, 142);
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
@@ -126,12 +126,12 @@ namespace QuanLyGiaiDauBongDa
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(839, 486);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmAboutUs";
