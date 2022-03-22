@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -81,6 +82,95 @@ namespace QuanLyGiaiDauBongDa
             this.Hide();
             frmRegister.ShowDialog();
            
+        }
+        public string CreateCaptcha()
+        {
+            const string characterArray = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            StringBuilder strCaptcha = new StringBuilder();
+            Random rand = new Random();
+            for (int i = 0; i < 7; i++)
+            {
+
+                string str = characterArray[rand.Next(characterArray.Length)].ToString();
+                strCaptcha.Append(str);
+            }
+            return strCaptcha.ToString();
+        }
+
+        public void Send(string sendto, string subject, string content)
+        {
+            string _from = "slenderman9196@gmail.com";
+            string _pass = "Yeuthuy111";
+            //sendto: Email receiver (người nhận)
+            //subject: Tiêu đề email
+            //content: Nội dung của email
+            //Nếu gửi email thành công, sẽ trả về kết quả: OK, không thành công sẽ trả về thông tin l�-i
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress(_from);
+                mail.To.Add(sendto);
+                mail.Subject = subject;
+                mail.IsBodyHtml = true;
+                mail.Body = content;
+
+                mail.Priority = MailPriority.High;
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(_from, _pass);
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        public string Captcha;
+        private void linkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                var accounts = (from account in _db.Accounts select new { account.Username, account.Password,account.Email }).ToList();
+                Account a = new Account();
+                foreach (var acc in accounts)
+                {
+                    if (txtUsername.Text.Trim().Equals(acc.Username))
+                    {
+                        a.Email = acc.Email;
+                    }
+
+                }
+                string captcha = CreateCaptcha();
+                Captcha = captcha;
+                Send(a.Email.Trim(), "Reset mật khẩu", "Mật khẩu mới của bạn là: " + captcha);
+                MessageBox.Show("Một email mật khẩu mới đã được gửi vào email tài khoản của bạn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var newAccount = _db.Accounts.SingleOrDefault(a => a.Username == txtUsername.Text.Trim());
+               if(newAccount!=null)
+                   
+                    {
+                    newAccount.Password = captcha;
+                        int count = _db.SaveChanges();
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Reset mật khẩu thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Refresh();
+                        }
+                    }
+
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

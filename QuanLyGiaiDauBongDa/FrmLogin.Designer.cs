@@ -50,7 +50,7 @@ namespace QuanLyGiaiDauBongDa
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(152, 159);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label1.Padding = new System.Windows.Forms.Padding(4);
             this.label1.Size = new System.Drawing.Size(102, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Đăng Nhập:";
@@ -73,7 +73,7 @@ namespace QuanLyGiaiDauBongDa
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(183, 199);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label2.Padding = new System.Windows.Forms.Padding(4);
             this.label2.Size = new System.Drawing.Size(71, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật Khẩu:";
@@ -132,6 +132,7 @@ namespace QuanLyGiaiDauBongDa
             this.linkForgotPassword.TabIndex = 6;
             this.linkForgotPassword.TabStop = true;
             this.linkForgotPassword.Text = "Quên mật khẩu ?";
+            this.linkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgotPassword_LinkClicked);
             // 
             // linkLabel1
             // 
