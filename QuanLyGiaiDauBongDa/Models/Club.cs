@@ -9,10 +9,8 @@ namespace QuanLyGiaiDauBongDa.Models
     {
         public Club()
         {
-            Accounts = new HashSet<Account>();
             MatchGuests = new HashSet<Match>();
             MatchHosts = new HashSet<Match>();
-            Players = new HashSet<Player>();
         }
 
         public int ClubId { get; set; }
@@ -26,9 +24,7 @@ namespace QuanLyGiaiDauBongDa.Models
 
         public virtual Country Country { get; set; }
         public virtual Stadiun Stadium { get; set; }
-        public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<Match> MatchGuests { get; set; }
         public virtual ICollection<Match> MatchHosts { get; set; }
-        public virtual ICollection<Player> Players { get; set; }
     }
 }

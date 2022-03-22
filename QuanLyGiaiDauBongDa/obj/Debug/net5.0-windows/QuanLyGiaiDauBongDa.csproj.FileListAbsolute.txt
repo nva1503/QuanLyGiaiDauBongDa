@@ -316,3 +316,7 @@ D:\Projects\C#\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\
 D:\Projects\C#\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Projects\C#\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.csproj.CopyComplete
 D:\Projects\C#\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmBangXepHang.resources
+C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmDanhSachCauThu.resources
+C:\Users\Admin\Desktop\Learn\PRN211\Project\QuanLyGiaiDauBongDa\QuanLyGiaiDauBongDa\obj\Debug\net5.0-windows\QuanLyGiaiDauBongDa.FrmLichThiDauChoClub.resources

@@ -21,11 +21,13 @@ namespace QuanLyGiaiDauBongDa.Models
         public virtual DbSet<Card> Cards { get; set; }
         public virtual DbSet<Club> Clubs { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Feedback> Feedbacks { get; set; }
         public virtual DbSet<Goal> Goals { get; set; }
         public virtual DbSet<Match> Matches { get; set; }
         public virtual DbSet<MatchResult> MatchResults { get; set; }
         public virtual DbSet<Player> Players { get; set; }
         public virtual DbSet<PlayingPosition> PlayingPositions { get; set; }
+        public virtual DbSet<Rate> Rates { get; set; }
         public virtual DbSet<Referee> Referees { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<RoleAccount> RoleAccounts { get; set; }
@@ -38,7 +40,7 @@ namespace QuanLyGiaiDauBongDa.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server=(local); database=QuanLyGiaiDauBongDa; uid=nva1503; pwd=1503;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("server=TUNG\\TUNG;database=QuanLyGiaiDauBongDa;uid=sa;pwd=yeuthuy111;TrustServerCertificate=True");
             }
         }
 
@@ -56,8 +58,6 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasMaxLength(50)
                     .HasColumnName("username");
 
-                entity.Property(e => e.ClubId).HasColumnName("club_id");
-
                 entity.Property(e => e.Dob)
                     .HasColumnType("date")
                     .HasColumnName("dob");
@@ -73,11 +73,6 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.Property(e => e.Password)
                     .HasMaxLength(100)
                     .HasColumnName("password");
-
-                entity.HasOne(d => d.Club)
-                    .WithMany(p => p.Accounts)
-                    .HasForeignKey(d => d.ClubId)
-                    .HasConstraintName("FK_Account_Club");
             });
 
             modelBuilder.Entity<Card>(entity =>
@@ -165,6 +160,35 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnName("short_name");
             });
 
+            modelBuilder.Entity<Feedback>(entity =>
+            {
+                entity.HasKey(e => e.Username);
+
+                entity.ToTable("Feedback");
+
+                entity.Property(e => e.Username)
+                    .HasMaxLength(50)
+                    .HasColumnName("username");
+
+                entity.Property(e => e.Content)
+                    .IsRequired()
+                    .HasMaxLength(500)
+                    .HasColumnName("content");
+
+                entity.Property(e => e.Problem)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("problem");
+
+                entity.Property(e => e.RateId).HasColumnName("rateId");
+
+                entity.HasOne(d => d.Rate)
+                    .WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.RateId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Feedback_Rate");
+            });
+
             modelBuilder.Entity<Goal>(entity =>
             {
                 entity.ToTable("Goal");
@@ -202,7 +226,14 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnType("date")
                     .HasColumnName("play_date");
 
+                entity.Property(e => e.PlayStage)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("play_stage");
+
                 entity.Property(e => e.RefereeId).HasColumnName("referee_id");
+
+                entity.Property(e => e.TourseasonId).HasColumnName("tourseason_id");
 
                 entity.Property(e => e.VenueId).HasColumnName("venue_id");
 
@@ -221,11 +252,13 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.HasOne(d => d.Referee)
                     .WithMany(p => p.Matches)
                     .HasForeignKey(d => d.RefereeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Referee");
 
                 entity.HasOne(d => d.Venue)
                     .WithMany(p => p.Matches)
                     .HasForeignKey(d => d.VenueId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Venue");
             });
 
@@ -269,8 +302,6 @@ namespace QuanLyGiaiDauBongDa.Models
                     .ValueGeneratedNever()
                     .HasColumnName("player_id");
 
-                entity.Property(e => e.ClubId).HasColumnName("club_id");
-
                 entity.Property(e => e.CountryId).HasColumnName("country_id");
 
                 entity.Property(e => e.Dob)
@@ -303,11 +334,6 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasMaxLength(50)
                     .HasColumnName("weight");
 
-                entity.HasOne(d => d.Club)
-                    .WithMany(p => p.Players)
-                    .HasForeignKey(d => d.ClubId)
-                    .HasConstraintName("FK_Player_Club");
-
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Players)
                     .HasForeignKey(d => d.CountryId)
@@ -335,6 +361,20 @@ namespace QuanLyGiaiDauBongDa.Models
                     .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("name");
+            });
+
+            modelBuilder.Entity<Rate>(entity =>
+            {
+                entity.ToTable("Rate");
+
+                entity.Property(e => e.RateId)
+                    .ValueGeneratedNever()
+                    .HasColumnName("rateId");
+
+                entity.Property(e => e.RateName)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("rateName");
             });
 
             modelBuilder.Entity<Referee>(entity =>
@@ -413,9 +453,16 @@ namespace QuanLyGiaiDauBongDa.Models
 
                 entity.ToTable("Team");
 
+                entity.Property(e => e.ClubId).HasColumnName("club_id");
+
                 entity.Property(e => e.MatchId).HasColumnName("match_id");
 
                 entity.Property(e => e.PlayerId).HasColumnName("player_id");
+
+                entity.HasOne(d => d.Club)
+                    .WithMany()
+                    .HasForeignKey(d => d.ClubId)
+                    .HasConstraintName("FK_Team_Club");
 
                 entity.HasOne(d => d.Match)
                     .WithMany()

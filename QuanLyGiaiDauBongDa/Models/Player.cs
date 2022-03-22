@@ -15,9 +15,7 @@ namespace QuanLyGiaiDauBongDa.Models
         public string Height { get; set; }
         public string Weight { get; set; }
         public string Image { get; set; }
-        public int? ClubId { get; set; }
 
-        public virtual Club Club { get; set; }
         public virtual Country Country { get; set; }
         public virtual PlayingPosition Position { get; set; }
     }

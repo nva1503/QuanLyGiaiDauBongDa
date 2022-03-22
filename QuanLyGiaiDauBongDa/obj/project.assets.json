@@ -3183,23 +3183,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\C#\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
       "projectName": "QuanLyGiaiDauBongDa",
-      "projectPath": "D:\\Projects\\C#\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\C#\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Desktop\\Learn\\PRN211\\Project\\QuanLyGiaiDauBongDa\\QuanLyGiaiDauBongDa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0-windows7.0"
+        "net5.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -3266,7 +3266,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

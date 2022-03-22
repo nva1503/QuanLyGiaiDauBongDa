@@ -12,8 +12,5 @@ namespace QuanLyGiaiDauBongDa.Models
         public string Password { get; set; }
         public string Email { get; set; }
         public DateTime? Dob { get; set; }
-        public int? ClubId { get; set; }
-
-        public virtual Club Club { get; set; }
     }
 }
