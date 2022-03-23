@@ -10,7 +10,6 @@ namespace QuanLyGiaiDauBongDa.Models
         public Country()
         {
             Clubs = new HashSet<Club>();
-            Players = new HashSet<Player>();
             Referees = new HashSet<Referee>();
         }
 
@@ -19,7 +18,6 @@ namespace QuanLyGiaiDauBongDa.Models
         public string ShortName { get; set; }
 
         public virtual ICollection<Club> Clubs { get; set; }
-        public virtual ICollection<Player> Players { get; set; }
         public virtual ICollection<Referee> Referees { get; set; }
     }
 }

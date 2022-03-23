@@ -21,11 +21,14 @@ namespace QuanLyGiaiDauBongDa.Models
         public virtual DbSet<Card> Cards { get; set; }
         public virtual DbSet<Club> Clubs { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Feedback> Feedbacks { get; set; }
         public virtual DbSet<Goal> Goals { get; set; }
         public virtual DbSet<Match> Matches { get; set; }
         public virtual DbSet<MatchResult> MatchResults { get; set; }
         public virtual DbSet<Player> Players { get; set; }
         public virtual DbSet<PlayingPosition> PlayingPositions { get; set; }
+        public virtual DbSet<Ranking> Rankings { get; set; }
+        public virtual DbSet<Rate> Rates { get; set; }
         public virtual DbSet<Referee> Referees { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<RoleAccount> RoleAccounts { get; set; }
@@ -38,7 +41,7 @@ namespace QuanLyGiaiDauBongDa.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server=(local); database=QuanLyGiaiDauBongDa; uid=nva1503; pwd=1503;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("server=DESKTOP-06THPCQ\\SQLEXPRESS;database=QuanLyGiaiDauBongDa;uid=sa;pwd=sa;TrustServerCertificate=True");
             }
         }
 
@@ -155,23 +158,48 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.Property(e => e.CountryId).HasColumnName("country_id");
 
                 entity.Property(e => e.Name)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("name");
 
                 entity.Property(e => e.ShortName)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("short_name");
+            });
+
+            modelBuilder.Entity<Feedback>(entity =>
+            {
+                entity.HasKey(e => e.Username);
+
+                entity.ToTable("Feedback");
+
+                entity.Property(e => e.Username)
+                    .HasMaxLength(50)
+                    .HasColumnName("username");
+
+                entity.Property(e => e.Content)
+                    .IsRequired()
+                    .HasMaxLength(500)
+                    .HasColumnName("content");
+
+                entity.Property(e => e.Problem)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("problem");
+
+                entity.Property(e => e.RateId).HasColumnName("rateId");
+
+                entity.HasOne(d => d.Rate)
+                    .WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.RateId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Feedback_Rate");
             });
 
             modelBuilder.Entity<Goal>(entity =>
             {
                 entity.ToTable("Goal");
 
-                entity.Property(e => e.GoalId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("goal_id");
+                entity.Property(e => e.GoalId).HasColumnName("goal_id");
 
                 entity.Property(e => e.GoalTime).HasColumnName("goal_time");
 
@@ -190,19 +218,23 @@ namespace QuanLyGiaiDauBongDa.Models
             {
                 entity.ToTable("Match");
 
-                entity.Property(e => e.MatchId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("match_id");
+                entity.Property(e => e.MatchId).HasColumnName("match_id");
 
                 entity.Property(e => e.GuestId).HasColumnName("guest_id");
 
                 entity.Property(e => e.HostId).HasColumnName("host_id");
 
                 entity.Property(e => e.PlayDate)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("play_date");
 
+                entity.Property(e => e.PlayStage)
+                    .HasMaxLength(50)
+                    .HasColumnName("play_stage");
+
                 entity.Property(e => e.RefereeId).HasColumnName("referee_id");
+
+                entity.Property(e => e.TourseasonId).HasColumnName("tourseason_id");
 
                 entity.Property(e => e.VenueId).HasColumnName("venue_id");
 
@@ -221,6 +253,7 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.HasOne(d => d.Referee)
                     .WithMany(p => p.Matches)
                     .HasForeignKey(d => d.RefereeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Referee");
 
                 entity.HasOne(d => d.Venue)
@@ -265,60 +298,35 @@ namespace QuanLyGiaiDauBongDa.Models
             {
                 entity.ToTable("Player");
 
-                entity.Property(e => e.PlayerId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("player_id");
+                entity.Property(e => e.PlayerId).HasColumnName("player_id");
 
                 entity.Property(e => e.ClubId).HasColumnName("club_id");
 
                 entity.Property(e => e.CountryId).HasColumnName("country_id");
 
                 entity.Property(e => e.Dob)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("dob");
 
                 entity.Property(e => e.Height)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("height");
 
                 entity.Property(e => e.Image)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("image");
 
                 entity.Property(e => e.Name)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("name");
 
                 entity.Property(e => e.PositionId)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("position_id");
 
                 entity.Property(e => e.Weight)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("weight");
-
-                entity.HasOne(d => d.Club)
-                    .WithMany(p => p.Players)
-                    .HasForeignKey(d => d.ClubId)
-                    .HasConstraintName("FK_Player_Club");
-
-                entity.HasOne(d => d.Country)
-                    .WithMany(p => p.Players)
-                    .HasForeignKey(d => d.CountryId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Player_Country");
-
-                entity.HasOne(d => d.Position)
-                    .WithMany(p => p.Players)
-                    .HasForeignKey(d => d.PositionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Player_Playing_Position");
             });
 
             modelBuilder.Entity<PlayingPosition>(entity =>
@@ -337,6 +345,49 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnName("name");
             });
 
+            modelBuilder.Entity<Ranking>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Ranking");
+
+                entity.Property(e => e.ClubId).HasColumnName("club_id");
+
+                entity.Property(e => e.ClubName)
+                    .HasMaxLength(50)
+                    .HasColumnName("club_name");
+
+                entity.Property(e => e.Drawn).HasColumnName("drawn");
+
+                entity.Property(e => e.GoalDifference).HasColumnName("goal_difference");
+
+                entity.Property(e => e.Lost).HasColumnName("lost");
+
+                entity.Property(e => e.MatchPlayed).HasColumnName("match_played");
+
+                entity.Property(e => e.Won).HasColumnName("won");
+
+                entity.HasOne(d => d.Club)
+                    .WithMany()
+                    .HasForeignKey(d => d.ClubId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Ranking_Club");
+            });
+
+            modelBuilder.Entity<Rate>(entity =>
+            {
+                entity.ToTable("Rate");
+
+                entity.Property(e => e.RateId)
+                    .ValueGeneratedNever()
+                    .HasColumnName("rateId");
+
+                entity.Property(e => e.RateName)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("rateName");
+            });
+
             modelBuilder.Entity<Referee>(entity =>
             {
                 entity.ToTable("Referee");
@@ -346,14 +397,12 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.Property(e => e.CountryId).HasColumnName("country_id");
 
                 entity.Property(e => e.RefereeName)
-                    .IsRequired()
                     .HasMaxLength(50)
                     .HasColumnName("referee_name");
 
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Referees)
                     .HasForeignKey(d => d.CountryId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Referee_Country");
             });
 

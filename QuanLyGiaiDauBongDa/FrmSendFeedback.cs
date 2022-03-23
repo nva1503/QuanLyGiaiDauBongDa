@@ -70,13 +70,13 @@ namespace QuanLyGiaiDauBongDa
                 }
                 
                Feedback feedback = new Feedback();
-                feedback.UserName = userName;
+                feedback.Username = userName;
                 feedback.Rate = rate;
                 feedback.Problem = txtSubject.Text.Trim();
                 feedback.Content = txtContent.Text.Trim();
                 try
                 {
-                    db.Feedbacks.Add(feedback);
+                    //db.Feedbacks.Add(feedback);
                     int count = db.SaveChanges();
                     if (count > 0)
                     {
