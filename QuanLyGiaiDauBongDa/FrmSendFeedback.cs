@@ -68,19 +68,34 @@ namespace QuanLyGiaiDauBongDa
                 {
                     rate.RateId = 1;
                 }
-                
-               Feedback feedback = new Feedback();
-                feedback.Username = userName;
-                feedback.Rate = rate;
+                var accounts = (from account in db.Accounts select new { account.Username, account.Password}).ToList();
+                Feedback feedback = new Feedback();
+                foreach (var acc in accounts)
+                {
+                    if (acc.Username.Equals(userName))
+                    {
+                        feedback.Username = acc.Username;
+                    }
+
+                }              
+                feedback.RateId = rate.RateId;
                 feedback.Problem = txtSubject.Text.Trim();
                 feedback.Content = txtContent.Text.Trim();
+
                 try
                 {
-                    //db.Feedbacks.Add(feedback);
+                    db.Feedbacks.Add(feedback);
                     int count = db.SaveChanges();
                     if (count > 0)
                     {
                         MessageBox.Show("Cảm ơn đánh giá của bạn !");
+                        txtContent.Text="";
+                        txtSubject.Text = "";
+                        radioButton1.Checked = true;
+                        radioButton2.Checked = false;
+                        radioButton3.Checked = false;
+                        radioButton4.Checked = false;
+                        radioButton5.Checked = false;
                     }
                 }
                 catch (Exception ex)
