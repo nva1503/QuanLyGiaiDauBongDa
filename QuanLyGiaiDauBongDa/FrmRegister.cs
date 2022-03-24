@@ -27,28 +27,27 @@ namespace QuanLyGiaiDauBongDa
         {
             if (ValidateInfomation())
             {
-                bool isExist = CheckExistAccount(txtUsername.Text.Trim());
+                bool isExist = CheckExistAccount();
                 if (isExist)
                 {
                     MessageBox.Show("Tên đăng nhập đã tồn tại !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
+                    Account account = new Account()
+                    {
+                        Username = txtUsername.Text.Trim(),
+                        FullName = txtFname.Text.Trim(),
+                        Email = txtEmail.Text.Trim(),
+                        Password = txtPassword.Text,
+                        Dob = dateTimePickerDOB.Value
+                    };
+
+                    RoleAccount roll_acc = new RoleAccount { Username = txtUsername.Text.Trim(), RoleId = 2 };
                     try
                     {
-                        Account account = new Account()
-                        {
-                            Username = txtUsername.Text.Trim(),
-                            FullName = txtFname.Text.Trim(),
-                            Email = txtEmail.Text.Trim(),
-                            Password = txtPassword.Text,
-                            Dob = dateTimePickerDOB.Value
-                        };
-                        RoleAccount roll_acc = new RoleAccount()
-                        {
-                            Username = txtUsername.Text.Trim(),
-                            RoleId = 2,
-                        };
+                       
+                           
                         _db.Accounts.Add(account);
                         _db.RoleAccounts.Add(roll_acc);
                         int count = _db.SaveChanges();
@@ -75,7 +74,7 @@ namespace QuanLyGiaiDauBongDa
 
         }
 
-        private bool CheckExistAccount(string v)
+        private bool CheckExistAccount()
         {
             bool isExist = false;
             var account = (from a in _db.Accounts select new { a.Username }).ToList();
@@ -132,28 +131,6 @@ namespace QuanLyGiaiDauBongDa
         }
 
         public string Captcha;
-        public bool CheckCaptcha(string txt, string captcha)
-        {
-            bool isMatchCaptcha;
-
-            if (txt.Trim().Equals(captcha.Trim()))
-            {
-                isMatchCaptcha = true;
-            }
-            else { isMatchCaptcha = false; }
-            return isMatchCaptcha;
-        }
-        public void verifyEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-            string captcha = CreateCaptcha();
-            Captcha = captcha;
-            Send(txtEmail.Text.Trim(), "Lấy mã captcha để verify tài khoản của bạn", "Mã captcha của bạn là: " + captcha);
-            MessageBox.Show("Một email chứa captcha đã gửi vào tài khoản của bạn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-        }
-
         public string CreateCaptcha()
         {
             const string characterArray = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -167,6 +144,28 @@ namespace QuanLyGiaiDauBongDa
             }
             return strCaptcha.ToString();
         }
+        public void verifyEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            string captcha = CreateCaptcha();
+            Captcha=captcha;
+            Send(txtEmail.Text.Trim(), "Lấy mã captcha để verify tài khoản của bạn", "Mã captcha của bạn là: " + captcha);
+            MessageBox.Show("Một email chứa captcha đã gửi vào tài khoản của bạn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+        public bool CheckCaptcha(string txt, string captcha)
+        {
+            bool isMatchCaptcha;
+
+            if (txt.Trim().Equals(captcha.Trim()))
+            {
+                isMatchCaptcha = true;
+            }
+            else { isMatchCaptcha = false; }
+            return isMatchCaptcha;
+        }
+       
 
         public void Send(string sendto, string subject, string content)
         {

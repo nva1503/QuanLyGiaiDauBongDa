@@ -21,6 +21,7 @@ namespace QuanLyGiaiDauBongDa
         QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
 
         public string search;
+        int CID;
         public void LoadList()
         {
             //Select data clubs include country,  tables
@@ -100,6 +101,9 @@ namespace QuanLyGiaiDauBongDa
             if (dgvClub.CurrentRow.Cells["LogoUrl"].Value != null)
             {
                 picLogo.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + dgvClub.CurrentRow.Cells["LogoUrl"].Value.ToString());
+                CID = Convert.ToInt32(dgvClub.CurrentRow.Cells["ClubId"].Value.ToString());
+               
+                
             }
         }
 
@@ -157,6 +161,12 @@ namespace QuanLyGiaiDauBongDa
         private void button7_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnViewListPlayer_Click(object sender, EventArgs e)
+        {
+            FrmListPlayerInClub frmListPlayerInClub = new FrmListPlayerInClub(CID);
+            frmListPlayerInClub.ShowDialog();
         }
     }
 }
