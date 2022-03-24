@@ -40,8 +40,8 @@ namespace QuanLyGiaiDauBongDa
 
         private void FrmHomePage_Load(object sender, EventArgs e)
         {
-            statusStrip1.Text = "Welcome, Admin! Have a nice Day";
-            txtTime.Text = "Hôm nay là: "+ DateTime.Now.DayOfWeek.ToString();
+            label1.Text += "dtd91";
+            txtTime.Text = DateTime.Now.ToShortDateString().ToString() + "\nThe weather is good today. Let's go outside!";
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

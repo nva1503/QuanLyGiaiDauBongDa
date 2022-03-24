@@ -37,7 +37,6 @@ namespace QuanLyGiaiDauBongDa
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,11 +45,12 @@ namespace QuanLyGiaiDauBongDa
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.txtTime = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -73,7 +73,7 @@ namespace QuanLyGiaiDauBongDa
             this.button8.BackColor = System.Drawing.SystemColors.Control;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button8.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.setting_tool;
+            this.button8.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.settings__1_;
             this.button8.Location = new System.Drawing.Point(575, 171);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(171, 161);
@@ -87,7 +87,7 @@ namespace QuanLyGiaiDauBongDa
             this.button6.BackColor = System.Drawing.SystemColors.Control;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button6.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.graph__1_;
+            this.button6.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.analytics;
             this.button6.Location = new System.Drawing.Point(389, 171);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(171, 161);
@@ -101,7 +101,7 @@ namespace QuanLyGiaiDauBongDa
             this.button5.BackColor = System.Drawing.SystemColors.Control;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button5.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.podium__1_;
+            this.button5.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.tournament;
             this.button5.Location = new System.Drawing.Point(197, 171);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(174, 161);
@@ -117,7 +117,7 @@ namespace QuanLyGiaiDauBongDa
             this.button4.BackColor = System.Drawing.SystemColors.Control;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.calendar;
+            this.button4.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.match;
             this.button4.Location = new System.Drawing.Point(19, 172);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(171, 160);
@@ -132,7 +132,7 @@ namespace QuanLyGiaiDauBongDa
             this.button3.BackColor = System.Drawing.SystemColors.Control;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.amonestation;
+            this.button3.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.referee__3_;
             this.button3.Location = new System.Drawing.Point(575, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(171, 160);
@@ -148,7 +148,7 @@ namespace QuanLyGiaiDauBongDa
             this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.football_player;
+            this.button2.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.soccer_player;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.Location = new System.Drawing.Point(389, 5);
             this.button2.Name = "button2";
@@ -164,7 +164,7 @@ namespace QuanLyGiaiDauBongDa
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.football_club__1_;
+            this.button1.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.football__1_;
             this.button1.Location = new System.Drawing.Point(16, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(354, 160);
@@ -175,18 +175,9 @@ namespace QuanLyGiaiDauBongDa
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 698);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(982, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
-            // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.btnAboutUs);
@@ -222,17 +213,18 @@ namespace QuanLyGiaiDauBongDa
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(599, 39);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(556, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 20);
+            this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Welcome, Admin";
+            this.label1.Text = "Welcome, ";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.employee__1_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(741, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(751, 29);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 63);
             this.pictureBox2.TabIndex = 1;
@@ -252,7 +244,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.button7.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.exit;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(832, 640);
+            this.button7.Location = new System.Drawing.Point(815, 610);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(122, 45);
             this.button7.TabIndex = 6;
@@ -265,35 +257,39 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.txtTime.AccessibleDescription = "";
             this.txtTime.AutoSize = true;
-            this.txtTime.Location = new System.Drawing.Point(27, 667);
+            this.txtTime.BackColor = System.Drawing.Color.Transparent;
+            this.txtTime.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtTime.ForeColor = System.Drawing.Color.White;
+            this.txtTime.Location = new System.Drawing.Point(126, 622);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(50, 20);
+            this.txtTime.Size = new System.Drawing.Size(51, 20);
             this.txtTime.TabIndex = 7;
             this.txtTime.Text = "label3";
             // 
-            // linkLabel1
+            // pictureBox3
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(704, 653);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(80, 20);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Trang Web";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.cloud__1_1;
+            this.pictureBox3.Location = new System.Drawing.Point(37, 622);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(83, 62);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
             // 
             // FrmHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 720);
-            this.Controls.Add(this.linkLabel1);
+            this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.football_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(982, 696);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel2);
             this.Name = "FrmHomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần Mềm Quản Lý Giải Premier League";
             this.Load += new System.EventHandler(this.FrmHomePage_Load);
             this.panel2.ResumeLayout(false);
@@ -301,6 +297,7 @@ namespace QuanLyGiaiDauBongDa
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +305,6 @@ namespace QuanLyGiaiDauBongDa
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
@@ -324,6 +320,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label txtTime;
         private System.Windows.Forms.Button btnAboutUs;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

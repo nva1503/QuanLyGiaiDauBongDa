@@ -19,7 +19,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -223,6 +223,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap analytics {
+            get {
+                object obj = ResourceManager.GetObject("analytics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap animated_click_here_sign_and_button_image_0040 {
             get {
                 object obj = ResourceManager.GetObject("animated-click-here-sign-and-button-image-0040", resourceCulture);
@@ -276,6 +286,46 @@ namespace QuanLyGiaiDauBongDa.Properties {
         internal static System.Drawing.Bitmap clcikhereicon {
             get {
                 object obj = ResourceManager.GetObject("clcikhereicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloud {
+            get {
+                object obj = ResourceManager.GetObject("cloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloud__1_ {
+            get {
+                object obj = ResourceManager.GetObject("cloud (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloud__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("cloud (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cloud1 {
+            get {
+                object obj = ResourceManager.GetObject("cloud1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +406,26 @@ namespace QuanLyGiaiDauBongDa.Properties {
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap football__1_ {
+            get {
+                object obj = ResourceManager.GetObject("football (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap football_background {
+            get {
+                object obj = ResourceManager.GetObject("football-background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -564,6 +634,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap match {
+            get {
+                object obj = ResourceManager.GetObject("match", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap podium__1_ {
             get {
                 object obj = ResourceManager.GetObject("podium (1)", resourceCulture);
@@ -594,6 +674,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap referee__3_ {
+            get {
+                object obj = ResourceManager.GetObject("referee (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sendmail {
             get {
                 object obj = ResourceManager.GetObject("sendmail", resourceCulture);
@@ -614,9 +704,39 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings__1_ {
+            get {
+                object obj = ResourceManager.GetObject("settings (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skysports_jamie_vardy_leicester_5628869 {
             get {
                 object obj = ResourceManager.GetObject("skysports-jamie-vardy-leicester_5628869", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soccer_player {
+            get {
+                object obj = ResourceManager.GetObject("soccer-player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tournament {
+            get {
+                object obj = ResourceManager.GetObject("tournament", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
