@@ -72,6 +72,8 @@ namespace QuanLyGiaiDauBongDa
                     club.CountryId = (int)cbCountry.SelectedValue;
                     //club.LogoUrl = System.IO.Path.GetFileName(picLogo.ImageLocation);
                     club.LogoUrl = txtLogo2.Text.Trim();
+
+                    context.Clubs.Update(club);
                     FrmDanhSachClub frmDanhSachClub = (FrmDanhSachClub)Application.OpenForms["FrmDanhSachClub"];
                     frmDanhSachClub.LoadList();
                     context.SaveChanges();

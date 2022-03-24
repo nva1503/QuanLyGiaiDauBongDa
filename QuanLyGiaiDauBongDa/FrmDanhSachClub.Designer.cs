@@ -51,6 +51,7 @@ namespace QuanLyGiaiDauBongDa
             this.txtTotalNumber = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -226,7 +227,7 @@ namespace QuanLyGiaiDauBongDa
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(560, 69);
+            this.label12.Location = new System.Drawing.Point(816, 201);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(130, 20);
             this.label12.TabIndex = 25;
@@ -235,7 +236,7 @@ namespace QuanLyGiaiDauBongDa
             // txtTotalNumber
             // 
             this.txtTotalNumber.AutoSize = true;
-            this.txtTotalNumber.Location = new System.Drawing.Point(696, 69);
+            this.txtTotalNumber.Location = new System.Drawing.Point(952, 201);
             this.txtTotalNumber.Name = "txtTotalNumber";
             this.txtTotalNumber.Size = new System.Drawing.Size(23, 20);
             this.txtTotalNumber.TabIndex = 26;
@@ -259,11 +260,25 @@ namespace QuanLyGiaiDauBongDa
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button7
+            // 
+            this.button7.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.exit;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.Location = new System.Drawing.Point(928, 685);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(122, 45);
+            this.button7.TabIndex = 29;
+            this.button7.Text = "Log Out";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FrmDanhSachClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 673);
+            this.ClientSize = new System.Drawing.Size(1090, 742);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtTotalNumber);
@@ -287,6 +302,7 @@ namespace QuanLyGiaiDauBongDa
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvClub);
             this.Name = "FrmDanhSachClub";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDanhSachClub";
             this.Load += new System.EventHandler(this.FrmDanhSachDoiBong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClub)).EndInit();
@@ -320,5 +336,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label txtTotalNumber;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button7;
     }
 }

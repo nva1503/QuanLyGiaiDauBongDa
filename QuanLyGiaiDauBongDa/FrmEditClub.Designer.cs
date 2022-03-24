@@ -260,6 +260,7 @@ namespace QuanLyGiaiDauBongDa
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmEditClub";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditClub";
             this.Load += new System.EventHandler(this.FrmEditClub_Load);
             this.panel1.ResumeLayout(false);

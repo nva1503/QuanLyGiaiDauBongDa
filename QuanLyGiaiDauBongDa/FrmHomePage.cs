@@ -83,7 +83,7 @@ namespace QuanLyGiaiDauBongDa
         {
             FrmDanhSachClub frmDanhSachDoiBong = new FrmDanhSachClub();
             this.Hide();
-            frmDanhSachDoiBong.Show();
+            frmDanhSachDoiBong.ShowDialog();
             this.Show();
 
         }
@@ -105,14 +105,16 @@ namespace QuanLyGiaiDauBongDa
         {
             FrmLichThiDau FrmLichThiDau = new FrmLichThiDau();
             this.Hide();
-            FrmLichThiDau.Show();
+            FrmLichThiDau.ShowDialog();
             this.Show();
         }
 
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
             FrmAboutUs frmAboutUs = new FrmAboutUs(userName);
+            this.Hide();
             frmAboutUs.ShowDialog();
+            this.Show();
 
 
         }
@@ -120,7 +122,17 @@ namespace QuanLyGiaiDauBongDa
         private void button5_Click(object sender, EventArgs e)
         {
             FrmBangXepHang frmBangXepHang = new FrmBangXepHang();
-            frmBangXepHang.Show();
+            this.Hide();
+            frmBangXepHang.ShowDialog();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmDanhSachCauThu frmDanhSachCauThu = new FrmDanhSachCauThu();
+            this.Hide();
+            frmDanhSachCauThu.ShowDialog();
+            this.Show();
         }
     }
 }

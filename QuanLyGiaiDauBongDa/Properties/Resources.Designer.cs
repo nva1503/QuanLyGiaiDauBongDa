@@ -133,6 +133,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _270901 {
+            get {
+                object obj = ResourceManager.GetObject("270901", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("3", resourceCulture);
@@ -727,6 +737,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         internal static System.Drawing.Bitmap soccer_player {
             get {
                 object obj = ResourceManager.GetObject("soccer-player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thumbnailBangXepHang {
+            get {
+                object obj = ResourceManager.GetObject("thumbnailBangXepHang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -63,28 +63,28 @@ namespace QuanLyGiaiDauBongDa
                 TextBox textBox = new TextBox();
                 textBox.Text = item.PlayDate.ToString();
                 textBox.Size = new Size(180, 20);
+                textBox.ReadOnly = true;
+
                 Button btnHost = new Button();
-                btnHost.AutoSize = true;
-                btnHost.Image = Image.FromFile(@"..\..\..\Resources\"+ item.Host.LogoUrl);
+                btnHost.Size = new Size(100,100);
+                btnHost.BackgroundImage = Image.FromFile(@"..\..\..\Resources\"+ item.Host.LogoUrl);
                 btnHost.ImageAlign = ContentAlignment.MiddleCenter;
-                btnHost.Text = item.Host.Name.ToString();
-                btnHost.TextAlign = ContentAlignment.BottomCenter;
+                btnHost.BackgroundImageLayout = ImageLayout.Stretch;
 
 
                 Button btnGuest = new Button();
-                btnGuest.AutoSize = true;
-                btnGuest.Image = Image.FromFile(@"..\..\..\Resources\" + item.Guest.LogoUrl);
+                btnGuest.Size = new Size(100, 100);
+                btnGuest.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + item.Guest.LogoUrl);
                 btnGuest.ImageAlign = ContentAlignment.MiddleCenter;
-                btnGuest.Text = item.Guest.Name.ToString();
-                btnGuest.TextAlign = ContentAlignment.BottomCenter;
-                
+                btnGuest.BackgroundImageLayout = ImageLayout.Stretch;
+
 
                 panel.FlowDirection = FlowDirection.LeftToRight;
 
                 panel.Controls.Add(new Label() { Text = "Ngày Thi Đấu: ", AutoSize = true }); 
                 panel.Controls.Add(textBox);
                 panel.Controls.Add(btnHost);
-                panel.Controls.Add(new Label() { Text = "VS" });
+                panel.Controls.Add(new Label() { Text = "VS", Width = 50 }) ;
                 panel.Controls.Add(btnGuest);
                 
 
@@ -99,6 +99,21 @@ namespace QuanLyGiaiDauBongDa
             this.Hide();
             frmAddMatch.ShowDialog();
             this.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
