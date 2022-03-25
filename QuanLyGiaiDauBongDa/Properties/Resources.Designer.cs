@@ -22,7 +22,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("QuanLyGiaiDauBongDa.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _104701853_697ca00a_81fa_4c68_9278_67e5d27ea257 {
+        public static System.Drawing.Bitmap _104701853_697ca00a_81fa_4c68_9278_67e5d27ea257 {
             get {
                 object obj = ResourceManager.GetObject("_104701853_697ca00a-81fa-4c68-9278-67e5d27ea257", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2 {
+        public static System.Drawing.Bitmap _2 {
             get {
                 object obj = ResourceManager.GetObject("2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _2_Raphinha_3 {
+        public static System.Drawing.Bitmap _2_Raphinha_3 {
             get {
                 object obj = ResourceManager.GetObject("2_Raphinha-3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _21 {
+        public static System.Drawing.Bitmap _21 {
             get {
                 object obj = ResourceManager.GetObject("21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +103,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _22 {
+        public static System.Drawing.Bitmap _22 {
             get {
                 object obj = ResourceManager.GetObject("22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _23 {
+        public static System.Drawing.Bitmap _23 {
             get {
                 object obj = ResourceManager.GetObject("23", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +123,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _27090 {
+        public static System.Drawing.Bitmap _27090 {
             get {
                 object obj = ResourceManager.GetObject("27090", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +133,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _270901 {
+        public static System.Drawing.Bitmap _270901 {
             get {
                 object obj = ResourceManager.GetObject("270901", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +143,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _3 {
+        public static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +153,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _39520735_illustration_of_a_striped_green_grass_background_image_ {
+        public static System.Drawing.Bitmap _39520735_illustration_of_a_striped_green_grass_background_image_ {
             get {
                 object obj = ResourceManager.GetObject("39520735-illustration-of-a-striped-green-grass-background-image-", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +163,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4 {
+        public static System.Drawing.Bitmap _4 {
             get {
                 object obj = ResourceManager.GetObject("4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +173,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _408175 {
+        public static System.Drawing.Bitmap _408175 {
             get {
                 object obj = ResourceManager.GetObject("408175", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +183,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6 {
+        public static System.Drawing.Bitmap _6 {
             get {
                 object obj = ResourceManager.GetObject("6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +193,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7 {
+        public static System.Drawing.Bitmap _7 {
             get {
                 object obj = ResourceManager.GetObject("7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +203,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap aboutus {
+        public static System.Drawing.Bitmap aboutus {
             get {
                 object obj = ResourceManager.GetObject("aboutus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +213,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap aboutuslogo {
+        public static System.Drawing.Bitmap aboutuslogo {
             get {
                 object obj = ResourceManager.GetObject("aboutuslogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -223,7 +223,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap aboutuss111 {
+        public static System.Drawing.Bitmap aboutuss111 {
             get {
                 object obj = ResourceManager.GetObject("aboutuss111", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -233,7 +233,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Adidas_tiet_lo_trai_bong_tuong_tac_cho_vong_knockout_World_cup_02_resize {
+        public static System.Drawing.Bitmap Adidas_tiet_lo_trai_bong_tuong_tac_cho_vong_knockout_World_cup_02_resize {
             get {
                 object obj = ResourceManager.GetObject("Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -243,7 +243,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Adidas_tiet_lo_trai_bong_tuong_tac_cho_vong_knockout_World_cup_02_resize1 {
+        public static System.Drawing.Bitmap Adidas_tiet_lo_trai_bong_tuong_tac_cho_vong_knockout_World_cup_02_resize1 {
             get {
                 object obj = ResourceManager.GetObject("Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -253,7 +253,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap amonestation {
+        public static System.Drawing.Bitmap amonestation {
             get {
                 object obj = ResourceManager.GetObject("amonestation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -263,7 +263,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap analytics {
+        public static System.Drawing.Bitmap analytics {
             get {
                 object obj = ResourceManager.GetObject("analytics", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -273,7 +273,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap animated_click_here_sign_and_button_image_0040 {
+        public static System.Drawing.Bitmap animated_click_here_sign_and_button_image_0040 {
             get {
                 object obj = ResourceManager.GetObject("animated-click-here-sign-and-button-image-0040", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -283,7 +283,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap appinfo {
+        public static System.Drawing.Bitmap appinfo {
             get {
                 object obj = ResourceManager.GetObject("appinfo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -293,7 +293,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arsenal {
+        public static System.Drawing.Bitmap arsenal {
             get {
                 object obj = ResourceManager.GetObject("arsenal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -303,7 +303,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arsenal_football_club_stadium_211427551515995098 {
+        public static System.Drawing.Bitmap arsenal_football_club_stadium_211427551515995098 {
             get {
                 object obj = ResourceManager.GetObject("arsenal-football-club-stadium-211427551515995098", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -313,7 +313,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendar {
+        public static System.Drawing.Bitmap calendar {
             get {
                 object obj = ResourceManager.GetObject("calendar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -323,7 +323,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap chan_thuong_cua_paul_pogba {
+        public static System.Drawing.Bitmap chan_thuong_cua_paul_pogba {
             get {
                 object obj = ResourceManager.GetObject("chan-thuong-cua-paul-pogba", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -333,7 +333,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap clcikhereicon {
+        public static System.Drawing.Bitmap clcikhereicon {
             get {
                 object obj = ResourceManager.GetObject("clcikhereicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -343,7 +343,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cloud {
+        public static System.Drawing.Bitmap cloud {
             get {
                 object obj = ResourceManager.GetObject("cloud", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -353,7 +353,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cloud__1_ {
+        public static System.Drawing.Bitmap cloud__1_ {
             get {
                 object obj = ResourceManager.GetObject("cloud (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -363,7 +363,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cloud__1_1 {
+        public static System.Drawing.Bitmap cloud__1_1 {
             get {
                 object obj = ResourceManager.GetObject("cloud (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -373,7 +373,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cloud1 {
+        public static System.Drawing.Bitmap cloud1 {
             get {
                 object obj = ResourceManager.GetObject("cloud1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -383,7 +383,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap contact {
+        public static System.Drawing.Bitmap contact {
             get {
                 object obj = ResourceManager.GetObject("contact", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -393,7 +393,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cristiano_Ronaldo_2018 {
+        public static System.Drawing.Bitmap Cristiano_Ronaldo_2018 {
             get {
                 object obj = ResourceManager.GetObject("Cristiano_Ronaldo_2018", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -403,7 +403,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cristiano_Ronaldo_20181 {
+        public static System.Drawing.Bitmap Cristiano_Ronaldo_20181 {
             get {
                 object obj = ResourceManager.GetObject("Cristiano_Ronaldo_20181", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -413,7 +413,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DoiHinh {
+        public static System.Drawing.Bitmap DoiHinh {
             get {
                 object obj = ResourceManager.GetObject("DoiHinh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -423,7 +423,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DoiHinh1 {
+        public static System.Drawing.Bitmap DoiHinh1 {
             get {
                 object obj = ResourceManager.GetObject("DoiHinh1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -433,7 +433,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap download {
+        public static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -443,7 +443,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap download__1_ {
+        public static System.Drawing.Bitmap download__1_ {
             get {
                 object obj = ResourceManager.GetObject("download (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -453,7 +453,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap download1 {
+        public static System.Drawing.Bitmap download1 {
             get {
                 object obj = ResourceManager.GetObject("download1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -463,7 +463,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap employee__1_ {
+        public static System.Drawing.Bitmap employee__1_ {
             get {
                 object obj = ResourceManager.GetObject("employee (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -473,7 +473,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap epl_1455031805339 {
+        public static System.Drawing.Bitmap epl_1455031805339 {
             get {
                 object obj = ResourceManager.GetObject("epl-1455031805339", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -483,7 +483,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit {
+        public static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -493,7 +493,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f57737 {
+        public static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f57737 {
             get {
                 object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f57737", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -503,7 +503,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577371 {
+        public static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577371 {
             get {
                 object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f577371", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -513,7 +513,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577372 {
+        public static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577372 {
             get {
                 object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f577372", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -523,7 +523,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577373 {
+        public static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577373 {
             get {
                 object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f577373", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -533,7 +533,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap football__1_ {
+        public static System.Drawing.Bitmap football__1_ {
             get {
                 object obj = ResourceManager.GetObject("football (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -543,7 +543,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap football_background {
+        public static System.Drawing.Bitmap football_background {
             get {
                 object obj = ResourceManager.GetObject("football-background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -553,7 +553,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap football_club__1_ {
+        public static System.Drawing.Bitmap football_club__1_ {
             get {
                 object obj = ResourceManager.GetObject("football-club (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -563,7 +563,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap football_player {
+        public static System.Drawing.Bitmap football_player {
             get {
                 object obj = ResourceManager.GetObject("football-player", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -573,7 +573,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gettyimages_1233858669_612x612 {
+        public static System.Drawing.Bitmap gettyimages_1233858669_612x612 {
             get {
                 object obj = ResourceManager.GetObject("gettyimages-1233858669-612x612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -583,7 +583,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap graph__1_ {
+        public static System.Drawing.Bitmap graph__1_ {
             get {
                 object obj = ResourceManager.GetObject("graph (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -593,7 +593,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap heung_min_son {
+        public static System.Drawing.Bitmap heung_min_son {
             get {
                 object obj = ResourceManager.GetObject("heung-min-son", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -603,7 +603,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hinh_1_WC_ball {
+        public static System.Drawing.Bitmap Hinh_1_WC_ball {
             get {
                 object obj = ResourceManager.GetObject("Hinh-1-WC-ball", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -613,7 +613,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hinh_1_WC_ball1 {
+        public static System.Drawing.Bitmap Hinh_1_WC_ball1 {
             get {
                 object obj = ResourceManager.GetObject("Hinh-1-WC-ball1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -623,7 +623,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap homeIcon {
+        public static System.Drawing.Bitmap homeIcon {
             get {
                 object obj = ResourceManager.GetObject("homeIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -633,7 +633,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icon1 {
+        public static System.Drawing.Bitmap icon1 {
             get {
                 object obj = ResourceManager.GetObject("icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -643,7 +643,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icon2 {
+        public static System.Drawing.Bitmap icon2 {
             get {
                 object obj = ResourceManager.GetObject("icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -653,7 +653,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icon4 {
+        public static System.Drawing.Bitmap icon4 {
             get {
                 object obj = ResourceManager.GetObject("icon4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -663,7 +663,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap images__1_ {
+        public static System.Drawing.Bitmap images__1_ {
             get {
                 object obj = ResourceManager.GetObject("images (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -673,7 +673,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap info {
+        public static System.Drawing.Bitmap info {
             get {
                 object obj = ResourceManager.GetObject("info", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -683,7 +683,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap istanbul_turkey_august_joy_smiles_cheer_sadio_mane_player_liverpool_fc_happy_emotions_celebrate_uefa_super_cup_trophy_188377002 {
+        public static System.Drawing.Bitmap istanbul_turkey_august_joy_smiles_cheer_sadio_mane_player_liverpool_fc_happy_emotions_celebrate_uefa_super_cup_trophy_188377002 {
             get {
                 object obj = ResourceManager.GetObject("istanbul-turkey-august-joy-smiles-cheer-sadio-mane-player-liverpool-fc-happy-emot" +
                         "ions-celebrate-uefa-super-cup-trophy-188377002", resourceCulture);
@@ -694,7 +694,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap jota {
+        public static System.Drawing.Bitmap jota {
             get {
                 object obj = ResourceManager.GetObject("jota", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -704,7 +704,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap list {
+        public static System.Drawing.Bitmap list {
             get {
                 object obj = ResourceManager.GetObject("list", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -714,7 +714,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap list__1_ {
+        public static System.Drawing.Bitmap list__1_ {
             get {
                 object obj = ResourceManager.GetObject("list (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -724,7 +724,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LoginBackground {
+        public static System.Drawing.Bitmap LoginBackground {
             get {
                 object obj = ResourceManager.GetObject("LoginBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -734,7 +734,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LoginBackground1 {
+        public static System.Drawing.Bitmap LoginBackground1 {
             get {
                 object obj = ResourceManager.GetObject("LoginBackground1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -744,7 +744,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        public static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -754,7 +754,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo1 {
+        public static System.Drawing.Bitmap logo1 {
             get {
                 object obj = ResourceManager.GetObject("logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -764,7 +764,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo2 {
+        public static System.Drawing.Bitmap logo2 {
             get {
                 object obj = ResourceManager.GetObject("logo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -774,7 +774,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap match {
+        public static System.Drawing.Bitmap match {
             get {
                 object obj = ResourceManager.GetObject("match", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -784,7 +784,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_2 {
+        public static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_2 {
             get {
                 object obj = ResourceManager.GetObject("nhung-hinh-anh-Old-Trafford-Wallpaper-dep-nhat-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -794,7 +794,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_21 {
+        public static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_21 {
             get {
                 object obj = ResourceManager.GetObject("nhung-hinh-anh-Old-Trafford-Wallpaper-dep-nhat-21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -804,7 +804,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_22 {
+        public static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_22 {
             get {
                 object obj = ResourceManager.GetObject("nhung-hinh-anh-Old-Trafford-Wallpaper-dep-nhat-22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -814,7 +814,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap old_trafford_stadium {
+        public static System.Drawing.Bitmap old_trafford_stadium {
             get {
                 object obj = ResourceManager.GetObject("old-trafford-stadium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -824,7 +824,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap old_trafford_stadium1 {
+        public static System.Drawing.Bitmap old_trafford_stadium1 {
             get {
                 object obj = ResourceManager.GetObject("old-trafford-stadium1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -834,7 +834,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap podium__1_ {
+        public static System.Drawing.Bitmap podium__1_ {
             get {
                 object obj = ResourceManager.GetObject("podium (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -844,7 +844,27 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap premierLogo {
+        public static System.Drawing.Bitmap premier_league {
+            get {
+                object obj = ResourceManager.GetObject("premier-league", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap premier_league_2 {
+            get {
+                object obj = ResourceManager.GetObject("premier-league-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap premierLogo {
             get {
                 object obj = ResourceManager.GetObject("premierLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -854,7 +874,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap referee__2_ {
+        public static System.Drawing.Bitmap referee__2_ {
             get {
                 object obj = ResourceManager.GetObject("referee (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -864,7 +884,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap referee__3_ {
+        public static System.Drawing.Bitmap referee__3_ {
             get {
                 object obj = ResourceManager.GetObject("referee (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -874,7 +894,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sendmail {
+        public static System.Drawing.Bitmap sendmail {
             get {
                 object obj = ResourceManager.GetObject("sendmail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -884,7 +904,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap setting_tool {
+        public static System.Drawing.Bitmap setting_tool {
             get {
                 object obj = ResourceManager.GetObject("setting-tool", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -894,7 +914,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap settings__1_ {
+        public static System.Drawing.Bitmap settings__1_ {
             get {
                 object obj = ResourceManager.GetObject("settings (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -904,7 +924,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap skysports_jamie_vardy_leicester_5628869 {
+        public static System.Drawing.Bitmap skysports_jamie_vardy_leicester_5628869 {
             get {
                 object obj = ResourceManager.GetObject("skysports-jamie-vardy-leicester_5628869", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -914,7 +934,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap soccer_football_grass_field_vivid_green_background_strong_color_nice_texture_39511876 {
+        public static System.Drawing.Bitmap soccer_football_grass_field_vivid_green_background_strong_color_nice_texture_39511876 {
             get {
                 object obj = ResourceManager.GetObject("soccer-football-grass-field-vivid-green-background-strong-color-nice-texture-3951" +
                         "1876", resourceCulture);
@@ -925,7 +945,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap soccer_player {
+        public static System.Drawing.Bitmap soccer_player {
             get {
                 object obj = ResourceManager.GetObject("soccer-player", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -935,7 +955,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap striped_soccer_football_grass_field_texture_background_copy_space_soccer_football_grass_field_108344313 {
+        public static System.Drawing.Bitmap striped_soccer_football_grass_field_texture_background_copy_space_soccer_football_grass_field_108344313 {
             get {
                 object obj = ResourceManager.GetObject("striped-soccer-football-grass-field-texture-background-copy-space-soccer-football" +
                         "-grass-field-108344313", resourceCulture);
@@ -946,7 +966,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap striped_soccer_football_grass_field_texture_background_copy_space_soccer_football_grass_field_1083443131 {
+        public static System.Drawing.Bitmap striped_soccer_football_grass_field_texture_background_copy_space_soccer_football_grass_field_1083443131 {
             get {
                 object obj = ResourceManager.GetObject("striped-soccer-football-grass-field-texture-background-copy-space-soccer-football" +
                         "-grass-field-1083443131", resourceCulture);
@@ -957,7 +977,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap thumbnailBangXepHang {
+        public static System.Drawing.Bitmap thumbnailBangXepHang {
             get {
                 object obj = ResourceManager.GetObject("thumbnailBangXepHang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -967,7 +987,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tournament {
+        public static System.Drawing.Bitmap tournament {
             get {
                 object obj = ResourceManager.GetObject("tournament", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

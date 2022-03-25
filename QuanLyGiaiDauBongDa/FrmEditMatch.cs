@@ -27,14 +27,7 @@ namespace QuanLyGiaiDauBongDa
         {
             try
             {
-                if ((from r in context.MatchResults where r.MatchId == match.MatchId select r).Any())
-                {
-                    MessageBox.Show("Result existed");
-                    this.Close();
-                } else
-                {
-                    LoadForm();
-                }
+                LoadForm();
             }
             catch (Exception ex)
             {
@@ -80,7 +73,7 @@ namespace QuanLyGiaiDauBongDa
             guestGoal.FlowDirection = FlowDirection.TopDown;
             var ggoals = (from g in context.Goals
                           where g.MatchId == match.MatchId && g.Player.ClubId == match.GuestId
-                          select new {g.Player.Name, g.GoalTime}).ToList();
+                          select new { g.Player.Name, g.GoalTime }).ToList();
             guestGoalScore = ggoals.Count;
             foreach (var g in ggoals)
             {
@@ -124,14 +117,14 @@ namespace QuanLyGiaiDauBongDa
         private void button3_Click(object sender, EventArgs e, Match m)
         {
             FrmAddGoal addgoal = new FrmAddGoal(m);
-            addgoal.Show();
+            addgoal.ShowDialog();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e, Match m)
         {
             FrmAddCard addcard = new FrmAddCard(m);
-            addcard.Show();
+            addcard.ShowDialog();
             this.Close();
         }
 

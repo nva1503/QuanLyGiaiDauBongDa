@@ -7,6 +7,7 @@ namespace QuanLyGiaiDauBongDa.Models
 {
     public partial class Feedback
     {
+        public int FeedbackId { get; set; }
         public string Username { get; set; }
         public string Problem { get; set; }
         public string Content { get; set; }

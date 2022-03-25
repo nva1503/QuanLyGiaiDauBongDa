@@ -47,6 +47,7 @@ namespace QuanLyGiaiDauBongDa
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatarPlayer)).BeginInit();
             this.panel1.SuspendLayout();
@@ -54,18 +55,21 @@ namespace QuanLyGiaiDauBongDa
             // 
             // dgvPlayer
             // 
+            this.dgvPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPlayer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlayer.Location = new System.Drawing.Point(27, 33);
+            this.dgvPlayer.Location = new System.Drawing.Point(27, 89);
             this.dgvPlayer.Name = "dgvPlayer";
             this.dgvPlayer.RowHeadersWidth = 51;
             this.dgvPlayer.RowTemplate.Height = 29;
-            this.dgvPlayer.Size = new System.Drawing.Size(721, 609);
+            this.dgvPlayer.Size = new System.Drawing.Size(721, 553);
             this.dgvPlayer.TabIndex = 0;
             this.dgvPlayer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlayer_CellClick);
+            this.dgvPlayer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlayer_CellContentClick);
             // 
             // avatarPlayer
             // 
             this.avatarPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.avatarPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.avatarPlayer.Location = new System.Drawing.Point(776, 43);
             this.avatarPlayer.Name = "avatarPlayer";
             this.avatarPlayer.Size = new System.Drawing.Size(283, 322);
@@ -236,16 +240,31 @@ namespace QuanLyGiaiDauBongDa
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(122, 45);
             this.button7.TabIndex = 7;
-            this.button7.Text = "Log Out";
+            this.button7.Text = "Exit";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(294, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(260, 37);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Danh Sách Cầu Thủ";
             // 
             // FrmDanhSachCauThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.football_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1088, 732);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.avatarPlayer);
@@ -259,6 +278,7 @@ namespace QuanLyGiaiDauBongDa
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -282,5 +302,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label13;
     }
 }

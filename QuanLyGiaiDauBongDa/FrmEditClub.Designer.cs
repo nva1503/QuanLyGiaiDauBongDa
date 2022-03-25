@@ -154,6 +154,7 @@ namespace QuanLyGiaiDauBongDa
             this.button1.TabIndex = 36;
             this.button1.Text = "Import Logo";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -170,6 +171,7 @@ namespace QuanLyGiaiDauBongDa
             this.picLogo.Location = new System.Drawing.Point(3, 3);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(215, 201);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 43;
             this.picLogo.TabStop = false;
             // 
@@ -215,6 +217,7 @@ namespace QuanLyGiaiDauBongDa
             this.txtLogo2.Name = "txtLogo2";
             this.txtLogo2.Size = new System.Drawing.Size(155, 27);
             this.txtLogo2.TabIndex = 43;
+            this.txtLogo2.Text = " ";
             // 
             // label7
             // 

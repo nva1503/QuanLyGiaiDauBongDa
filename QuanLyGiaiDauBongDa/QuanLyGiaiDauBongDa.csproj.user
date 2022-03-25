@@ -19,6 +19,9 @@
     <Compile Update="FrmAddMatch.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAddReferee.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmBangXepHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmDanhSachClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmDanhSachTrongTai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmDetailMatch.cs">
@@ -40,6 +46,9 @@
     <Compile Update="FrmEditPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmEditReferee.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -49,9 +58,6 @@
     <Compile Update="FrmLichThiDauChoClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmListPlayerInClub.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmSendFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmSettingAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmTheThucThamGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmThongSoGiaiDau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmViewAndEditInformation.cs">

@@ -47,6 +47,8 @@ namespace QuanLyGiaiDauBongDa
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtFileName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +78,7 @@ namespace QuanLyGiaiDauBongDa
             this.button3.TabIndex = 57;
             this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -102,6 +105,7 @@ namespace QuanLyGiaiDauBongDa
             this.picLogo.Location = new System.Drawing.Point(3, 3);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(215, 201);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 43;
             this.picLogo.TabStop = false;
             // 
@@ -113,6 +117,7 @@ namespace QuanLyGiaiDauBongDa
             this.button1.TabIndex = 54;
             this.button1.Text = "Import Logo";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtNameClub
             // 
@@ -205,11 +210,29 @@ namespace QuanLyGiaiDauBongDa
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 43;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(40, 371);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.TabIndex = 60;
+            this.label7.Text = "File Name:";
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Location = new System.Drawing.Point(126, 371);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(140, 27);
+            this.txtFileName.TabIndex = 61;
+            // 
             // FrmAddClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtFileName);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.cbStadium);
             this.Controls.Add(this.cbCountry);
             this.Controls.Add(this.button3);
@@ -228,6 +251,7 @@ namespace QuanLyGiaiDauBongDa
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmAddClub";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddClub";
             this.Load += new System.EventHandler(this.FrmAddClub_Load);
             this.panel1.ResumeLayout(false);
@@ -257,5 +281,7 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtFileName;
     }
 }

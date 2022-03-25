@@ -14,26 +14,28 @@ namespace QuanLyGiaiDauBongDa
     public partial class FrmAddMatch : Form
     {
         QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
-        Match match = new();
         public FrmAddMatch()
         {
             InitializeComponent();
         }
-        public FrmAddMatch(Match match)
+        class Play_Stage
         {
-            InitializeComponent();
-            this.match = match;
+            public string key { get; set; }
+            public string value { get; set; }
         }
+
         private void Loadmatch()
         {
+            context = new QuanLyGiaiDauBongDaContext();
+
             cbGuest.DataSource = context.Clubs.ToList();
             cbGuest.DisplayMember = "Name";
-            cbGuest.ValueMember = "ClubId";
+            cbGuest.ValueMember = "Name";
             cbGuest.SelectedIndex = -1;
 
             cbHost.DataSource = context.Clubs.ToList();
             cbHost.DisplayMember = "Name";
-            cbHost.ValueMember = "ClubId";
+            cbHost.ValueMember = "Name";
             cbHost.SelectedIndex = -1;
 
             cbVenue.DataSource = context.Venues.ToList();
@@ -45,93 +47,118 @@ namespace QuanLyGiaiDauBongDa
             cbReferee.DisplayMember = "RefereeName";
             cbReferee.ValueMember = "RefereeId";
 
-            if (match.MatchId != 0)
-            {
-                cbHost.SelectedValue = match.HostId;
-                cbGuest.SelectedValue = match.GuestId;
-                cbReferee.SelectedValue = match.RefereeId;
-                cbVenue.SelectedValue = match.VenueId;
-                dateTimePicker1.Value = DateTime.Parse(match.PlayDate.ToString());
-            }
+            //Note: play_stage – this indicates that in which stage a match is going on,
+            //i.e.G for Group stage, R for Round of 16 stage, Q for Quarter final stage,
+            //S for Semi Final stage, and F for Final
+
+            Dictionary<string, string> list = new Dictionary<string, string>();
+
+            var play_stages = new List<Play_Stage>()
+      {
+        new Play_Stage() { key = "G", value = "Vòng Bảng" },
+        new Play_Stage() { key = "R", value = "Vòng Loại 16 trận" },
+        new Play_Stage() { key = "Q", value = "Tứ Kết" },
+        new Play_Stage() { key = "S", value = "Bán Kết" },
+        new Play_Stage() { key = "F", value = "Chung Kết" },
+      };
+
+            cbStage.DataSource = play_stages;
+            cbStage.ValueMember = "key";
+            cbStage.DisplayMember = "value";
+            cbStage.SelectedIndex = 0;
+
         }
         private void FrmAddMatch_Load(object sender, EventArgs e)
         {
             try
             {
-                if (match.MatchId == 0) 
-                {
-                    Loadmatch();
-                } else
-                {
-                    if (!(from r in context.MatchResults where r.MatchId == match.MatchId select r).Any())
-                    {
-                        Loadmatch();
-                    } else
-                    {
-                        MessageBox.Show("Trận đấu đã diễn ra");
-                        this.Close();
-                    }
-                }
+                Loadmatch();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbVenue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtCapacity.Text = "Hello";
+        }
+
+        private void cbVenue_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void cbHost_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbHost.SelectedIndex != -1)
+            {
+                string x = cbHost.SelectedValue.ToString();
+                foreach (var item in context.Clubs.ToList())
+                {
+                    if (x == item.Name && item.LogoUrl != null)
+                    {
+                        pictureBox1.Image = Image.FromFile(@"..\..\..\Resources\" + item.LogoUrl);
+
+                    }
+                }
+            }
+
+        }
+
+        private void cbGuest_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbGuest.SelectedIndex != -1)
+            {
+                string x = cbGuest.SelectedValue.ToString();
+                foreach (var item in context.Clubs.ToList())
+                {
+                    if (x == item.Name && item.LogoUrl != null)
+                    {
+                        pic2.Image = Image.FromFile(@"..\..\..\Resources\" + item.LogoUrl);
+                    }
+                }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (match.MatchId != 0)
+            try
             {
-                Match m = context.Matches.SingleOrDefault(m => m.MatchId == match.MatchId);
-                m.HostId = int.Parse(cbHost.SelectedValue.ToString());
-                m.GuestId = int.Parse(cbGuest.SelectedValue.ToString());
-                m.VenueId = int.Parse(cbVenue.SelectedValue.ToString());
-                m.RefereeId = int.Parse(cbReferee.SelectedValue.ToString());
-                m.PlayDate = dateTimePicker1.Value;
-                try
+                var x = MessageBox.Show("Are you sure want to create?", "Warning", MessageBoxButtons.YesNo);
+                if (x == DialogResult.Yes)
                 {
-                    context.Matches.Update(m);
-                    if (context.SaveChanges() > 0)
-                    {
-                        MessageBox.Show("Match successful");
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Match failed");
-                    }
+                    int host_id = context.Clubs.FirstOrDefault(s => s.Name == cbHost.SelectedValue.ToString()).ClubId;
+                    int guest_id = context.Clubs.FirstOrDefault(s => s.Name == cbGuest.SelectedValue.ToString()).ClubId;
+                    Match match = new Match();
+                    match.PlayDate = DateTime.Parse(dateTimePicker1.Value.ToString());
+                    match.HostId = host_id;
+                    match.GuestId = guest_id;
+
+                    match.RefereeId = int.Parse(cbReferee.SelectedValue.ToString());
+                    match.VenueId = int.Parse(cbVenue.SelectedValue.ToString());
+                    match.PlayStage = cbStage.SelectedValue.ToString();
+                    context.Matches.Add(match);
+                    context.SaveChanges();
+                    MessageBox.Show("Create Successful!");
+
+                    FrmLichThiDau frmLichThiDau = (FrmLichThiDau)Application.OpenForms["FrmLichThiDau"];
+                    frmLichThiDau.LoadMatch();
+                    this.Close();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            } else
+            }
+            catch (Exception ex)
             {
-                try
-                {
-                    context.Matches.Add(new Match()
-                    {
-                        HostId = int.Parse(cbHost.SelectedValue.ToString()),
-                        GuestId = int.Parse(cbGuest.SelectedValue.ToString()),
-                        RefereeId = int.Parse(cbReferee.SelectedValue.ToString()),
-                        PlayDate = dateTimePicker1.Value,
-                        VenueId = int.Parse(cbVenue.SelectedValue.ToString())
-                    });
-                    if (context.SaveChanges() > 0)
-                    {
-                        MessageBox.Show("Match successful");
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Match failed");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show(ex.Message);
+                throw;
             }
         }
     }

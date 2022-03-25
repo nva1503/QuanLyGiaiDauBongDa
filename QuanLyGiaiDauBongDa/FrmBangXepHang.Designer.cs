@@ -55,7 +55,7 @@ namespace QuanLyGiaiDauBongDa
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(122, 45);
             this.button7.TabIndex = 7;
-            this.button7.Text = "Log Out";
+            this.button7.Text = "Exit";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -94,6 +94,7 @@ namespace QuanLyGiaiDauBongDa
             this.Controls.Add(this.button7);
             this.Controls.Add(this.dgvBangXepHang);
             this.Name = "FrmBangXepHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBangXepHang";
             this.Load += new System.EventHandler(this.FrmBangXepHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBangXepHang)).EndInit();

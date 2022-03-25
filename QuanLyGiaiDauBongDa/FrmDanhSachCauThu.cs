@@ -66,7 +66,7 @@ namespace QuanLyGiaiDauBongDa
             label10.Text = dgvPlayer.CurrentRow.Cells["Club"].Value.ToString();
             label12.Text = dgvPlayer.CurrentRow.Cells["Dob"].Value.ToString();
 
-            if (dgvPlayer.CurrentRow.Cells["Image"].Value != null)
+            if (dgvPlayer.CurrentRow.Cells["Image"].Value != null && dgvPlayer.CurrentRow.Cells["Image"].Value != "")
             {
                 avatarPlayer.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + dgvPlayer.CurrentRow.Cells["Image"].Value.ToString());
             }
@@ -111,6 +111,11 @@ namespace QuanLyGiaiDauBongDa
                 this.LoadPlayer();
             }
             this.Show();
+        }
+
+        private void dgvPlayer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

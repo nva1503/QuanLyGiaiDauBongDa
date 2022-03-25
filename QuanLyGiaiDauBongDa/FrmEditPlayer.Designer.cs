@@ -115,9 +115,11 @@ namespace QuanLyGiaiDauBongDa
             // avatarPlayer
             // 
             this.avatarPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.avatarPlayer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.avatarPlayer.Location = new System.Drawing.Point(3, 3);
             this.avatarPlayer.Name = "avatarPlayer";
             this.avatarPlayer.Size = new System.Drawing.Size(215, 201);
+            this.avatarPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.avatarPlayer.TabIndex = 43;
             this.avatarPlayer.TabStop = false;
             // 
@@ -129,6 +131,7 @@ namespace QuanLyGiaiDauBongDa
             this.button1.TabIndex = 57;
             this.button1.Text = "Import Image";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPlayerID
             // 

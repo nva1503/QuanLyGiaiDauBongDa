@@ -38,6 +38,7 @@ namespace QuanLyGiaiDauBongDa
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@ namespace QuanLyGiaiDauBongDa
             this.button8.Text = "Cài Đặt Thông Tin";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button6
             // 
@@ -95,6 +97,7 @@ namespace QuanLyGiaiDauBongDa
             this.button6.Text = "Thông Số";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -181,6 +184,7 @@ namespace QuanLyGiaiDauBongDa
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.btnAboutUs);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
@@ -192,11 +196,21 @@ namespace QuanLyGiaiDauBongDa
             this.panel3.TabIndex = 5;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(822, 72);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(122, 29);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "Thông Tin";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // btnAboutUs
             // 
-            this.btnAboutUs.Location = new System.Drawing.Point(858, 39);
+            this.btnAboutUs.Location = new System.Drawing.Point(822, 29);
             this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(94, 29);
+            this.btnAboutUs.Size = new System.Drawing.Size(122, 29);
             this.btnAboutUs.TabIndex = 8;
             this.btnAboutUs.Text = "About us";
             this.btnAboutUs.UseVisualStyleBackColor = true;
@@ -205,7 +219,7 @@ namespace QuanLyGiaiDauBongDa
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(669, 72);
+            this.label2.Location = new System.Drawing.Point(639, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 3;
@@ -215,7 +229,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(556, 39);
+            this.label1.Location = new System.Drawing.Point(543, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 2;
@@ -225,7 +239,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.pictureBox2.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.employee__1_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(751, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(712, 29);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 63);
             this.pictureBox2.TabIndex = 1;
@@ -249,7 +263,7 @@ namespace QuanLyGiaiDauBongDa
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(122, 45);
             this.button7.TabIndex = 6;
-            this.button7.Text = "Log Out";
+            this.button7.Text = "Exit";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -322,5 +336,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label txtTime;
         private System.Windows.Forms.Button btnAboutUs;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button9;
     }
 }

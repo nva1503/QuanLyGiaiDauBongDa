@@ -79,21 +79,30 @@ namespace QuanLyGiaiDauBongDa
                           select new { g.Player.Name, g.GoalTime }).ToList();
             foreach (var g in hgoals)
             {
-                hostGoal.Controls.Add(new Label { Text = g.Name + " " + g.GoalTime.ToString() + "'", AutoSize = true,
-                                                    Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)});
+                hostGoal.Controls.Add(new Label
+                {
+                    Text = g.Name + " " + g.GoalTime.ToString() + "'",
+                    AutoSize = true,
+                    Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+                });
             }
 
             FlowLayoutPanel guestGoal = new FlowLayoutPanel();
             guestGoal.Size = new Size(225, 90);
-            guestGoal.AutoScroll= true;
+            guestGoal.AutoScroll = true;
             guestGoal.FlowDirection = FlowDirection.TopDown;
             var ggoals = (from g in context.Goals
                           where g.MatchId == match.MatchId && g.Player.ClubId == match.GuestId
                           select new { g.Player.Name, g.GoalTime }).ToList();
             foreach (var g in ggoals)
             {
-                guestGoal.Controls.Add(new Label { Text = g.Name + " " + g.GoalTime.ToString() + "'", Size = new Size(215, 30), TextAlign = ContentAlignment.TopRight,
-                                                    Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)});
+                guestGoal.Controls.Add(new Label
+                {
+                    Text = g.Name + " " + g.GoalTime.ToString() + "'",
+                    Size = new Size(215, 30),
+                    TextAlign = ContentAlignment.TopRight,
+                    Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+                });
             }
 
             PictureBox fb = new PictureBox();

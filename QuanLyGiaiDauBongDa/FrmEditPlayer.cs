@@ -40,13 +40,14 @@ namespace QuanLyGiaiDauBongDa
             cbClub.DisplayMember = "Name";
             cbClub.ValueMember = "ClubId";
             cbClub.SelectedValue = player.ClubId;
+            cbClub.SelectedIndex = 0;
 
             cbPosition.DataSource = context.PlayingPositions.ToList();
             cbPosition.DisplayMember = "Name";
             cbPosition.ValueMember = "PositionId";
             cbPosition.SelectedValue = player.PositionId;
 
-            if (player.Image != null)
+            if (player.Image != null && player.Image !="")
             {
                 avatarPlayer.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + player.Image);
             }
@@ -100,6 +101,17 @@ namespace QuanLyGiaiDauBongDa
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                avatarPlayer.Image = new Bitmap(opnfd.FileName);
+                txtAvatar.Text = opnfd.SafeFileName;
+            }
         }
     }
 }

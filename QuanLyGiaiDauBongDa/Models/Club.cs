@@ -12,7 +12,6 @@ namespace QuanLyGiaiDauBongDa.Models
             Accounts = new HashSet<Account>();
             MatchGuests = new HashSet<Match>();
             MatchHosts = new HashSet<Match>();
-            MatchResults = new HashSet<MatchResult>();
         }
 
         public int ClubId { get; set; }
@@ -25,10 +24,10 @@ namespace QuanLyGiaiDauBongDa.Models
         public string LogoUrl { get; set; }
 
         public virtual Country Country { get; set; }
-        public virtual Stadiun Stadium { get; set; }
+        public virtual Stadium Stadium { get; set; }
+        public virtual Ranking Ranking { get; set; }
         public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<Match> MatchGuests { get; set; }
         public virtual ICollection<Match> MatchHosts { get; set; }
-        public virtual ICollection<MatchResult> MatchResults { get; set; }
     }
 }

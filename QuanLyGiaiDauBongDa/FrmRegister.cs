@@ -148,9 +148,13 @@ namespace QuanLyGiaiDauBongDa
         {
 
             string captcha = CreateCaptcha();
-            Captcha=captcha;
-            Send(txtEmail.Text.Trim(), "Lấy mã captcha để verify tài khoản của bạn", "Mã captcha của bạn là: " + captcha);
-            MessageBox.Show("Một email chứa captcha đã gửi vào tài khoản của bạn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Captcha = captcha;
+            bool isSend = Send(txtEmail.Text.Trim(), "Lấy mã captcha để verify tài khoản của bạn", "Mã captcha của bạn là: " + captcha);
+            if (isSend)
+            {
+                MessageBox.Show("Một email chứa captcha đã gửi vào tài khoản của bạn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
 
 
         }
@@ -165,10 +169,11 @@ namespace QuanLyGiaiDauBongDa
             else { isMatchCaptcha = false; }
             return isMatchCaptcha;
         }
-       
 
-        public void Send(string sendto, string subject, string content)
+
+        public bool Send(string sendto, string subject, string content)
         {
+            bool isSend;
             string _from = "slenderman9196@gmail.com";
             string _pass = "Yeuthuy111";
             //sendto: Email receiver (người nhận)
@@ -193,13 +198,14 @@ namespace QuanLyGiaiDauBongDa
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
-
+                isSend = true;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                isSend = false;
             }
-
+            return isSend;
         }
     }
 }

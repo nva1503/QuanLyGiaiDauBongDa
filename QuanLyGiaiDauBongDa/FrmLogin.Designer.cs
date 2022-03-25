@@ -51,7 +51,7 @@ namespace QuanLyGiaiDauBongDa
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(174, 212);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label1.Padding = new System.Windows.Forms.Padding(5);
             this.label1.Size = new System.Drawing.Size(131, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Đăng Nhập:";
@@ -75,7 +75,7 @@ namespace QuanLyGiaiDauBongDa
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(209, 265);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.label2.Padding = new System.Windows.Forms.Padding(5);
             this.label2.Size = new System.Drawing.Size(91, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật Khẩu:";
@@ -149,6 +149,7 @@ namespace QuanLyGiaiDauBongDa
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.LoginBackground1;

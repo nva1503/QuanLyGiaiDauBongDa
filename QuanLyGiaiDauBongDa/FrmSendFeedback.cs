@@ -68,7 +68,7 @@ namespace QuanLyGiaiDauBongDa
                 {
                     rate.RateId = 1;
                 }
-                var accounts = (from account in db.Accounts select new { account.Username, account.Password}).ToList();
+                var accounts = (from account in db.Accounts select new { account.Username, account.Password }).ToList();
                 Feedback feedback = new Feedback();
                 foreach (var acc in accounts)
                 {
@@ -77,7 +77,7 @@ namespace QuanLyGiaiDauBongDa
                         feedback.Username = acc.Username;
                     }
 
-                }              
+                }
                 feedback.RateId = rate.RateId;
                 feedback.Problem = txtSubject.Text.Trim();
                 feedback.Content = txtContent.Text.Trim();
@@ -89,7 +89,7 @@ namespace QuanLyGiaiDauBongDa
                     if (count > 0)
                     {
                         MessageBox.Show("Cảm ơn đánh giá của bạn !");
-                        txtContent.Text="";
+                        txtContent.Text = "";
                         txtSubject.Text = "";
                         radioButton1.Checked = true;
                         radioButton2.Checked = false;

@@ -34,40 +34,42 @@ namespace QuanLyGiaiDauBongDa
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(57, 158);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(28, 126);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(794, 484);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(810, 460);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(658, 46);
+            this.button2.Location = new System.Drawing.Point(638, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(172, 29);
             this.button2.TabIndex = 1;
             this.button2.Text = "Xếp Cặp Thi Đấu";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(385, 91);
+            this.label1.Location = new System.Drawing.Point(282, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 41);
+            this.label1.Size = new System.Drawing.Size(199, 41);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Trận Thi Đấu";
+            this.label1.Text = " Lịch Thi Đấu";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(658, 91);
+            this.button1.Location = new System.Drawing.Point(638, 65);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 29);
             this.button1.TabIndex = 3;
@@ -79,14 +81,26 @@ namespace QuanLyGiaiDauBongDa
             // 
             this.button7.Image = global::QuanLyGiaiDauBongDa.Properties.Resources.exit;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(752, 651);
+            this.button7.Location = new System.Drawing.Point(727, 602);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(122, 45);
             this.button7.TabIndex = 7;
-            this.button7.Text = "Log Out";
+            this.button7.Text = "Exit";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(28, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(844, 95);
+            this.panel1.TabIndex = 8;
             // 
             // FrmLichThiDau
             // 
@@ -94,18 +108,17 @@ namespace QuanLyGiaiDauBongDa
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyGiaiDauBongDa.Properties.Resources.football_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(902, 708);
+            this.ClientSize = new System.Drawing.Size(902, 658);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FrmLichThiDau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLichThiDau";
             this.Load += new System.EventHandler(this.FrmLichThiDau_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -116,5 +129,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Panel panel1;
     }
 }

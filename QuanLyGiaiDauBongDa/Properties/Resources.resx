@@ -160,8 +160,8 @@
   <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="football-player" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\football-player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="list (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sendmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sendmail1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,6 +199,12 @@
   <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="football-player" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\football-player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fc5edd6db81ddc1e81f640d2f5f577373" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fc5edd6db81ddc1e81f640d2f5f57737.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cristiano_Ronaldo_2018" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cristiano_Ronaldo_2018.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,11 +232,17 @@
   <data name="fc5edd6db81ddc1e81f640d2f5f57737" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fc5edd6db81ddc1e81f640d2f5f57737.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="epl-1455031805339" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\epl-1455031805339.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="premier-league-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\premier-league-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="aboutuslogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aboutuslogo.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,9 +283,6 @@
   <data name="Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="list (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\list (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DoiHinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DoiHinh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -306,9 +315,6 @@
   </data>
   <data name="graph (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graph (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="old-trafford-stadium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\old-trafford-stadium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,7 +394,7 @@
   <data name="football-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\football-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fc5edd6db81ddc1e81f640d2f5f577373" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fc5edd6db81ddc1e81f640d2f5f57737.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="premier-league" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\premier-league.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

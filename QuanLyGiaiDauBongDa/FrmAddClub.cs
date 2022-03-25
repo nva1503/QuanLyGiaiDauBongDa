@@ -23,7 +23,7 @@ namespace QuanLyGiaiDauBongDa
 
         private void FrmAddClub_Load(object sender, EventArgs e)
         {
-            cbStadium.DataSource = context.Stadiuns.ToList();
+            cbStadium.DataSource = context.Stadia.ToList();
             cbStadium.DisplayMember = "Name";
             cbStadium.ValueMember = "StadiumId";
 
@@ -48,7 +48,7 @@ namespace QuanLyGiaiDauBongDa
                         City = txtCity.Text.Trim(),
                         StadiumId = (int)cbStadium.SelectedValue,
                         CountryId = (int)cbCountry.SelectedValue,
-                        LogoUrl = "logo.png",
+                        LogoUrl = txtFileName.Text,
                     };
                     context.Clubs.Add(club);
                     context.SaveChanges();
@@ -61,6 +61,22 @@ namespace QuanLyGiaiDauBongDa
                 MessageBox.Show(ex.Message);
                 throw;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                picLogo.Image = new Bitmap(opnfd.FileName);
+                txtFileName.Text = opnfd.SafeFileName;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

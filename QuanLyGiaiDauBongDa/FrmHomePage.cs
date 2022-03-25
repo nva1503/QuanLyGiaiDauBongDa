@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyGiaiDauBongDa.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,15 +14,17 @@ namespace QuanLyGiaiDauBongDa
 {
     public partial class FrmHomePage : Form
     {
+        QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
         public FrmHomePage()
         {
             InitializeComponent();
         }
         string userName;
+        public Account account;
         public FrmHomePage(string username): this()
         {
             userName = username;
-            
+            account = context.Accounts.FirstOrDefault(s => s.Username == userName);
         }
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -40,7 +43,7 @@ namespace QuanLyGiaiDauBongDa
 
         private void FrmHomePage_Load(object sender, EventArgs e)
         {
-            label1.Text += "dtd91";
+            label1.Text += account.FullName;
             txtTime.Text = DateTime.Now.ToShortDateString().ToString() + "\nThe weather is good today. Let's go outside!";
         }
 
@@ -66,7 +69,10 @@ namespace QuanLyGiaiDauBongDa
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            FrmDanhSachTrongTai frmDanhSachTrongTai = new FrmDanhSachTrongTai();
+            this.Hide();
+            frmDanhSachTrongTai.ShowDialog();
+            this.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -85,7 +91,6 @@ namespace QuanLyGiaiDauBongDa
             this.Hide();
             frmDanhSachDoiBong.ShowDialog();
             this.Show();
-
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -94,8 +99,8 @@ namespace QuanLyGiaiDauBongDa
             FrmLogin frmLogin = new FrmLogin();
             frmLogin.Show();
         }
-
         
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -132,6 +137,30 @@ namespace QuanLyGiaiDauBongDa
             FrmDanhSachCauThu frmDanhSachCauThu = new FrmDanhSachCauThu();
             this.Hide();
             frmDanhSachCauThu.ShowDialog();
+            this.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FrmTheThucThamGia frmTheThucThamGia = new FrmTheThucThamGia();
+            this.Hide();
+            frmTheThucThamGia.ShowDialog();
+            this.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmThongSoGiaiDau frmThongSoGiaiDau = new FrmThongSoGiaiDau();
+            this.Hide();
+            frmThongSoGiaiDau.ShowDialog();
+            this.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FrmSettingAccount frmSettingAccount = new FrmSettingAccount(userName);
+            this.Hide();
+            frmSettingAccount.ShowDialog();
             this.Show();
         }
     }

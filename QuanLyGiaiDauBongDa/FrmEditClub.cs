@@ -34,7 +34,7 @@ namespace QuanLyGiaiDauBongDa
             txtYear.Text = club.YearCreated;
             txtAddress.Text = club.Address;
             txtCity.Text = club.City;
-            cbStadium.DataSource = context.Stadiuns.ToList();
+            cbStadium.DataSource = context.Stadia.ToList();
             cbStadium.DisplayMember = "Name";
             cbStadium.ValueMember = "StadiumId";
             cbStadium.SelectedValue = club.StadiumId;
@@ -92,6 +92,17 @@ namespace QuanLyGiaiDauBongDa
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opnfd = new OpenFileDialog();
+            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
+            if (opnfd.ShowDialog() == DialogResult.OK)
+            {
+                picLogo.Image = new Bitmap(opnfd.FileName);
+                txtLogo2.Text = opnfd.SafeFileName;
+            }
         }
     }
 }

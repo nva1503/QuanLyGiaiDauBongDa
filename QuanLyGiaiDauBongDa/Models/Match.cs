@@ -11,7 +11,6 @@ namespace QuanLyGiaiDauBongDa.Models
         {
             Cards = new HashSet<Card>();
             Goals = new HashSet<Goal>();
-            MatchResults = new HashSet<MatchResult>();
             Teams = new HashSet<Team>();
         }
 
@@ -30,7 +29,6 @@ namespace QuanLyGiaiDauBongDa.Models
         public virtual Venue Venue { get; set; }
         public virtual ICollection<Card> Cards { get; set; }
         public virtual ICollection<Goal> Goals { get; set; }
-        public virtual ICollection<MatchResult> MatchResults { get; set; }
         public virtual ICollection<Team> Teams { get; set; }
     }
 }

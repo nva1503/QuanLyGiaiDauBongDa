@@ -19,6 +19,7 @@ namespace QuanLyGiaiDauBongDa
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new FrmLichThiDauChoClub(context.Clubs.First(c => c.ClubId == 3)));
             Application.Run(new FrmLogin());
         }
     }
