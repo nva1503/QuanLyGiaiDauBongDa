@@ -118,9 +118,10 @@ namespace QuanLyGiaiDauBongDa
 
                 //Xem thông tin chi tiết trận đấu:
                 Button details = new Button();
-                details.Text = "Xem Chi Tiết";
+                details.Text = "Chi Tiết";
                 details.AutoSize = true;
                 panel.Controls.Add(details);
+                Click += delegate (object sender, EventArgs e) { btnDetail_Click(this, e, item); };
 
 
                 flowLayoutPanel1.Controls.Add(panel);
@@ -130,10 +131,10 @@ namespace QuanLyGiaiDauBongDa
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //FrmAddMatch frmAddMatch = new FrmAddMatch();
-            //this.Hide();
-            //frmAddMatch.ShowDialog();
-            //this.Show();
+            FrmAddMatch frmAddMatch = new FrmAddMatch();
+            this.Hide();
+            frmAddMatch.ShowDialog();
+            this.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -149,6 +150,20 @@ namespace QuanLyGiaiDauBongDa
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e, Match m)
+        {
+            if ((from r in context.MatchResults where r.MatchId == m.MatchId select r).Any())
+            {
+                FrmDetailMatch detail = new FrmDetailMatch(m);
+                detail.ShowDialog();
+            }
+            else
+            {
+                FrmEditMatch result = new FrmEditMatch(m);
+                result.ShowDialog();
+            }
         }
     }
 }
