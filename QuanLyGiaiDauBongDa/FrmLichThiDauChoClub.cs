@@ -15,7 +15,7 @@ namespace QuanLyGiaiDauBongDa
     {
         QuanLyGiaiDauBongDaContext context = new QuanLyGiaiDauBongDaContext();
         //Khởi tạo object Câu Lạc Bộ
-        Club club = new Club();
+        readonly Club club = new();
         public FrmLichThiDauChoClub(Club club)
         {
             InitializeComponent();
@@ -56,6 +56,7 @@ namespace QuanLyGiaiDauBongDa
             {
                 //Tạo panel cho trận đấu
                 FlowLayoutPanel match = new FlowLayoutPanel();
+                match.BackColor = Color.WhiteSmoke;
                 match.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
                 match.Size = new System.Drawing.Size(flpSchedule.Width-30, 70);
 
@@ -67,27 +68,35 @@ namespace QuanLyGiaiDauBongDa
                 match.Controls.Add(time);
 
                 Label content = new Label();
-                content.Size = new System.Drawing.Size(550, 70);
+                content.Size = new System.Drawing.Size(450, 70);
                 content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-                string result = "0 - 0";
+                MatchResult result1 = context.MatchResults.FirstOrDefault(r => r.MatchId == item.MatchId && r.ClubId == club.ClubId);
+                MatchResult result2 = context.MatchResults.FirstOrDefault(r => r.MatchId == item.MatchId && r.ClubId != club.ClubId);
+                string displayresult = "";
+                if (result1 != null)
+                {
+                    displayresult = $"{result1.GoalScore} - {result2.GoalScore}";
+                }
                 if (item.HostId == club.ClubId)
                 {
-                    content.Text = "HOST VS " + item.Guest.Name + "\n         " + result;
+                    content.Text = "HOST VS " + item.Guest.Name + "\n         " + displayresult;
                 }
                 else
                 {
-                    content.Text = "GUEST VS " + item.Host.Name + "\n          " + result;
+                    content.Text = "GUEST VS " + item.Host.Name + "\n          " + displayresult;
                 }
 
                 Button squad = new Button();
                 squad.Size = new System.Drawing.Size(70, 60);
                 squad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 squad.Text = "Squad";
+                squad.Click += delegate (object sender, EventArgs e) { btnSquad_Click(this, e, club.ClubId, item); };
 
                 Button detail = new Button();
                 detail.Size = new System.Drawing.Size(70, 60);
                 detail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 detail.Text = "Detail";
+                detail.Click += delegate (object sender, EventArgs e) { btnDetail_Click(this, e, item); };
 
                 match.Controls.Add(content);
                 match.Controls.Add(squad);
@@ -96,6 +105,19 @@ namespace QuanLyGiaiDauBongDa
 
                 flpSchedule.Controls.Add(match);
             }
+        }
+        private void btnSquad_Click(object sender, EventArgs e, int c, Match m)
+        {
+            FrmDoiHinhThiDau squad = new FrmDoiHinhThiDau(c, m);
+            squad.ShowDialog();
+        }
+
+        private void btnDetail_Click(object sender, EventArgs e, Match m)
+        {
+            FrmDetailMatch frmDetailMatch = new FrmDetailMatch(m);
+            this.Hide();
+            frmDetailMatch.ShowDialog();
+            this.Show();
         }
     }
 }

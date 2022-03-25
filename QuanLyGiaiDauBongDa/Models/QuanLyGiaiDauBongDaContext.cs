@@ -41,7 +41,7 @@ namespace QuanLyGiaiDauBongDa.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("server=TUNG\\TUNG;database=QuanLyGiaiDauBongDa;uid=sa;pwd=yeuthuy111;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("server=(local); database=QuanLyGiaiDauBongDa; uid=nva1503; pwd=1503;TrustServerCertificate=True");
             }
         }
 
@@ -85,9 +85,9 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<Card>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("Card");
+
+                entity.Property(e => e.CardId).HasColumnName("card_id");
 
                 entity.Property(e => e.CardTime).HasColumnName("card_time");
 
@@ -98,13 +98,13 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.Property(e => e.PlayerId).HasColumnName("player_id");
 
                 entity.HasOne(d => d.Match)
-                    .WithMany()
+                    .WithMany(p => p.Cards)
                     .HasForeignKey(d => d.MatchId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Card_Match");
 
                 entity.HasOne(d => d.Player)
-                    .WithMany()
+                    .WithMany(p => p.Cards)
                     .HasForeignKey(d => d.PlayerId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Card_Player");
@@ -168,7 +168,13 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<Feedback>(entity =>
             {
+                entity.HasKey(e => e.Username);
+
                 entity.ToTable("Feedback");
+
+                entity.Property(e => e.Username)
+                    .HasMaxLength(50)
+                    .HasColumnName("username");
 
                 entity.Property(e => e.Content)
                     .IsRequired()
@@ -181,11 +187,6 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnName("problem");
 
                 entity.Property(e => e.RateId).HasColumnName("rateId");
-
-                entity.Property(e => e.Username)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .HasColumnName("username");
 
                 entity.HasOne(d => d.Rate)
                     .WithMany(p => p.Feedbacks)
@@ -211,6 +212,12 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasForeignKey(d => d.MatchId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Goal_Match");
+
+                entity.HasOne(d => d.Player)
+                    .WithMany(p => p.Goals)
+                    .HasForeignKey(d => d.PlayerId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Goal_Player");
             });
 
             modelBuilder.Entity<Match>(entity =>
@@ -263,31 +270,44 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<MatchResult>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.MatchId, e.ClubId });
 
                 entity.ToTable("Match_Result");
 
+                entity.Property(e => e.MatchId).HasColumnName("match_id");
+
                 entity.Property(e => e.ClubId).HasColumnName("club_id");
+
+                entity.Property(e => e.Control).HasColumnName("control");
+
+                entity.Property(e => e.Corners).HasColumnName("corners");
+
+                entity.Property(e => e.Fouls).HasColumnName("fouls");
 
                 entity.Property(e => e.GoalScore).HasColumnName("goal_score");
 
-                entity.Property(e => e.MatchId).HasColumnName("match_id");
+                entity.Property(e => e.Offsides).HasColumnName("offsides");
+
+                entity.Property(e => e.Ontarget).HasColumnName("ontarget");
 
                 entity.Property(e => e.PlayStage)
                     .HasMaxLength(50)
                     .HasColumnName("play_stage");
+
+                entity.Property(e => e.Shots).HasColumnName("shots");
 
                 entity.Property(e => e.WinLose)
                     .HasMaxLength(50)
                     .HasColumnName("win_lose");
 
                 entity.HasOne(d => d.Club)
-                    .WithMany()
+                    .WithMany(p => p.MatchResults)
                     .HasForeignKey(d => d.ClubId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Result_Club");
 
                 entity.HasOne(d => d.Match)
-                    .WithMany()
+                    .WithMany(p => p.MatchResults)
                     .HasForeignKey(d => d.MatchId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Result_Match");
@@ -326,6 +346,11 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.Property(e => e.Weight)
                     .HasMaxLength(50)
                     .HasColumnName("weight");
+
+                entity.HasOne(d => d.Position)
+                    .WithMany(p => p.Players)
+                    .HasForeignKey(d => d.PositionId)
+                    .HasConstraintName("FK_Player_Playing_Position");
             });
 
             modelBuilder.Entity<PlayingPosition>(entity =>
@@ -420,7 +445,7 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<RoleAccount>(entity =>
             {
-                entity.HasKey(e => new { e.RoleId, e.Username });
+                entity.HasNoKey();
 
                 entity.ToTable("Role_Account");
 
@@ -431,15 +456,13 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnName("username");
 
                 entity.HasOne(d => d.Role)
-                    .WithMany(p => p.RoleAccounts)
+                    .WithMany()
                     .HasForeignKey(d => d.RoleId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Role_Account_Role");
 
                 entity.HasOne(d => d.UsernameNavigation)
-                    .WithMany(p => p.RoleAccounts)
+                    .WithMany()
                     .HasForeignKey(d => d.Username)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Role_Account_Account");
             });
 
@@ -459,22 +482,24 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<Team>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.PlayerId, e.MatchId });
 
                 entity.ToTable("Team");
 
-                entity.Property(e => e.MatchId).HasColumnName("match_id");
-
                 entity.Property(e => e.PlayerId).HasColumnName("player_id");
 
+                entity.Property(e => e.MatchId).HasColumnName("match_id");
+
                 entity.HasOne(d => d.Match)
-                    .WithMany()
+                    .WithMany(p => p.Teams)
                     .HasForeignKey(d => d.MatchId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Team_Match");
 
                 entity.HasOne(d => d.Player)
-                    .WithMany()
+                    .WithMany(p => p.Teams)
                     .HasForeignKey(d => d.PlayerId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Team_Player");
             });
 

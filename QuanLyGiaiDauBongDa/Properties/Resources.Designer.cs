@@ -19,7 +19,7 @@ namespace QuanLyGiaiDauBongDa.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -153,6 +153,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _39520735_illustration_of_a_striped_green_grass_background_image_ {
+            get {
+                object obj = ResourceManager.GetObject("39520735-illustration-of-a-striped-green-grass-background-image-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4 {
             get {
                 object obj = ResourceManager.GetObject("4", resourceCulture);
@@ -223,6 +233,26 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Adidas_tiet_lo_trai_bong_tuong_tac_cho_vong_knockout_World_cup_02_resize {
+            get {
+                object obj = ResourceManager.GetObject("Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Adidas_tiet_lo_trai_bong_tuong_tac_cho_vong_knockout_World_cup_02_resize1 {
+            get {
+                object obj = ResourceManager.GetObject("Adidas-tiet-lo-trai-bong-tuong-tac-cho-vong-knockout-World-cup-02_resize1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap amonestation {
             get {
                 object obj = ResourceManager.GetObject("amonestation", resourceCulture);
@@ -266,6 +296,16 @@ namespace QuanLyGiaiDauBongDa.Properties {
         internal static System.Drawing.Bitmap arsenal {
             get {
                 object obj = ResourceManager.GetObject("arsenal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arsenal_football_club_stadium_211427551515995098 {
+            get {
+                object obj = ResourceManager.GetObject("arsenal-football-club-stadium-211427551515995098", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,6 +413,26 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DoiHinh {
+            get {
+                object obj = ResourceManager.GetObject("DoiHinh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DoiHinh1 {
+            get {
+                object obj = ResourceManager.GetObject("DoiHinh1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
@@ -413,9 +473,59 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap epl_1455031805339 {
+            get {
+                object obj = ResourceManager.GetObject("epl-1455031805339", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f57737 {
+            get {
+                object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f57737", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577371 {
+            get {
+                object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f577371", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577372 {
+            get {
+                object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f577372", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fc5edd6db81ddc1e81f640d2f5f577373 {
+            get {
+                object obj = ResourceManager.GetObject("fc5edd6db81ddc1e81f640d2f5f577373", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,6 +596,26 @@ namespace QuanLyGiaiDauBongDa.Properties {
         internal static System.Drawing.Bitmap heung_min_son {
             get {
                 object obj = ResourceManager.GetObject("heung-min-son", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hinh_1_WC_ball {
+            get {
+                object obj = ResourceManager.GetObject("Hinh-1-WC-ball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hinh_1_WC_ball1 {
+            get {
+                object obj = ResourceManager.GetObject("Hinh-1-WC-ball1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -654,6 +784,56 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_2 {
+            get {
+                object obj = ResourceManager.GetObject("nhung-hinh-anh-Old-Trafford-Wallpaper-dep-nhat-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_21 {
+            get {
+                object obj = ResourceManager.GetObject("nhung-hinh-anh-Old-Trafford-Wallpaper-dep-nhat-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nhung_hinh_anh_Old_Trafford_Wallpaper_dep_nhat_22 {
+            get {
+                object obj = ResourceManager.GetObject("nhung-hinh-anh-Old-Trafford-Wallpaper-dep-nhat-22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap old_trafford_stadium {
+            get {
+                object obj = ResourceManager.GetObject("old-trafford-stadium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap old_trafford_stadium1 {
+            get {
+                object obj = ResourceManager.GetObject("old-trafford-stadium1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap podium__1_ {
             get {
                 object obj = ResourceManager.GetObject("podium (1)", resourceCulture);
@@ -734,9 +914,42 @@ namespace QuanLyGiaiDauBongDa.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap soccer_football_grass_field_vivid_green_background_strong_color_nice_texture_39511876 {
+            get {
+                object obj = ResourceManager.GetObject("soccer-football-grass-field-vivid-green-background-strong-color-nice-texture-3951" +
+                        "1876", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap soccer_player {
             get {
                 object obj = ResourceManager.GetObject("soccer-player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap striped_soccer_football_grass_field_texture_background_copy_space_soccer_football_grass_field_108344313 {
+            get {
+                object obj = ResourceManager.GetObject("striped-soccer-football-grass-field-texture-background-copy-space-soccer-football" +
+                        "-grass-field-108344313", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap striped_soccer_football_grass_field_texture_background_copy_space_soccer_football_grass_field_1083443131 {
+            get {
+                object obj = ResourceManager.GetObject("striped-soccer-football-grass-field-texture-background-copy-space-soccer-football" +
+                        "-grass-field-1083443131", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

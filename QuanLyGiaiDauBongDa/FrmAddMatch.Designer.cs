@@ -39,8 +39,6 @@ namespace QuanLyGiaiDauBongDa
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbReferee = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCapacity = new System.Windows.Forms.TextBox();
             this.cbVenue = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -101,6 +99,7 @@ namespace QuanLyGiaiDauBongDa
             this.button1.TabIndex = 6;
             this.button1.Text = "Match";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -113,7 +112,6 @@ namespace QuanLyGiaiDauBongDa
             this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Thời Gian:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -147,22 +145,6 @@ namespace QuanLyGiaiDauBongDa
             this.cbReferee.Size = new System.Drawing.Size(193, 28);
             this.cbReferee.TabIndex = 11;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(556, 442);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Sức Chứa:";
-            // 
-            // txtCapacity
-            // 
-            this.txtCapacity.Location = new System.Drawing.Point(636, 439);
-            this.txtCapacity.Name = "txtCapacity";
-            this.txtCapacity.Size = new System.Drawing.Size(90, 27);
-            this.txtCapacity.TabIndex = 13;
-            // 
             // cbVenue
             // 
             this.cbVenue.FormattingEnabled = true;
@@ -171,7 +153,6 @@ namespace QuanLyGiaiDauBongDa
             this.cbVenue.Size = new System.Drawing.Size(193, 28);
             this.cbVenue.TabIndex = 59;
             this.cbVenue.Text = " ";
-            this.cbVenue.SelectedIndexChanged += new System.EventHandler(this.cbVenue_SelectedIndexChanged_1);
             // 
             // FrmAddMatch
             // 
@@ -181,8 +162,6 @@ namespace QuanLyGiaiDauBongDa
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(904, 567);
             this.Controls.Add(this.cbVenue);
-            this.Controls.Add(this.txtCapacity);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.cbReferee);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -216,8 +195,6 @@ namespace QuanLyGiaiDauBongDa
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbReferee;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCapacity;
         private System.Windows.Forms.ComboBox cbVenue;
     }
 }

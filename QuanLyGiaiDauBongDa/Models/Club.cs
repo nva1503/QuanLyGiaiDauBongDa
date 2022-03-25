@@ -12,6 +12,7 @@ namespace QuanLyGiaiDauBongDa.Models
             Accounts = new HashSet<Account>();
             MatchGuests = new HashSet<Match>();
             MatchHosts = new HashSet<Match>();
+            MatchResults = new HashSet<MatchResult>();
         }
 
         public int ClubId { get; set; }
@@ -28,5 +29,6 @@ namespace QuanLyGiaiDauBongDa.Models
         public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<Match> MatchGuests { get; set; }
         public virtual ICollection<Match> MatchHosts { get; set; }
+        public virtual ICollection<MatchResult> MatchResults { get; set; }
     }
 }
