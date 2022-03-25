@@ -1,8 +1,6 @@
 ﻿using System;
-using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -40,13 +38,10 @@ namespace QuanLyGiaiDauBongDa.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (!optionsBuilder.IsConfigured)
             {
-                //Chỉnh file appsettings để hỗ trợ đổi server khi thi
-                var builder = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-                IConfigurationRoot config = builder.Build();
-                optionsBuilder.UseSqlServer(config.GetConnectionString("QuanLyGiaiDauBongDa"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("server=TUNG\\TUNG;database=QuanLyGiaiDauBongDa;uid=sa;pwd=yeuthuy111;TrustServerCertificate=True");
             }
         }
 
@@ -173,13 +168,7 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<Feedback>(entity =>
             {
-                entity.HasKey(e => e.Username);
-
                 entity.ToTable("Feedback");
-
-                entity.Property(e => e.Username)
-                    .HasMaxLength(50)
-                    .HasColumnName("username");
 
                 entity.Property(e => e.Content)
                     .IsRequired()
@@ -192,6 +181,11 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnName("problem");
 
                 entity.Property(e => e.RateId).HasColumnName("rateId");
+
+                entity.Property(e => e.Username)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .HasColumnName("username");
 
                 entity.HasOne(d => d.Rate)
                     .WithMany(p => p.Feedbacks)
@@ -426,7 +420,7 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<RoleAccount>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.RoleId, e.Username });
 
                 entity.ToTable("Role_Account");
 
@@ -437,13 +431,15 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnName("username");
 
                 entity.HasOne(d => d.Role)
-                    .WithMany()
+                    .WithMany(p => p.RoleAccounts)
                     .HasForeignKey(d => d.RoleId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Role_Account_Role");
 
                 entity.HasOne(d => d.UsernameNavigation)
-                    .WithMany()
+                    .WithMany(p => p.RoleAccounts)
                     .HasForeignKey(d => d.Username)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Role_Account_Account");
             });
 

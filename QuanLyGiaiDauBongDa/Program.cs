@@ -19,7 +19,7 @@ namespace QuanLyGiaiDauBongDa
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDanhSachClub());
+            Application.Run(new FrmLogin());
         }
     }
 }
