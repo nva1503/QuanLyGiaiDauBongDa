@@ -37,7 +37,7 @@ namespace QuanLyGiaiDauBongDa
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
+                
             }
         }
 
@@ -121,7 +121,7 @@ namespace QuanLyGiaiDauBongDa
                 details.Text = "Chi Tiết";
                 details.AutoSize = true;
                 panel.Controls.Add(details);
-                Click += delegate (object sender, EventArgs e) { btnDetail_Click(this, e, item); };
+                details.Click += delegate (object sender, EventArgs e) { btnDetail_Click(this, e, item); };
 
 
                 flowLayoutPanel1.Controls.Add(panel);

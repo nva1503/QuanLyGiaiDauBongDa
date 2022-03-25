@@ -287,9 +287,6 @@
     <None Update="Resources\info.PNG">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\istanbul-turkey-august-joy-smiles-cheer-sadio-mane-player-liverpool-fc-happy-emotions-celebrate-uefa-super-cup-trophy-188377002.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\jota.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -40,14 +40,13 @@ namespace QuanLyGiaiDauBongDa
             cbClub.DisplayMember = "Name";
             cbClub.ValueMember = "ClubId";
             cbClub.SelectedValue = player.ClubId;
-            cbClub.SelectedIndex = 0;
 
             cbPosition.DataSource = context.PlayingPositions.ToList();
             cbPosition.DisplayMember = "Name";
             cbPosition.ValueMember = "PositionId";
             cbPosition.SelectedValue = player.PositionId;
 
-            if (player.Image != null && player.Image !="")
+            if (player.Image != null)
             {
                 avatarPlayer.BackgroundImage = Image.FromFile(@"..\..\..\Resources\" + player.Image);
             }
@@ -77,8 +76,10 @@ namespace QuanLyGiaiDauBongDa
                     player.ClubId = int.Parse(cbClub.SelectedValue.ToString());
 
                     player.Image = txtAvatar.Text.Trim();
-                    FrmDanhSachCauThu frmDanhSachCauThu = (FrmDanhSachCauThu)Application.OpenForms["FrmDanhSachCauThu"];
-                    frmDanhSachCauThu.LoadPlayer();
+
+                    FrmListPlayer frmListPlayer = (FrmListPlayer)Application.OpenForms["FrmListPlayer"];
+                    frmListPlayer.Refresh();
+                    frmListPlayer.Loading();
 
                     context.Players.Update(player);
                     context.SaveChanges();
@@ -112,6 +113,7 @@ namespace QuanLyGiaiDauBongDa
                 avatarPlayer.Image = new Bitmap(opnfd.FileName);
                 txtAvatar.Text = opnfd.SafeFileName;
             }
+
         }
     }
 }
