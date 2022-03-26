@@ -87,11 +87,5 @@ namespace QuanLyGiaiDauBongDa
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void FrmAddCard_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FrmEditMatch edit = new FrmEditMatch(match);
-            edit.Show();
-        }
     }
 }

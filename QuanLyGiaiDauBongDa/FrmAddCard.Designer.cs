@@ -139,7 +139,6 @@
             this.Name = "FrmAddCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddCard";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAddCard_FormClosed);
             this.Load += new System.EventHandler(this.FrmAddCard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

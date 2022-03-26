@@ -25,15 +25,7 @@ namespace QuanLyGiaiDauBongDa
         {
             try
             {
-                if ((from r in context.MatchResults where r.MatchId == match.MatchId select r).Any())
-                {
-                    LoadDetail();
-                } else
-                {
-                    MessageBox.Show("Trận đấu chưa diễn ra");
-                    this.Close();
-                }
-                
+                LoadDetail();  
             }
             catch (Exception ex)
             {

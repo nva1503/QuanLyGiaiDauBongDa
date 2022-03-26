@@ -113,7 +113,6 @@
             this.Name = "FrmAddGoal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddGoal";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAddGoal_FormClosed);
             this.Load += new System.EventHandler(this.FrmAddGoal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

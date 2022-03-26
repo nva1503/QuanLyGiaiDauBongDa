@@ -158,11 +158,13 @@ namespace QuanLyGiaiDauBongDa
             {
                 FrmDetailMatch detail = new FrmDetailMatch(m);
                 detail.ShowDialog();
+                this.Refresh();
             }
             else
             {
                 FrmEditMatch result = new FrmEditMatch(m);
                 result.ShowDialog();
+                this.Refresh();
             }
         }
     }

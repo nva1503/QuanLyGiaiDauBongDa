@@ -34,21 +34,34 @@ namespace QuanLyGiaiDauBongDa
 
             try
             {
-                var accounts = (from a in _db.Accounts select new { a.Username,a.Password }).ToList();
+                var accounts = (from a in _db.Accounts join b in _db.RoleAccounts on a.Username equals b.Username select new { a.Username, a.Password, b.RoleId, a.ClubId }).ToList();
                 bool isLogin = false;
+                int roleId = 2;
+                int clubId = 0;
                 foreach (var a in accounts)
                 {
                     if (txtUsername.Text.Trim().Equals(a.Username) && txtPassword.Text.Trim().Equals(a.Password))
                     {
                         isLogin = true;
+                        roleId = a.RoleId;
+                        clubId = (int)a.ClubId;
                     }
-                   
+
                 }
-                if (isLogin == true) {
+                if (isLogin) {
                     MessageBox.Show("Bạn đã đăng nhập thành công !", "Thông Báo", MessageBoxButtons.OK);
-                    FrmHomePage h = new FrmHomePage(txtUsername.Text.Trim());
-                    this.Hide();//ẩn form login
-                    h.ShowDialog();
+                    if (roleId == 1)
+                    {
+                        FrmHomePage h = new FrmHomePage(txtUsername.Text.Trim());
+                        this.Hide();//ẩn form login
+                        h.ShowDialog();
+                    } else
+                    {
+                        
+                        FrmLichThiDauChoClub club = new FrmLichThiDauChoClub(_db.Clubs.SingleOrDefault(c => c.ClubId == clubId));
+                        this.Hide();
+                        club.ShowDialog();
+                    }
                 }
                 else
                 {

@@ -30,7 +30,6 @@ namespace QuanLyGiaiDauBongDa
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -45,15 +44,6 @@ namespace QuanLyGiaiDauBongDa
             this.flowLayoutPanel1.Size = new System.Drawing.Size(810, 460);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(638, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Xếp Cặp Thi Đấu";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -95,7 +85,6 @@ namespace QuanLyGiaiDauBongDa
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(28, 12);
             this.panel1.Name = "panel1";
@@ -125,7 +114,6 @@ namespace QuanLyGiaiDauBongDa
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;

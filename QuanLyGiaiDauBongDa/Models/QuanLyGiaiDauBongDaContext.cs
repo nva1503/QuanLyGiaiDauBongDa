@@ -1,8 +1,6 @@
 ﻿using System;
-using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -40,11 +38,11 @@ namespace QuanLyGiaiDauBongDa.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-            IConfigurationRoot configuration = builder.Build();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("QuanLyGiaiDauBongDa"));
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("server=(local); database=QuanLyGiaiDauBongDa; uid=nva1503; pwd=1503;TrustServerCertificate=True");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -271,9 +269,11 @@ namespace QuanLyGiaiDauBongDa.Models
 
             modelBuilder.Entity<MatchResult>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.MatchId, e.ClubId });
 
                 entity.ToTable("Match_Result");
+
+                entity.Property(e => e.MatchId).HasColumnName("match_id");
 
                 entity.Property(e => e.ClubId).HasColumnName("club_id");
 
@@ -284,8 +284,6 @@ namespace QuanLyGiaiDauBongDa.Models
                 entity.Property(e => e.Fouls).HasColumnName("fouls");
 
                 entity.Property(e => e.GoalScore).HasColumnName("goal_score");
-
-                entity.Property(e => e.MatchId).HasColumnName("match_id");
 
                 entity.Property(e => e.Offsides).HasColumnName("offsides");
 
@@ -302,12 +300,13 @@ namespace QuanLyGiaiDauBongDa.Models
                     .HasColumnName("win_lose");
 
                 entity.HasOne(d => d.Club)
-                    .WithMany()
+                    .WithMany(p => p.MatchResults)
                     .HasForeignKey(d => d.ClubId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Result_Club");
 
                 entity.HasOne(d => d.Match)
-                    .WithMany()
+                    .WithMany(p => p.MatchResults)
                     .HasForeignKey(d => d.MatchId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Match_Result_Match");

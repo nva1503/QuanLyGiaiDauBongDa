@@ -68,7 +68,7 @@ namespace QuanLyGiaiDauBongDa
                 match.Controls.Add(time);
 
                 Label content = new Label();
-                content.Size = new System.Drawing.Size(450, 70);
+                content.Size = new System.Drawing.Size(420, 70);
                 content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
                 MatchResult result1 = context.MatchResults.FirstOrDefault(r => r.MatchId == item.MatchId && r.ClubId == club.ClubId);
                 MatchResult result2 = context.MatchResults.FirstOrDefault(r => r.MatchId == item.MatchId && r.ClubId != club.ClubId);
@@ -114,10 +114,18 @@ namespace QuanLyGiaiDauBongDa
 
         private void btnDetail_Click(object sender, EventArgs e, Match m)
         {
-            FrmDetailMatch frmDetailMatch = new FrmDetailMatch(m);
-            this.Hide();
-            frmDetailMatch.ShowDialog();
-            this.Show();
+            if ((from r in context.MatchResults where r.MatchId == m.MatchId select r).Any())
+            {
+                FrmDetailMatch frmDetailMatch = new FrmDetailMatch(m);
+                this.Hide();
+                frmDetailMatch.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Trận đấu chưa diễn ra");
+            }
+            
         }
     }
 }

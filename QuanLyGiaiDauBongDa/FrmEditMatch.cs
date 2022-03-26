@@ -118,14 +118,14 @@ namespace QuanLyGiaiDauBongDa
         {
             FrmAddGoal addgoal = new FrmAddGoal(m);
             addgoal.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e, Match m)
         {
             FrmAddCard addcard = new FrmAddCard(m);
             addcard.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -142,7 +142,8 @@ namespace QuanLyGiaiDauBongDa
                     Control = (int)nudHostControl.Value,
                     Fouls = (int)nudHostFouls.Value,
                     Corners = (int)nudHostCorner.Value,
-                    Offsides = (int)nudHostOffside.Value
+                    Offsides = (int)nudHostOffside.Value,
+                    WinLose = (hostGoalScore > guestGoalScore)?"W":(hostGoalScore  == guestGoalScore)?"D":"L"
                 });
                 context.MatchResults.Add(new MatchResult()
                 {
@@ -154,7 +155,8 @@ namespace QuanLyGiaiDauBongDa
                     Control = (int)nudGuestControl.Value,
                     Fouls = (int)nudGuestFouls.Value,
                     Corners = (int)nudGuestCorner.Value,
-                    Offsides = (int)nudGuestOffside.Value
+                    Offsides = (int)nudGuestOffside.Value,
+                    WinLose = (hostGoalScore < guestGoalScore) ? "W" : (hostGoalScore == guestGoalScore) ? "D" : "L"
                 });
                 if (context.SaveChanges()>0)
                 {
